@@ -1,0 +1,499 @@
+    Test ID,Test Case Description,Preconditions,Test Steps,Expected Result,Test Type,Priority,Status,
+1222792,Verify Export PGA records UI,User has valid credentials,Go to PGA mapping page,,,Functional,High,Not Started 
+1553046,,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use AWS-QA
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC/GC 2
+
+    Use the partner: 20339 or 2033",,,,,
+    ,,,"Select the ""Global Classification"" menu
+    Click on ""PGA Mapping"" option or go to
+    �
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping","
+    ",,,,
+    ,,,"Select ""Global classification"" on Application feature field","
+    ",,,,
+    ,,,"Select ""Export - All agencies"" on Trade direction and agency field",Option should be selectable,,,,
+    ,,,Verify the PGA record UI,"Option should be selectable
+    ",,,,
+    ,,,,"1. Page title should be displayed
+    2. Respective export PGA record buttons should be displayed
+    3. Grid should be displayed
+    4. Search all should be displayed ",,,,
+1222796,Verify upload PGA records successful message,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use QA AWS
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC 2
+    ",,,,,
+    ,,,"Navigate to -https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping
+    ","Application should be logged in successful
+    ",,,,
+    ,,,"Select ""Global classification"" on Application feature field
+    ","Page should be loaded successfully
+    ",,,,
+    ,,,"Select ""Export - All agencies"" / any one single agency under ""Export"". on Trade direction and agency field
+    ","Option should be selectable
+    ",,,,
+    ,,,"Click on ""Upload PGA records""","Option should be selectable
+    ",,,,
+    ,,,"Click on ""Add file"" --> upload the single / multiple XLS format file--> Click on upload
+    ",Upload PGA records popup should be populated,,,,
+    ,,,,"""1 document successfully uploaded."" A successful message should be displayed for a single file
+
+    ""<#> documents successfully uploaded."" A successful message should be displayed for multi-file",,,,
+1222797,Verify upload PGA records error message,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use QA AWS
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC 2
+    ",,,,,
+    ,,,"Navigate to -https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping
+    ","Application should be logged in successful
+    ",,,,
+    ,,,"Select ""Global classification"" on Application feature field
+    ","Page should be loaded successfully
+    ",,,,
+    ,,,"Select ""Export - All agencies"" / any one single agency under ""Export"". on Trade direction and agency field
+    ","Option should be selectable
+    ",,,,
+    ,,,"Click on ""upload PGA records""","Option should be selectable
+    ",,,,
+    ,,,"Click on ""Add file""-->Upload mismatch column contains data on XLS format file--> ""Upload""","""Upload PGA records"" popup should be populated",,,,
+    ,,,"Click on ""upload PGA records""
+    ","""The spreadsheet columns must match the columns in the selected tab. Try updating your file and uploading again. "" A error message should be displayed",,,,
+    ,,,"Click on ""Add file""-->Upload 1 or more outdated contains product data on XLS format file--> ""Upload""
+    ","""Upload PGA records"" popup should be populated
+    ",,,,
+    ,,,"Click on ""upload PGA records""
+    ","""1 or more products in the upload are outdated. Try extracting the latest version of these products before uploading."" A error message should be displayed",,,,
+    ,,,"Click on ""Add file""-->Upload invalid data on XLS format file--> ""Upload"" / Before on click of ""Upload"" turn page to offline mode 
+    ","""Upload PGA records"" popup should be populated
+    ",,,,
+    ,,,,"""There was an issue processing your request. Try again, or contact Support if the problem continues."" A error message should be displayed",,,,
+1222798,Verify successful message for extract functionality for a single agency,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use QA AWS
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC 2
+    ",,,,,
+    ,,,"Navigate to -https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping
+    ","Application should be logged in successful
+    ",,,,
+    ,,,"Select ""Global classification"" on Application feature field
+    ","Page should be loaded successfully
+    ",,,,
+    ,,,"Select any one agency code under Export on Trade direction and agency field
+    For testing purpose selecting ""Export --> DEA""
+    ","Option should be selectable
+    ",,,,
+    ,,,"Select all items on the grid and click on ""Extract""","Option should be selectable and available data should be loaded on grid
+    ",,,,
+    ,,,,"""1 document should download automatically."" A successful message should be displayed
+    �2. XLS file format should be downloaded",,,,
+1222799,Verify successful message for extract functionality for a multi agency,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use QA AWS
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC 2
+    ",,,,,
+    ,,,"Navigate to -https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping
+    ","Application should be logged in successful
+    ",,,,
+    ,,,"Select ""Global classification"" on Application feature field
+    ","Page should be loaded successfully
+    ",,,,
+    ,,,"Select ""Export - All agencies"" on Trade direction and agency field
+    ","Option should be selectable
+    ",,,,
+    ,,,"Select all items on the grid and click on ""Extract""
+    ","Option should be selectable
+    ",,,,
+    ,,,"Select any one / more agency code on the popup and click on ""Download now""
+    ",Download extract file popup should be populated,,,,
+    ,,,,"""<#> documents should download automatically."" A successful message should be displayed
+
+    2. XLS file format should be downloaded",,,,
+1222800,Verify extract error message,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use QA AWS
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC 2
+    ",,,,,
+    ,,,"Navigate to -https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping
+    ","Application should be logged in successful
+    ",,,,
+    ,,,"Select ""Global classification"" on Application feature field
+    ","Page should be loaded successfully
+    ",,,,
+    ,,,"Select ""Export - All agencies"" / any one single agency under ""Export"". on Trade direction and agency field
+    ","Option should be selectable
+    ",,,,
+    ,,,"click on ""Extract"" without selecting the items on the grid
+    ","Option should be selectable
+    ",,,,
+    ,,,,"""You must select a PGA record to extract."" Error message should be displayed",,,,
+1222801,Verify the delete record ,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use QA AWS
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC 2
+    ",,,,,
+    ,,,"Navigate to -https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping
+    ","Application should be logged in successful
+    ",,,,
+    ,,,"Select ""Global classification"" on Application feature field
+    ","Page should be loaded successfully
+    ",,,,
+    ,,,"Select ""Export - All agencies"" / any one single agency under ""Export"". on Trade direction and agency field
+    ","Option should be selectable
+    ",,,,
+    ,,,"Click on ""Edit"" which item has the record status as complete","Option should be selectable
+    ",,,,
+    ,,,"Click on ""Delete record""",A respective edit modal box should be opened and existing data should be displayed on the field ,,,,
+    ,,,," ""You have successfully deleted <#> record"" A successful message should be displayed
+    ",,,,
+1222816,"Verify by on-click GC product number items links that navigates to product record, PGA data tab",,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use QA AWS
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC 2
+    ",,,,,
+    ,,,"Navigate to -https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping
+    ","Application should be logged in successful
+    ",,,,
+    ,,,"Select ""Global classification"" on Application feature field
+    ","Page should be loaded successfully
+    ",,,,
+    ,,,"Select ""Export - All agencies"" / any one single agency under ""Export"". on Trade direction and agency field
+    ","Option should be selectable
+    ",,,,
+    ,,,Click any one hyperlink items of GC product number,"Option should be selectable
+    ",,,,
+    ,,,,It should be navigated to product record PGA data tab,,,,
+1222817,Verify the item has �Complete� or �Incomplete� status: Navigates user to PGA exportRecord.,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use QA AWS
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC 2
+    ",,,,,
+    ,,,"Navigate to -https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping
+    ","Application should be logged in successful
+    ",,,,
+    ,,,"Select ""Global classification"" on Application feature field
+    ","Page should be loaded successfully
+    ",,,,
+    ,,,"Select ""Export - All agencies"" / any one single agency under ""Export"". on Trade direction and agency field
+    ","Option should be selectable
+    ",,,,
+    ,,,Select any one PGA record item hyperlink ,"Option should be selectable
+    ",,,,
+    ,,,,It should be navigated to PGA export record page,,,,
+1255314,"Verify that ""Add PGA record"" changes to ""Edit"" when adds PGA export record to created missing PGA record",,Run the attached SQL in SSMS / Open SQL this will create the product record,,,,,
+    ,,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use QA AWS
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC 2
+    ","
+    ",,,,
+    ,,,"Navigate to -https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping
+    ","Application should be logged in successful
+    ",,,,
+    ,,,"Select ""Global classification"" on Application feature field
+    ","Page should be loaded successfully. IF THIS NEVER STOPS LOADING THE PAGE, SWITCH TO PARTNER 2033
+    ",,,,
+    ,,,"Select ""Export - All agencies"" on Trade direction and agency field
+    ","Option should be selectable
+    ",,,,
+    ,,,"Pass the created record name on search field
+    OR FILTER BY GC PRODUCTNUM IF SEARCH BOX IS HIDDEN
+    ","Option should be selectable
+    ",,,,
+    ,,,"Select any one agency code and click on ""Save""",Data should be get filtered,,,,
+    ,,,"Verify that after agency code added the respective record actions status changed to ""Edit""",Agency code should be applied successful,,,,
+    ,,,,"Under Actions column record status should be changed to ""Edit"" and Has PGA data column status should be changed to ""Y""",,,,
+1557248,Verify PGA Mapping Bulk Edit for Export: All Agencies,,"Navigate to PGA Mapping Screen.
+
+    gtm/product-classification/pga-mapping",,,,,
+    ,,,"Select ""Export-All Agencies"" from the ""Trade direction and agency""",Navigation must be successful,,,,
+    ,,,Select few products which has data and click on Bulk Edit,The grid must be loaded with new data.,,,,
+    ,,,"Choose the data you want to edit and the value you want it to be updated to and click on Apply button
+    ","A new tab, from where the user can choose which data to be edited must be loaded",,,,
+    ,,,,"A spinner will be loading and the data will be updated.
+
+    The user will get the success message as well.
+    ""You have successfully updated""",,,,
+1571138,PGA mapping - Export: validate FWS agency form UI,,Go to PGA mapping page,,,,,
+1553046,,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use AWS-QA
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC/GC 2
+
+    Use the partner: 20339 or 2033",,,,,
+    ,,,"Select the ""Global Classification"" menu
+    Click on ""PGA Mapping"" option or go to
+    �
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping","
+    ",,,,
+    ,,,"Set 
+    Application Feature: Global Classification
+    Trade direction and agency: Export - All agencies","
+    ",,,,
+    ,,,"Click ""Add PGA record"" button for a record with non-empty HS number","
+    ",,,,
+    ,,,"In the modal, select ""FWS - Fish & Wildlife Service"" in the ""Trade direction and agency"" dropdown ","
+    ",,,,
+    ,,,Select FW7 as PGA ID,"
+    ",,,,
+    ,,,"Validate the form
+    ","
+    ",,,,
+    ,,,Select FW8 as PGA ID,GC PGA � Figma,,,,
+    ,,,"Validate the form
+    ","
+    ",,,,
+    ,,,,�GC PGA � Figma,,,,
+1571139,PGA mapping - Export: validate AMS agency form UI,,Go to PGA mapping page,,,,,
+1553046,,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use AWS-QA
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC/GC 2
+
+    Use the partner: 20339 or 2033",,,,,
+    ,,,"Select the ""Global Classification"" menu
+    Click on ""PGA Mapping"" option or go to
+    �
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping","
+    ",,,,
+    ,,,"Set 
+    Application Feature: Global Classification
+    Trade direction and agency: Export - All agencies","
+    ",,,,
+    ,,,"Click ""Add PGA record"" button for a record with non-empty HS number","
+    ",,,,
+    ,,,"In the modal, select ""AMS - Agricultural Marketing Service"" in the ""Trade direction and agency"" dropdown ","
+    ",,,,
+    ,,,"Validate the form
+    ","
+    ",,,,
+    ,,,,GC PGA � Figma,,,,
+1571140,PGA mapping - Export: validate ATF agency form UI,,Go to PGA mapping page,,,,,
+1553046,,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use AWS-QA
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC/GC 2
+
+    Use the partner: 20339 or 2033",,,,,
+    ,,,"Select the ""Global Classification"" menu
+    Click on ""PGA Mapping"" option or go to
+    �
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping","
+    ",,,,
+    ,,,"Set 
+    Application Feature: Global Classification
+    Trade direction and agency: Export - All agencies","
+    ",,,,
+    ,,,"Click ""Add PGA record"" button for a record with non-empty HS number","
+    ",,,,
+    ,,,"In the modal, select ""ATF - Bureau of Alcohol, Tobacco, Firearms and Explosives"" in the ""Trade direction and agency"" dropdown ","
+    ",,,,
+    ,,,"Validate the form
+    ","
+    ",,,,
+    ,,,,GC PGA � Figma,,,,
+1571141,PGA mapping - Export: validate DEA agency form UI,,Go to PGA mapping page,,,,,
+1553046,,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use AWS-QA
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC/GC 2
+
+    Use the partner: 20339 or 2033",,,,,
+    ,,,"Select the ""Global Classification"" menu
+    Click on ""PGA Mapping"" option or go to
+    �
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping","
+    ",,,,
+    ,,,"Set 
+    Application Feature: Global Classification
+    Trade direction and agency: Export - All agencies","
+    ",,,,
+    ,,,"Click ""Add PGA record"" button for a record with non-empty HS number","
+    ",,,,
+    ,,,"In the modal, select ""DEA - Drug Enforcement Administration"" in the ""Trade direction and agency"" dropdown ","
+    ",,,,
+    ,,,"Validate the form
+    ","
+    ",,,,
+    ,,,,GC PGA � Figma,,,,
+1571142,PGA mapping - Export: validate EPA agency form UI,,Go to PGA mapping page,,,,,
+1553046,,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use AWS-QA
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC/GC 2
+
+    Use the partner: 20339 or 2033",,,,,
+    ,,,"Select the ""Global Classification"" menu
+    Click on ""PGA Mapping"" option or go to
+    �
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping","
+    ",,,,
+    ,,,"Set 
+    Application Feature: Global Classification
+    Trade direction and agency: Export - All agencies","
+    ",,,,
+    ,,,"Click ""Add PGA record"" button for a record with non-empty HS number","
+    ",,,,
+    ,,,"In the modal, select ""EPA - U.S. Environmental Protection Agency"" dropdown ","
+    ",,,,
+    ,,,"Validate the form
+    ","
+    ",,,,
+    ,,,,GC PGA � Figma,,,,
+1571143,PGA mapping - Export: validate NMFS agency form UI,,Go to PGA mapping page,,,,,
+1553046,,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use AWS-QA
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC/GC 2
+
+    Use the partner: 20339 or 2033",,,,,
+    ,,,"Select the ""Global Classification"" menu
+    Click on ""PGA Mapping"" option or go to
+    �
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping","
+    ",,,,
+    ,,,"Set 
+    Application Feature: Global Classification
+    Trade direction and agency: Export - All agencies","
+    ",,,,
+    ,,,"Click ""Add PGA record"" button for a record with non-empty HS number","
+    ",,,,
+    ,,,"In the modal, select ""NMFS - National Marine Fisheries Service"" in the ""Trade direction and agency"" dropdown ","
+    ",,,,
+    ,,,Select PGA ID: NM7,"
+    ",,,,
+    ,,,Validate the form,"
+    ",,,,
+    ,,,Select PGA ID: NM8,GC PGA � Figma,,,,
+    ,,,Validate the form,"
+    ",,,,
+    ,,,Select PGA ID: NM9,GC PGA � Figma,,,,
+    ,,,Validate the form,"
+    ",,,,
+    ,,,,GC PGA � Figma,,,,
+1571144,PGA mapping - Export: validate TTB agency form UI,,Go to PGA mapping page,,,,,
+1553046,,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use AWS-QA
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC/GC 2
+
+    Use the partner: 20339 or 2033",,,,,
+    ,,,"Select the ""Global Classification"" menu
+    Click on ""PGA Mapping"" option or go to
+    �
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping","
+    ",,,,
+    ,,,"Set 
+    Application Feature: Global Classification
+    Trade direction and agency: Export - All agencies","
+    ",,,,
+    ,,,"Click ""Add PGA record"" button for a record with non-empty HS number","
+    ",,,,
+    ,,,"In the modal, select ""TTB - Alcohol and Tobacco Tax and Trade Bureau"" in the ""Trade direction and agency"" dropdown ","
+    ",,,,
+    ,,,Validate the form,"
+    ",,,,
+    ,,,,GC PGA � Figma,,,,
+1571145,PGA mapping - Export: verify user is able to edit PGA,,Go to PGA mapping page,,,,,
+1553046,,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use AWS-QA
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC/GC 2
+
+    Use the partner: 20339 or 2033",,,,,
+    ,,,"Select the ""Global Classification"" menu
+    Click on ""PGA Mapping"" option or go to
+    �
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping","
+    ",,,,
+    ,,,"Set 
+    Application Feature: Global Classification
+    Trade direction and agency: Export - All agencies","
+    ",,,,
+    ,,,Click Edit button for a record in the table,"
+    ",,,,
+    ,,,Edit the PGA and click Save,"
+    ",,,,
+    ,,,Click Edit for the same record again,"The success message is displayed
+    The edited record is displayed in the table (1 record)",,,,
+    ,,,,The updated data is displayed,,,,
+1571146,PGA mapping - Export: verify user can add PGA with NMFS - NM9 agency,,Go to PGA mapping page,,,,,
+1553046,,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use AWS-QA
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC/GC 2
+
+    Use the partner: 20339 or 2033",,,,,
+    ,,,"Select the ""Global Classification"" menu
+    Click on ""PGA Mapping"" option or go to
+    �
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping","
+    ",,,,
+    ,,,"Set 
+    Application Feature: Global Classification
+    Trade direction and agency: Export - All agencies","
+    ",,,,
+    ,,,"Click ""Add PGA record"" button for a record with non-empty HS number","
+    ",,,,
+    ,,,"In the modal, select ""NMFS - National Marine Fisheries Service"" in the ""Trade direction and agency"" dropdown","
+    ",,,,
+    ,,,Select PGA ID: NM9,"
+    ",,,,
+    ,,,Fill the form and click Save,'LCPO unit of measure' contains 1 option - 'KG',,,,
+    ,,,Click Edit for the added PGA record,"The success message is displayed
+    The Edit button appears in the record action column
+    ",,,,
+    ,,,,The previously added data is displayed,,,,
+1571147,PGA mapping - Export: verify user can add PGA with FWS - FW7 agency,,Go to PGA mapping page,,,,,
+1553046,,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use AWS-QA
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC/GC 2
+
+    Use the partner: 20339 or 2033",,,,,
+    ,,,"Select the ""Global Classification"" menu
+    Click on ""PGA Mapping"" option or go to
+    �
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping","
+    ",,,,
+    ,,,"Set 
+    Application Feature: Global Classification
+    Trade direction and agency: Export - All agencies","
+    ",,,,
+    ,,,"Click ""Add PGA record"" button for a record with non-empty HS number","
+    ",,,,
+    ,,,"In the modal, select ""FWS - Fish & Wildlife Service"" in the ""Trade direction and agency"" dropdown ","
+    ",,,,
+    ,,,Select FW7 as PGA ID,"
+    ",,,,
+    ,,,Fill the form and click Save,"
+    ",,,,
+    ,,,Click Edit for the added PGA record,"The success message is displayed
+    The Edit button appears in the record action column",,,,
+    ,,,,The previously added data is displayed,,,,
+1571148,PGA mapping - Export: verify user can add PGA with ATF agency,,Go to PGA mapping page,,,,,
+1553046,,,"Login to the Env with valid credentials.
+    For the purpose of the test case, we will use AWS-QA
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/
+    Company - GC/GC 2
+
+    Use the partner: 20339 or 2033",,,,,
+    ,,,"Select the ""Global Classification"" menu
+    Click on ""PGA Mapping"" option or go to
+    �
+    https://ogt-gtm-web-qa.8443.aws-int.thomsonreuters.com/gtm/product-classification/pga-mapping","
+    ",,,,
+    ,,,"Set 
+    Application Feature: Global Classification
+    Trade direction and agency: Export - All agencies","
+    ",,,,
+    ,,,"Click ""Add PGA record"" button for a record with non-empty HS number","
+    ",,,,
+    ,,,"In the modal, select ""ATF - Bureau of Alcohol, Tobacco, Firearms and Explosives"" in the ""Trade direction and agency"" dropdown","
+    ",,,,
+    ,,,Fill the form and click Save,"
+    ",,,,
+    ,,,Click Edit for the added PGA record,"The success message is displayed
+    The Edit button appears in the record action column",,,,
+    ,,,,The previously added data is displayed,,,,

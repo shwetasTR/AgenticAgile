@@ -1,0 +1,1300 @@
+[
+  {
+    "user_story": {
+      "user_type": "Okay, here are the user stories based on the provided requirements document, following the specified format:",
+      "action": "As a Partner Government Agency (PGA)",
+      "benefit": "I want to conduct pilots for my agency's functionality within ACE/ITDS"
+    },
+    "acceptance_criteria": [
+      {
+        "given": "Okay, here are detailed acceptance criteria for the provided user story and requirements context, following the specified format:",
+        "when": "**Acceptance Criteria Set 1: Pilot Environment Access**",
+        "then": "*   **Given** a PGA has been approved to conduct a pilot for specific functionality within ACE/ITDS"
+      },
+      {
+        "given": "**Acceptance Criteria Set 2: Submitting Test Data**",
+        "when": "*   **Given** a PGA user is logged into the designated ACE/ITDS pilot environment",
+        "then": "*   **When** the PGA user submits a test transaction or message set relevant to their agency's specific piloted functionality (e.g., permit data, license information)"
+      },
+      {
+        "given": "**Acceptance Criteria Set 3: Processing and Response**",
+        "when": "*   **Given** a PGA has submitted valid test data relevant to their pilot scope within the ACE/ITDS pilot environment",
+        "then": "*   **When** the ACE/ITDS system processes the submitted data against the pilot's rules and logic"
+      },
+      {
+        "given": "**Acceptance Criteria Set 4: Viewing Pilot Status (If a tracking mechanism exists)**",
+        "when": "*   **Given** a PGA is actively participating in an approved pilot",
+        "then": "*   **When** an authorized PGA user accesses the designated system or interface for monitoring pilot activities (potentially a dashboard or status page within ACE or a related system)"
+      },
+      {
+        "given": "**Acceptance Criteria Set 5: Functionality Validation**",
+        "when": "*   **Given** a PGA is conducting a pilot for a specific function (e.g., data validation rule, specific message exchange)",
+        "then": "*   **When** the PGA submits test cases designed to exercise that specific function (both valid and invalid scenarios)"
+      },
+      {
+        "given": "**Acceptance Criteria Set 6: Pilot Conclusion Data**",
+        "when": "*   **Given** the planned testing activities for a PGA pilot have been executed",
+        "then": "*   **When** the pilot period concludes"
+      }
+    ],
+    "test_cases": [
+      {
+        "test_id": "PGA_PILOT_001",
+        "description": "Verify an approved PGA user can successfully log in to the designated pilot environment.",
+        "expected_result": "The user is successfully authenticated and redirected to the pilot environment's dashboard or landing page for their role.",
+        "type": "Functional / Security (Authentication)",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_PILOT_002",
+        "description": "Verify an unapproved or invalid user cannot log in to the pilot environment.",
+        "expected_result": "An error message is displayed indicating invalid credentials or lack of authorization, and the user is not granted access to the pilot environment.",
+        "type": "Negative / Security (Authentication)",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_PILOT_003",
+        "description": "Verify a logged-in PGA user can submit a valid test transaction relevant to their pilot scope.",
+        "expected_result": "The system accepts the submission, and a confirmation message (e.g., \"Submission successful\", \"Transaction received\") is displayed, potentially with a transaction ID.",
+        "type": "Functional / Positive",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_PILOT_004",
+        "description": "Verify the system rejects or flags an invalid test transaction submitted by a logged-in PGA user.",
+        "expected_result": "The system rejects the submission, and an informative error message is displayed, indicating the reason for failure (e.g., \"Invalid format for field X\", \"Required field Y is missing\"). The transaction is not processed further.",
+        "type": "Functional / Negative",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_PILOT_005",
+        "description": "Verify the ACE/ITDS pilot system correctly processes a valid submitted test transaction according to pilot logic.",
+        "expected_result": "The transaction status updates to reflect successful processing according to the pilot rules (e.g., 'Accepted', 'Processed', 'Routed to Next Step'). Any expected response message or data update associated with the pilot logic is generated correctly.",
+        "type": "Functional / Integration",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_PILOT_006",
+        "description": "Verify an authorized PGA user can access the pilot monitoring interface (if available).",
+        "expected_result": "The user successfully accesses the monitoring interface, and it displays relevant information pertaining to their agency's active pilot (e.g., pilot name, status, recent activity).",
+        "type": "Functional / UI",
+        "priority": "Medium"
+      },
+      {
+        "test_id": "PGA_PILOT_007",
+        "description": "Verify an unauthorized user cannot access the specific pilot monitoring interface.",
+        "expected_result": "Access is denied. An error message indicating insufficient privileges is displayed, or the link/menu option to the monitoring interface is not visible/active for the user.",
+        "type": "Security (Authorization) / Negative",
+        "priority": "Medium"
+      },
+      {
+        "test_id": "PGA_PILOT_008",
+        "description": "Validate specific pilot functionality using a positive test case (e.g., data passes a validation rule).",
+        "expected_result": "The transaction is processed successfully, specifically confirming that the piloted function evaluated the data as valid and allowed processing to continue as expected (e.g., accepted status, correct subsequent routing, expected confirmation).",
+        "type": "Functional / Positive",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_PILOT_009",
+        "description": "Validate specific pilot functionality using a negative test case (e.g., data fails a validation rule).",
+        "expected_result": "The transaction is rejected or flagged with an error, specifically indicating that the piloted function identified the data as invalid according to its rules. The expected error message related to the piloted function is displayed.",
+        "type": "Functional / Negative",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_PILOT_010",
+        "description": "Verify pilot conclusion data (logs/reports) are available after the pilot period ends.",
+        "expected_result": "The authorized user can successfully access the relevant logs, reports, or summary data detailing the activities and outcomes of the concluded pilot. The data accurately reflects the testing performed during the pilot period.",
+        "type": "Functional / System",
+        "priority": "Medium"
+      }
+    ]
+  },
+  {
+    "user_story": {
+      "user_type": "Partner Government Agency (PGA)",
+      "action": "work with CBP to expedite necessary regulatory changes",
+      "benefit": "I can collect required data elements electronically and align with the Executive Order 13659 mandate."
+    },
+    "acceptance_criteria": [
+      {
+        "given": "Okay, here are detailed acceptance criteria based on the provided user story and requirements context, using the Gherkin format:",
+        "when": "**Acceptance Criteria Set 1: Initiation of Collaboration**",
+        "then": "Given the PGA has identified a necessary regulatory change required to collect specific data elements electronically via ITDS/ACE"
+      },
+      {
+        "given": "**Acceptance Criteria Set 2: Defining Requirements within Pilot Framework**",
+        "when": "Given a regulatory change proposal from a PGA has been accepted for consideration within a BIEC/ITDS Pilot",
+        "then": "When CBP and the PGA engage in collaborative working sessions (e.g., workshops, meetings)"
+      },
+      {
+        "given": "**Acceptance Criteria Set 3: System Configuration for Data Collection**",
+        "when": "Given agreed-upon technical specifications for new/updated PGA data elements exist",
+        "then": "When CBP development teams configure the ITDS/ACE system (in a pilot or test environment initially)"
+      },
+      {
+        "given": "**Acceptance Criteria Set 4: Successful Electronic Data Submission (Pilot Phase)**",
+        "when": "Given the ITDS/ACE system has been configured in a pilot environment to accept the PGA's required data elements",
+        "then": "When the PGA submits test messages containing the specified data elements electronically through the agreed-upon channel (e.g., ACE Portal, EDI)"
+      },
+      {
+        "given": "**Acceptance Criteria Set 5: Verification of Data Availability**",
+        "when": "Given the PGA has successfully submitted test data electronically via ITDS/ACE in the pilot",
+        "then": "When authorized PGA personnel query or access the relevant data within the ITDS/ACE environment (or via data extracts/reports provided by CBP)"
+      },
+      {
+        "given": "**Acceptance Criteria Set 6: Process Alignment & Mandate Confirmation**",
+        "when": "Given a PGA Pilot for electronic data collection has been successfully conducted and evaluated",
+        "then": "When CBP and the PGA review the implemented electronic data collection process and results"
+      },
+      {
+        "given": "**Acceptance Criteria Set 7: Expedited Process Evidence**",
+        "when": "Given the established BIEC/ITDS Pilot framework exists for PGA collaboration",
+        "then": "When a PGA initiates a request for a regulatory change needed for electronic data collection under this framework"
+      }
+    ],
+    "test_cases": [
+      {
+        "test_id": "TC_PGA_COLLAB_001",
+        "description": "Verify that a PGA can initiate a request for a regulatory change via the BIEC/ITDS Pilot framework and successfully participate in initial collaborative sessions with CBP to define requirements.",
+        "preconditions": "PGA has identified a regulatory change need for electronic data collection; The BIEC/ITDS Pilot framework for collaboration is established and accessible to the PGA; Relevant CBP personnel are available for collaboration.",
+        "expected_result": "The PGA successfully submits the proposal, receives acceptance confirmation into the pilot, and participates in a collaborative session where requirements definition begins. The collaboration process as defined in AC Set 1 and 2 is initiated.",
+        "type": "Process / Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_CBP_CONFIG_001",
+        "description": "Verify that CBP can configure the ITDS/ACE system (in a pilot/test environment) to accommodate new/updated PGA data elements based on agreed technical specifications derived from collaborative sessions.",
+        "preconditions": "Agreed-upon technical specifications for the new/updated PGA data elements exist (output from AC Set 2); A pilot or test ITDS/ACE environment is available; CBP development resources are assigned.",
+        "expected_result": "The ITDS/ACE pilot/test environment is successfully updated to accept the specified PGA data elements according to the technical specifications. CBP provides confirmation of readiness to the PGA. This fulfills AC Set 3.",
+        "type": "Functional / Configuration",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_SUBMIT_001",
+        "description": "Verify that the PGA can successfully submit test messages containing the specified new/updated data elements electronically to the configured ITDS/ACE pilot environment.",
+        "preconditions": "ITDS/ACE pilot environment is configured and ready (as per TC_CBP_CONFIG_001 Expected Result); PGA has access to the agreed-upon submission channel (e.g., ACE Portal, specific API endpoint, EDI VAN); PGA has prepared valid test messages including the new/updated data elements.",
+        "expected_result": "The test message is successfully processed and accepted by the ITDS/ACE pilot system. A positive acknowledgement (e.g., 'Accepted' status, successful transaction ID) is received, indicating the system correctly handled the new/updated data elements. This validates AC Set 4.",
+        "type": "Functional / Integration",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_VERIFY_001",
+        "description": "Verify that authorized PGA personnel can access and accurately view the electronically submitted test data within the ITDS/ACE environment or via provided reports/extracts.",
+        "preconditions": "PGA has successfully submitted test data containing new/updated elements (as per TC_PGA_SUBMIT_001 Expected Result); Authorized PGA personnel have the necessary credentials and permissions to access the relevant data viewing tool, portal, or report distribution mechanism; Sufficient time has passed for data processing and availability within the viewing system.",
+        "expected_result": "The PGA user can successfully locate the submitted test data. The displayed data accurately reflects the information submitted, specifically confirming the presence and correctness of the new/updated data elements required by the regulatory change. This confirms AC Set 5.",
+        "type": "Functional / Data Validation",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_ALIGN_001",
+        "description": "Verify that the post-pilot review process confirms the implemented electronic data collection successfully meets PGA needs and aligns with the Executive Order 13659 mandate.",
+        "preconditions": "A PGA Pilot for electronic data collection (covering AC Sets 3, 4, 5) has been successfully conducted and evaluated; Key stakeholders from both PGA and CBP are available for the review.",
+        "expected_result": "The review meeting concludes with documented agreement from both PGA and CBP that the piloted electronic data collection process is successful, meets the PGA's data requirements, and aligns with the EO 13659 mandate. This validates AC Set 6.",
+        "type": "Process / Compliance",
+        "priority": "Medium"
+      },
+      {
+        "test_id": "TC_PGA_EXPEDITE_001",
+        "description": "Verify that utilizing the BIEC/ITDS Pilot framework results in an expedited timeline for implementing the necessary regulatory change compared to standard procedures.",
+        "preconditions": "The BIEC/ITDS Pilot framework is operational; A specific regulatory change request has been processed end-to-end (or to a significant milestone) using this framework; Baseline data or estimates for standard (non-pilot) regulatory change timelines for similar scope changes are available for comparison.",
+        "expected_result": "The analysis shows that the time taken to process the regulatory change through the BIEC/ITDS Pilot framework is demonstrably shorter than the established baseline/standard timeline, providing evidence that the framework facilitates an expedited process as per AC Set 7.",
+        "type": "Process / Performance",
+        "priority": "Medium"
+      }
+    ]
+  },
+  {
+    "user_story": {
+      "user_type": "Partner Government Agency (PGA) like ATF or FSIS",
+      "action": "draft and publish a Federal Register Notice (FRN)",
+      "benefit": "I can formally announce the end/closure of my successful pilot."
+    },
+    "acceptance_criteria": [
+      {
+        "given": "Okay, here are detailed acceptance criteria based on the user story and requirements provided, following the Given/When/Then format:",
+        "when": "**Acceptance Criteria 1: Initiating and Drafting the FRN**",
+        "then": "*   **Given** I am an authorized user from a Partner Government Agency (PGA) with permissions to manage pilot documentation,"
+      },
+      {
+        "given": "**Acceptance Criteria 2: Saving a Draft FRN**",
+        "when": "*   **Given** I am drafting an FRN for a pilot closure,",
+        "then": "*   **When** I enter some required information (e.g., PGA Name, Pilot Name) and choose to save the draft without submitting,"
+      },
+      {
+        "given": "**Acceptance Criteria 3: Validating Mandatory Fields Before Submission**",
+        "when": "*   **Given** I have drafted an FRN for a pilot closure,",
+        "then": "*   **When** I attempt to submit the FRN for publication,"
+      },
+      {
+        "given": "**Acceptance Criteria 4: Successful Submission for Publication**",
+        "when": "*   **Given** I have a completed draft FRN for a pilot closure with all mandatory fields filled correctly,",
+        "then": "*   **When** I click the action to submit the FRN for publication,"
+      },
+      {
+        "given": "**Acceptance Criteria 5: Content of the Published FRN**",
+        "when": "*   **Given** An FRN for a pilot closure has been successfully submitted and processed for publication,",
+        "then": "*   **When** The FRN is officially published in the Federal Register,"
+      },
+      {
+        "given": "**Acceptance Criteria 6: Confirmation of Publication**",
+        "when": "*   **Given** An FRN for a pilot closure has been submitted for publication,",
+        "then": "*   **When** The FRN is successfully published in the Federal Register,"
+      }
+    ],
+    "test_cases": [
+      {
+        "test_id": "FRN_TC_001",
+        "description": "Verify an authorized PGA user can access the FRN drafting interface.",
+        "expected_result": "The system displays the FRN drafting form/interface, allowing the user to begin entering details for the pilot closure notice.",
+        "type": "Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "FRN_TC_002",
+        "description": "Verify a user can save a partially filled FRN as a draft.",
+        "expected_result": "The system saves the FRN with a 'Draft' status. A confirmation message indicating the draft has been saved is displayed. The user is able to navigate away and later return to this draft FRN to continue editing. The FRN is not submitted for publication.",
+        "type": "Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "FRN_TC_003",
+        "description": "Verify that attempting to submit an FRN with missing mandatory fields triggers validation errors.",
+        "expected_result": "The system prevents submission. Validation error messages are displayed, clearly indicating which mandatory fields are missing or invalid. The FRN remains in a 'Draft' or editable state.",
+        "type": "Validation",
+        "priority": "High"
+      },
+      {
+        "test_id": "FRN_TC_004",
+        "description": "Verify successful submission of a complete and valid FRN for publication.",
+        "expected_result": "The system accepts the submission. A success confirmation message is displayed (e.g., \"FRN submitted successfully for publication\"). The status of the FRN changes (e.g., from 'Draft' to 'Submitted' or 'Pending Publication'). The user can no longer edit the submitted FRN directly (it may become read-only or move to a different queue).",
+        "type": "Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "FRN_TC_005",
+        "description": "Verify the content of the published FRN accurately reflects the submitted data.",
+        "expected_result": "All key data points in the published FRN exactly match the information submitted in the final draft. The content accurately reflects the intent of announcing the pilot closure.",
+        "type": "Functional / Validation",
+        "priority": "High"
+      },
+      {
+        "test_id": "FRN_TC_006",
+        "description": "Verify the user/PGA receives confirmation or notification upon successful publication.",
+        "expected_result": "The system provides a clear notification (e.g., an in-app message, an email) to the relevant PGA user(s) confirming that the FRN has been successfully published. The status of the FRN within the system is updated to 'Published' (or equivalent). The notification might include a publication number or link if applicable.",
+        "type": "Functional",
+        "priority": "Medium"
+      }
+    ]
+  },
+  {
+    "user_story": {
+      "user_type": "Partner Government Agency (PGA) like EPA",
+      "action": "I want CBP to prepare regulatory language on my behalf",
+      "benefit": "I can collect additional required data elements (e.g., for Pesticides, Non-Road Vehicles) through ACE."
+    },
+    "acceptance_criteria": [
+      {
+        "given": "Okay, here are the detailed acceptance criteria based on the provided user story and context, following the Given/When/Then format:",
+        "when": "**Acceptance Criteria 1: Request Initiation and Acknowledgement**",
+        "then": "*   **Given** a PGA (like EPA) has identified specific additional data elements (e.g., Pesticide Registration Number, Non-Road Vehicle Engine Family Name) required for their regulatory mission"
+      },
+      {
+        "given": "**Acceptance Criteria 2: Requirements Clarification and Definition**",
+        "when": "*   **Given** CBP has acknowledged the PGA's request for regulatory language preparation",
+        "then": "*   **When** CBP collaborates with the PGA to refine the requirements (including data element specifics, format, validation needs, legal basis, associated HTS codes, and conditions for reporting)"
+      },
+      {
+        "given": "**Acceptance Criteria 3: Drafting Regulatory Language**",
+        "when": "*   **Given** the detailed requirements for the new PGA data elements have been confirmed by the PGA",
+        "then": "*   **When** CBP legal and policy experts draft the necessary regulatory language (e.g., amendments to CBP regulations, Federal Register notices)"
+      },
+      {
+        "given": "**Acceptance Criteria 4: PGA Review and Approval of Draft Language**",
+        "when": "*   **Given** CBP has prepared a draft of the regulatory language",
+        "then": "*   **When** CBP provides the draft language to the requesting PGA for review and comment"
+      },
+      {
+        "given": "**Acceptance Criteria 5: Finalization and Path Forward**",
+        "when": "*   **Given** the PGA has formally approved the final regulatory language drafted by CBP",
+        "then": "*   **When** CBP finalizes the approved regulatory language"
+      },
+      {
+        "given": "**Acceptance Criteria 6: Adherence to Pilot Program Guidelines (Context-Specific)**",
+        "when": "*   **Given** this regulatory language preparation is occurring under the scope of a BIEC PGA Pilot program",
+        "then": "*   **When** CBP performs all activities related to requirement gathering, drafting, and finalizing the regulatory language"
+      }
+    ],
+    "test_cases": [
+      {
+        "test_id": "TC_PGA_REG_001",
+        "description": "Verify that CBP acknowledges a PGA's request for regulatory language preparation after the PGA identifies the need for additional data elements.",
+        "preconditions": "A PGA (e.g., EPA) has identified specific additional data elements required (e.g., Pesticide Registration Number) and formally communicated this need to CBP.",
+        "expected_result": "CBP issues a formal acknowledgement (e.g., email confirmation, system notification, official letter) confirming receipt of the PGA's request for regulatory language preparation.",
+        "type": "Process / Communication",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_REG_002",
+        "description": "Verify that CBP collaborates with the PGA to define and refine the requirements for the requested additional data elements.",
+        "preconditions": "CBP has acknowledged the PGA's request (as per TC_PGA_REG_001). The PGA has provided initial information on the required data elements.",
+        "3._verify_that_the_discussion_covers": "data element name, format constraints, validation rules, legal basis for collection, associated HTS codes, and specific conditions for reporting.",
+        "expected_result": "Documented evidence of collaboration exists (e.g., meeting minutes, shared documents) containing refined requirement specifications for the data elements, covering specifics like format, validation, legal basis, HTS codes, and reporting conditions.",
+        "type": "Process / Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_REG_003",
+        "description": "Verify that CBP collaborates with the PGA to define and refine requirements specifically for \"Non-Road Vehicle Engine Family Name\".",
+        "preconditions": "CBP has acknowledged the PGA's request. The PGA has identified \"Non-Road Vehicle Engine Family Name\" as a required element.",
+        "expected_result": "Requirement specifications for \"Non-Road Vehicle Engine Family Name\" are clearly documented, including its format, validation, legal basis, HTS codes, and reporting conditions, agreed upon by both CBP and the PGA.",
+        "type": "Process / Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_REG_004",
+        "description": "Verify that CBP legal and policy experts draft the regulatory language based on the confirmed requirements.",
+        "preconditions": "Detailed requirements for the new PGA data elements have been collaboratively defined and formally confirmed/approved by the requesting PGA.",
+        "expected_result": "A draft version of the necessary regulatory language, reflecting the confirmed requirements for the new data elements, is produced by CBP's legal and policy experts.",
+        "type": "Process / Documentation",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_REG_005",
+        "description": "Verify that CBP provides the drafted regulatory language to the requesting PGA for review and comment.",
+        "preconditions": "CBP has prepared a draft of the regulatory language (as per TC_PGA_REG_004).",
+        "expected_result": "The requesting PGA receives the draft regulatory language from CBP via the agreed-upon communication channel, enabling them to review and provide comments.",
+        "type": "Process / Communication",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_REG_006",
+        "description": "Verify that CBP finalizes the regulatory language after receiving formal approval from the PGA.",
+        "preconditions": "CBP has provided the draft language to the PGA (as per TC_PGA_REG_005). The PGA has reviewed the draft and provided formal approval (potentially after iterations/comments).",
+        "expected_result": "The approved regulatory language is marked as final within CBP systems/records, and appropriate steps are initiated for its official implementation or publication, based on the documented formal approval from the PGA.",
+        "type": "Process / Documentation",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_REG_007",
+        "description": "Verify that all activities related to regulatory language preparation adhere to BIEC PGA Pilot program guidelines when applicable.",
+        "preconditions": "The request for regulatory language preparation is explicitly occurring under the scope of a BIEC PGA Pilot program. The pilot program guidelines are documented and available.",
+        "expected_result": "All documented activities (requirement gathering, drafting, review, finalization) performed by CBP for this specific regulatory language request demonstrate adherence to the established BIEC PGA Pilot program guidelines.",
+        "type": "Compliance / Process",
+        "priority": "Medium"
+      },
+      {
+        "test_id": "TC_PGA_REG_008",
+        "description": "Verify that the drafted regulatory language accurately reflects the specific requirements defined during collaboration (e.g., data format, validation rules).",
+        "preconditions": "Detailed requirements have been confirmed by the PGA (output of AC2). CBP has drafted the regulatory language (output of AC3).",
+        "expected_result": "The draft regulatory language accurately incorporates and reflects the specific details (data element specifics, format, validation needs, legal basis, HTS codes, reporting conditions) defined and confirmed in the requirements documentation.",
+        "type": "Functional / Documentation / Validation",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_REG_009",
+        "description": "Verify the mechanism for PGA review and comment on the draft language is functional.",
+        "preconditions": "CBP has prepared and provided the draft regulatory language to the PGA.",
+        "expected_result": "The defined process for the PGA to review and provide feedback (comments or approval) on the draft regulatory language is functional and communication is successfully received by CBP.",
+        "type": "Communication / Process",
+        "priority": "Medium"
+      },
+      {
+        "test_id": "TC_PGA_REG_010",
+        "description": "Verify that a formal record of the PGA's approval of the final regulatory language is captured and stored.",
+        "preconditions": "The PGA has reviewed the (potentially revised) draft language and is ready to give formal approval.",
+        "expected_result": "A verifiable record (e.g., a stored document, a log entry) of the PGA's formal approval for the final regulatory language exists within CBP's designated systems or documentation.",
+        "type": "Documentation / Audit",
+        "priority": "High"
+      }
+    ]
+  },
+  {
+    "user_story": {
+      "user_type": "Partner Government Agency (PGA) like CDC",
+      "action": "expand my pilot to additional ports (e.g., LAX, DET)",
+      "benefit": "I can test the functionality across different operational environments."
+    },
+    "acceptance_criteria": [
+      {
+        "given": "Okay, here are detailed acceptance criteria based on the user story and requirements context provided, following the Given/When/Then format:",
+        "when": "**Acceptance Criterion 1: Configuration Update**",
+        "then": "*   **Given** a specific PGA pilot (e.g., CDC Pilot XYZ) is currently active in the ITDS system for a defined set of ports."
+      },
+      {
+        "given": "**Acceptance Criterion 2: PGA Visibility of New Ports**",
+        "when": "*   **Given** the PGA pilot (e.g., CDC Pilot XYZ) has been successfully configured and activated to include new ports (LAX, DET).",
+        "then": "*   **When** an authorized user from the PGA (e.g., CDC) logs into their interface connected to ITDS (e.g., ACE Portal, their own integrated system)."
+      },
+      {
+        "given": "**Acceptance Criterion 3: Data Transmission for New Ports**",
+        "when": "*   **Given** the PGA pilot (e.g., CDC Pilot XYZ) is active for a new port (e.g., LAX).",
+        "then": "*   **And** trade data relevant to the pilot (e.g., an entry requiring CDC review) is filed electronically via ACE for processing at that new port (LAX)."
+      },
+      {
+        "given": "**Acceptance Criterion 4: PGA Interaction for New Ports**",
+        "when": "*   **Given** the PGA pilot (e.g., CDC Pilot XYZ) is active for a new port (e.g., DET).",
+        "then": "*   **And** the PGA (CDC) has received relevant data for an entry processed at that port (DET)."
+      },
+      {
+        "given": "**Acceptance Criterion 5: Reporting/Querying Includes New Ports**",
+        "when": "*   **Given** the PGA pilot (e.g., CDC Pilot XYZ) is active for new ports (LAX, DET) and transactions have occurred at these ports under the pilot.",
+        "then": "*   **When** an authorized PGA user accesses reporting or query functions related to their pilot program within ACE/ITDS."
+      },
+      {
+        "given": "**Acceptance Criterion 6: Functionality at Original Ports Unaffected**",
+        "when": "*   **Given** the PGA pilot (e.g., CDC Pilot XYZ) was active at original ports (e.g., JFK) before expansion.",
+        "then": "*   **And** the pilot has now been expanded to include new ports (LAX, DET)."
+      }
+    ],
+    "test_cases": [
+      {
+        "test_id": "PGA_EXP_001",
+        "description": "Verify an authorized administrator can successfully add new ports (LAX, DET) to an existing active PGA pilot's configuration within the ITDS system.",
+        "expected_result": "The system successfully saves the updated configuration. The pilot configuration for CDC Pilot XYZ now lists LAX and DET as active ports, in addition to the original ports. A confirmation message may be displayed.",
+        "type": "Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_EXP_002",
+        "description": "Verify an authorized PGA user can see the newly added ports (LAX, DET) associated with their pilot in their user interface after the configuration update.",
+        "expected_result": "The user interface correctly displays the newly added ports (LAX, DET) as being associated with or selectable for the CDC Pilot XYZ, alongside the original ports.",
+        "type": "Functional / UI",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_EXP_003",
+        "description": "Verify that trade data filed electronically via ACE for a newly added port (LAX), relevant to the pilot, is correctly transmitted to the designated PGA (CDC).",
+        "expected_result": "The relevant trade data submitted for port LAX is successfully routed by ITDS and received by the designated PGA (CDC) system/interface associated with the pilot.",
+        "type": "Functional / Integration",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_EXP_004",
+        "description": "Verify an authorized PGA user can perform standard interactions (e.g., review, release, hold) on trade data received for an entry processed at a newly added port (DET).",
+        "expected_result": "The system successfully processes the PGA user's interaction (e.g., Release, Hold) for the entry at the new port (DET). The entry's status in ITDS/ACE is updated accordingly, reflecting the PGA's action.",
+        "type": "Functional / Integration",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_EXP_005",
+        "description": "Verify that reporting and querying functions available to the PGA user accurately include data and transactions from the newly added ports (LAX, DET).",
+        "expected_result": "The generated report or query results contain the transaction data corresponding to the activities that occurred at the newly added ports (LAX, DET), alongside data from original ports if included in the query parameters. The data should be accurate and reflect the actual transactions.",
+        "type": "Functional / Reporting",
+        "priority": "Medium"
+      },
+      {
+        "test_id": "PGA_EXP_006",
+        "description": "Verify that the core functionality (data transmission, PGA interaction, reporting) for the original ports (e.g., JFK) remains unaffected after the pilot expansion to new ports.",
+        "expected_result": "Data transmission for the original port (JFK) occurs as expected. PGA users can interact with entries at the original port (JFK) without issues. Reporting functions continue to accurately reflect data for the original port (JFK). All functionalities related to the original port operate as they did before the expansion.",
+        "type": "Regression / Functional",
+        "priority": "High"
+      }
+    ]
+  },
+  {
+    "user_story": {
+      "user_type": "Partner Government Agency (PGA) like DEA or NRC",
+      "action": "allow the use of the Document Imaging System (DIS) in the interim",
+      "benefit": "trade processing can continue while the PGA Message Set pilot is being prepared or underway."
+    },
+    "acceptance_criteria": [
+      {
+        "given": "Okay, here are detailed acceptance criteria for the user story based on the provided context, using the G/W/T format:",
+        "when": "**Acceptance Criteria Set 1: Enabling DIS for a Pilot PGA**",
+        "then": "*   **Given** a specific Partner Government Agency (PGA), like DEA, is officially designated as being in the preparation phase or active pilot phase for their ACE/ITDS PGA Message Set."
+      },
+      {
+        "given": "**Acceptance Criteria Set 2: Trade Filer Submitting Documents via DIS**",
+        "when": "*   **Given** a trade filer is submitting an entry that requires documentation for a PGA (e.g., NRC) currently using DIS as an interim solution during their pilot.",
+        "then": "*   **When** the filer uploads the required documents using the standard DIS submission process."
+      },
+      {
+        "given": "**Acceptance Criteria Set 3: PGA Accessing DIS Documents**",
+        "when": "*   **Given** documents have been submitted via DIS for a trade entry requiring review by a PGA (e.g., DEA) that is utilizing the interim DIS process.",
+        "then": "*   **And** an authorized user from that PGA (DEA) is logged into the appropriate system interface (e.g., ACE Portal)."
+      },
+      {
+        "given": "**Acceptance Criteria Set 4: System Linking DIS Documents to Entry for PGA Review**",
+        "when": "*   **Given** a document relevant to a PGA requirement (e.g., NRC) has been successfully uploaded via DIS during their pilot interim phase.",
+        "then": "*   **And** the document is tagged with the correct entry number and identified for the relevant PGA (NRC)."
+      },
+      {
+        "given": "**Acceptance Criteria Set 5: Ensuring Trade Processing Continuity**",
+        "when": "*   **Given** a PGA (e.g., DEA) is operating under the interim DIS allowance due to their Message Set pilot status.",
+        "then": "*   **And** a trade entry requiring DEA documentation has had the necessary documents submitted via DIS."
+      },
+      {
+        "given": "**Acceptance Criteria Set 6: Deactivating DIS Allowance Post-Pilot**",
+        "when": "*   **Given** a PGA (e.g., NRC) has successfully completed its Message Set pilot and the PGA Message Set is now the mandatory method for submitting their required data/documents.",
+        "then": "*   **When** an authorized administrator updates the system configuration to reflect the completion of the pilot and the mandatory status of the Message Set for that PGA."
+      }
+    ],
+    "test_cases": [
+      {
+        "test_id": "PGA_DIS_001",
+        "description": "Verify an administrator can enable the interim DIS allowance for a specific PGA designated as being in a pilot phase.",
+        "expected_result": "The system configuration for the designated PGA (DEA) is successfully updated to reflect its pilot status and explicitly allows the use of DIS as an interim solution.",
+        "type": "Functional / Configuration",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_DIS_002",
+        "description": "Verify a trade filer can successfully submit documents via DIS for an entry requiring review by a PGA operating under the interim DIS allowance.",
+        "expected_result": "The documents are successfully uploaded via DIS. The system accepts the submission, associates the documents with the specified entry number, and potentially flags them for NRC. The filer receives a confirmation of successful submission.",
+        "type": "Functional / Positive",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_DIS_003",
+        "description": "Verify an authorized user from a PGA operating under the interim DIS allowance can access documents submitted via DIS for a relevant trade entry.",
+        "expected_result": "The authorized DEA user can successfully find and view/download the documents that were submitted via DIS for the relevant trade entry.",
+        "type": "Functional / Positive",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_DIS_004",
+        "description": "Verify that documents submitted via DIS for a PGA in its interim phase are correctly linked to the specific trade entry and identified for that PGA.",
+        "expected_result": "The system correctly displays the document submitted via DIS, clearly linking it to Entry123 and indicating that it is relevant to/submitted for the NRC requirement.",
+        "type": "Functional / Data Validation",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_DIS_005",
+        "description": "Verify that trade entry processing is not blocked due to document requirements when documents are successfully submitted via DIS for a PGA using the interim process.",
+        "expected_result": "The trade entry proceeds past the initial document submission check for the DEA requirement. No system holds are placed solely because the documents were submitted via DIS instead of a potential future Message Set during the pilot phase. Processing continues as expected based on DIS document receipt.",
+        "type": "End-to-End / Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_DIS_006",
+        "description": "Verify an administrator can deactivate the interim DIS allowance for a specific PGA upon completion of its Message Set pilot.",
+        "expected_result": "The system configuration for the designated PGA (NRC) is successfully updated to reflect pilot completion, the interim DIS allowance is removed, and the PGA Message Set is marked as the mandatory method.",
+        "type": "Functional / Configuration",
+        "priority": "High"
+      },
+      {
+        "test_id": "PGA_DIS_007",
+        "description": "Verify that DIS submission attempts for a PGA are rejected or handled differently after its interim DIS allowance has been deactivated post-pilot.",
+        "expected_result": "The system prevents the successful submission of documents via DIS specifically for the NRC requirement. An appropriate error message should be displayed informing the user that DIS is no longer accepted for this PGA and the PGA Message Set must be used, or the option to tag for NRC via DIS is unavailable.",
+        "type": "Functional / Negative",
+        "priority": "High"
+      }
+    ]
+  },
+  {
+    "user_story": {
+      "user_type": "Partner Government Agency (PGA) like FWS or NMFS",
+      "action": "encourage the Trade Community to participate in my ongoing pilot",
+      "benefit": "we receive sufficient filings to thoroughly test the system and gather feedback."
+    },
+    "acceptance_criteria": [
+      {
+        "given": "Okay, here are detailed acceptance criteria based on the user story and requirements context provided:",
+        "when": "**Acceptance Criteria Set 1: Discoverability of Pilot Information**",
+        "then": "*   **Given** a member of the Trade Community is browsing the official ACE or CBP website/portal section related to PGA information"
+      },
+      {
+        "given": "**Acceptance Criteria Set 2: Clarity of Pilot Status**",
+        "when": "*   **Given** a Trade Community member has navigated to the PGA pilot listing or the specific FWS/NMFS pilot information page",
+        "then": "*   **When** they view the details for the FWS/NMFS pilot"
+      },
+      {
+        "given": "**Acceptance Criteria Set 3: Information on How to Participate**",
+        "when": "*   **Given** a Trade Community member is viewing the information page for the FWS/NMFS pilot that is currently accepting participants",
+        "then": "*   **When** they look for instructions on joining the pilot"
+      },
+      {
+        "given": "**Acceptance Criteria Set 4: Explanation of Pilot Benefits and Scope**",
+        "when": "*   **Given** a potential Trade Community participant is evaluating the FWS/NMFS pilot",
+        "then": "*   **When** they access the detailed pilot description"
+      },
+      {
+        "given": "**Acceptance Criteria Set 5: PGA Ability to Update Pilot Information**",
+        "when": "*   **Given** an authorized user from the FWS/NMFS PGA needs to update the pilot details (e.g., status, contact info, participation instructions)",
+        "then": "*   **When** they access the administrative interface or follow the defined procedure for managing pilot information"
+      },
+      {
+        "given": "**Acceptance Criteria Set 6: Accessibility of Support/Feedback Channels**",
+        "when": "*   **Given** a Trade Community member (potential or current participant) requires assistance or wants to provide feedback regarding the FWS/NMFS pilot",
+        "then": "*   **When** they view the FWS/NMFS pilot information page"
+      }
+    ],
+    "test_cases": [
+      {
+        "test_id": "TC_PILOT_DISC_001",
+        "description": "Verify Trade Community member can find the FWS/NMFS pilot listing on the ACE/CBP website/portal PGA section.",
+        "expected_result": "The FWS/NMFS pilot program should be clearly listed or linked within the PGA information section, making it discoverable to the user.",
+        "type": "Functional / UI",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PILOT_STAT_001",
+        "description": "Verify the status of the FWS/NMFS pilot (e.g., \"Accepting Participants\") is clearly displayed on its information page.",
+        "expected_result": "The pilot's status (e.g., \"Accepting Participants\", \"Active\", \"Ongoing\") must be prominently and unambiguously displayed on the page.",
+        "type": "Functional / UI",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PILOT_STAT_002",
+        "description": "Verify the status of the FWS/NMFS pilot (e.g., \"Planned\", \"Closed\") is clearly displayed when it is not actively accepting participants.",
+        "expected_result": "The pilot's non-active status (e.g., \"Planned\", \"Closed\") must be prominently and unambiguously displayed on the page.",
+        "type": "Functional / UI",
+        "priority": "Medium"
+      },
+      {
+        "test_id": "TC_PILOT_PART_001",
+        "description": "Verify that clear instructions on how to participate are available on the information page for an active FWS/NMFS pilot.",
+        "expected_result": "The page should contain clear, actionable instructions on how a Trade Community member can register or begin participating in the pilot. This could include contact information, links to forms, or procedural steps.",
+        "type": "Functional / Content",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PILOT_PART_002",
+        "description": "Verify that participation instructions are absent or appropriately modified for a pilot that is not currently accepting participants.",
+        "expected_result": "Either no instructions on how to join are present, or any information present clearly indicates that participation is not currently open (e.g., \"The pilot is planned for Q3\", \"Participation is now closed\").",
+        "type": "Functional / Content",
+        "priority": "Medium"
+      },
+      {
+        "test_id": "TC_PILOT_INFO_001",
+        "description": "Verify that the pilot information page clearly explains the benefits of participation and the scope of the pilot for the Trade Community.",
+        "expected_result": "The page must contain clear and understandable text describing the advantages for participants and the overall purpose, coverage, and goals of the pilot.",
+        "type": "Functional / Content",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_UPDATE_001",
+        "description": "Verify an authorized FWS/NMFS user can access the admin interface/process to manage pilot information.",
+        "expected_result": "The user successfully accesses the interface or part of the process where they can view and modify the FWS/NMFS pilot details.",
+        "type": "Functional / Security",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_UPDATE_002",
+        "description": "Verify an authorized FWS/NMFS user can successfully update the pilot's status and the change is reflected on the public-facing page.",
+        "expected_result": "The pilot status is successfully updated in the administrative interface, and the new status (\"Accepting Participants\") is correctly displayed on the public information page.",
+        "type": "Functional / Integration",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_UPDATE_003",
+        "description": "Verify an authorized FWS/NMFS user can successfully update the pilot's contact information and the change is reflected.",
+        "expected_result": "The pilot contact information is successfully updated in the administrative interface, and the new information is correctly displayed on the public information page.",
+        "type": "Functional / Integration",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_UPDATE_004",
+        "description": "Verify an authorized FWS/NMFS user can successfully update the pilot's participation instructions and the change is reflected.",
+        "expected_result": "The pilot participation instructions are successfully updated in the administrative interface, and the new instructions are correctly displayed on the public information page.",
+        "type": "Functional / Integration",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_AUTH_001",
+        "description": "Verify that a user without FWS/NMFS authorization cannot access the administrative interface to update pilot details.",
+        "expected_result": "The user is either denied login, receives an access denied message, or cannot see/access the options to modify the FWS/NMFS pilot information.",
+        "type": "Security",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PILOT_SUPP_001",
+        "description": "Verify that contact information or a feedback mechanism is clearly accessible on the FWS/NMFS pilot information page.",
+        "expected_result": "The page must display clear contact information (e.g., email address, phone number, contact person name) and/or a link to a feedback form/process, allowing users to seek assistance or provide input regarding the pilot.",
+        "type": "Functional / UI",
+        "priority": "High"
+      }
+    ]
+  },
+  {
+    "user_story": {
+      "user_type": "As U.S. Customs and Border Protection (CBP)",
+      "action": "complete the programming in ACE for PGA core functionality",
+      "benefit": "the system is ready to accommodate all required PGA data and processes by the deadline."
+    },
+    "acceptance_criteria": [
+      {
+        "given": "Okay, here are several detailed acceptance criteria sets for the user story, based on the provided context, using the GIVEN/WHEN/THEN format:",
+        "when": "**Acceptance Criteria 1: PGA Data Element Reception and Storage**",
+        "then": "*   **Given** The ACE system has been programmed with the defined data structures for required core PGA data elements (as specified in ITDS requirements)."
+      },
+      {
+        "given": "**Acceptance Criteria 2: PGA Data Validation**",
+        "when": "*   **Given** ACE has defined validation rules for core PGA data elements (e.g., format, required fields, valid codes) based on PGA and ITDS specifications.",
+        "then": "*   **When** A trade user submits an entry filing containing PGA data."
+      },
+      {
+        "given": "**Acceptance Criteria 3: PGA Data Routing to Correct Agency**",
+        "when": "*   **Given** ACE has successfully received and validated an entry containing data relevant to one or more specific PGAs.",
+        "then": "*   **When** The ACE processing workflow reaches the step for PGA data dissemination."
+      },
+      {
+        "given": "**Acceptance Criteria 4: Processing PGA Disposition Messages**",
+        "when": "*   **Given** ACE has previously transmitted PGA data for an entry to a participating PGA via the ITDS framework.",
+        "then": "*   **When** ACE receives an electronic disposition message (e.g., 'May Proceed', 'Hold', 'Reject', 'Document Required') from that PGA regarding the submitted data."
+      },
+      {
+        "given": "**Acceptance Criteria 5: Handling Data for Multiple PGAs on a Single Entry**",
+        "when": "*   **Given** A trade user submits a single entry filing that contains required data elements for multiple different PGAs (e.g., FDA and APHIS).",
+        "then": "*   **When** ACE processes the entry filing."
+      },
+      {
+        "given": "**Acceptance Criteria 6: Core PGA Functionality Test Scenario Completion**",
+        "when": "*   **Given** A predefined set of end-to-end test scenarios exists, covering the submission, validation, routing, and status update processes for core PGA functionality involving key participating PGAs.",
+        "then": "*   **When** These predefined test scenarios are executed against the ACE system."
+      }
+    ],
+    "test_cases": [
+      {
+        "test_id": "ACE_PGA_TC001",
+        "description": "Verify ACE can successfully receive and store valid core PGA data elements submitted in an entry filing.",
+        "expected_result": "The submitted core PGA data elements are successfully received by ACE and accurately stored in the corresponding database fields or system records without errors.",
+        "type": "Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "ACE_PGA_TC002",
+        "description": "Verify ACE correctly validates core PGA data elements based on defined rules (Positive Case - Valid Data).",
+        "expected_result": "The entry filing containing valid PGA data passes validation checks without any validation errors related to the PGA data. The submission proceeds to the next processing step.",
+        "type": "Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "ACE_PGA_TC003",
+        "description": "Verify ACE correctly rejects an entry filing with core PGA data containing invalid formatting.",
+        "expected_result": "The entry filing is rejected by ACE due to a validation error. The system provides a clear error message indicating the specific PGA data element with the incorrect format.",
+        "type": "Negative",
+        "priority": "High"
+      },
+      {
+        "test_id": "ACE_PGA_TC004",
+        "description": "Verify ACE correctly rejects an entry filing missing a required core PGA data element.",
+        "expected_result": "The entry filing is rejected by ACE due to a validation error. The system provides a clear error message indicating which required PGA data element is missing.",
+        "type": "Negative",
+        "priority": "High"
+      },
+      {
+        "test_id": "ACE_PGA_TC005",
+        "description": "Verify ACE correctly rejects an entry filing containing an invalid code for a core PGA data element.",
+        "expected_result": "The entry filing is rejected by ACE due to a validation error. The system provides a clear error message indicating the specific PGA data element with the invalid code.",
+        "type": "Negative",
+        "priority": "High"
+      },
+      {
+        "test_id": "ACE_PGA_TC006",
+        "description": "Verify ACE correctly routes PGA data to the appropriate single PGA based on the submitted data.",
+        "expected_result": "The core PGA data relevant to PGA 'X' is successfully transmitted/routed to the correct destination for PGA 'X'. No PGA 'X' data is routed to destinations for other PGAs (PGA 'Y', PGA 'Z').",
+        "type": "Functional / Integration",
+        "priority": "High"
+      },
+      {
+        "test_id": "ACE_PGA_TC007",
+        "description": "Verify ACE correctly processes a 'May Proceed' disposition message received from a PGA.",
+        "expected_result": "The ACE system correctly processes the 'May Proceed' message. The status associated with PGA 'X' for that entry is updated to reflect 'May Proceed'. Any related overall status or notifications are updated as per system rules.",
+        "type": "Functional / Integration",
+        "priority": "High"
+      },
+      {
+        "test_id": "ACE_PGA_TC008",
+        "description": "Verify ACE correctly processes a 'Hold' disposition message received from a PGA.",
+        "expected_result": "The ACE system correctly processes the 'Hold' message. The status associated with PGA 'Y' for that entry is updated to reflect 'Hold'. Any required notifications are generated, and the overall entry status reflects the hold as per system rules.",
+        "type": "Functional / Integration",
+        "priority": "High"
+      },
+      {
+        "test_id": "ACE_PGA_TC009",
+        "description": "Verify ACE correctly processes a 'Reject' disposition message received from a PGA.",
+        "expected_result": "The ACE system correctly processes the 'Reject' message. The status associated with PGA 'Z' for that entry is updated to reflect 'Reject'. Any required notifications are generated, and the overall entry status reflects the rejection as per system rules.",
+        "type": "Functional / Integration",
+        "priority": "High"
+      },
+      {
+        "test_id": "ACE_PGA_TC010",
+        "description": "Verify ACE correctly processes a 'Document Required' disposition message received from a PGA.",
+        "expected_result": "The ACE system correctly processes the 'Document Required' message. The status associated with PGA 'A' for that entry is updated to reflect 'Document Required'. Any required notifications are generated as per system rules.",
+        "type": "Functional / Integration",
+        "priority": "Medium"
+      },
+      {
+        "test_id": "ACE_PGA_TC011",
+        "description": "Verify ACE can handle a single entry filing containing data for multiple PGAs and route data correctly to each.",
+        "expected_result": "The entry is successfully validated. The FDA-relevant data is routed *only* to the FDA destination. The APHIS-relevant data is routed *only* to the APHIS destination. No data is incorrectly routed to unrelated PGAs. ACE maintains separate tracking for FDA and APHIS processing within the single entry.",
+        "type": "Functional / Integration",
+        "priority": "High"
+      },
+      {
+        "test_id": "ACE_PGA_TC012",
+        "description": "Verify ACE can receive and process separate disposition messages from multiple PGAs for a single entry.",
+        "expected_result": "ACE correctly processes both disposition messages independently. The status for each PGA associated with the entry is updated accurately ('May Proceed' for FDA, 'Hold' for APHIS). The overall entry status is updated correctly based on the combination of individual PGA dispositions per defined business logic.",
+        "type": "Functional / Integration",
+        "priority": "High"
+      },
+      {
+        "test_id": "ACE_PGA_TC013",
+        "description": "Verify successful execution and outcome of the predefined end-to-end core PGA functionality test scenarios.",
+        "expected_result": "All predefined end-to-end test scenarios execute successfully, and the actual results match the expected results defined for each scenario, demonstrating that the core PGA functionality (submission, validation, routing, disposition processing) works as intended across the system.",
+        "type": "End-to-End / System",
+        "priority": "High"
+      }
+    ]
+  },
+  {
+    "user_story": {
+      "user_type": "As U.S. Customs and Border Protection (CBP)",
+      "action": "assist PGAs with the process of closing their pilots",
+      "benefit": "the transition to full implementation in ACE can proceed efficiently."
+    },
+    "acceptance_criteria": [
+      {
+        "given": "Okay, here are detailed acceptance criteria based on the provided user story and requirements context, formatted as requested.",
+        "when": "**Acceptance Criteria:**",
+        "then": "Given CBP personnel need to view the status of PGA pilots"
+      },
+      {
+        "given": "a specific PGA has formally indicated their readiness to begin the pilot closure process",
+        "when": "CBP personnel access the record for that specific PGA pilot within the ACE/ITDS system",
+        "then": "they have the ability to update the pilot's status to reflect the initiation of closure (e.g., change status from 'Active' to 'Initiating Closure')."
+      },
+      {
+        "given": "CBP personnel are viewing the details of a specific PGA pilot record",
+        "when": "they look for information relevant to the pilot's closure",
+        "then": "the system displays fields or sections containing key closure-related information (e.g., Target Closure Date, Link to Closure Checklist/Plan, Key PGA Contact for Closure, Date Closure Initiated)."
+      },
+      {
+        "given": "CBP personnel have updated the status of a PGA pilot (e.g., to 'Initiating Closure' or 'Closed')",
+        "when": "they save the changes to the pilot record",
+        "then": "the system provides confirmation that the update was successful, and the new status is immediately reflected in the pilot list and detail views."
+      },
+      {
+        "given": "CBP management or BIEC stakeholders need an overview of pilot closure progress",
+        "when": "they access a summary report or dashboard view related to PGA Pilot Status",
+        "then": "the system presents aggregated data, such as the number/percentage of pilots in each status category (Active, Initiating Closure, Pending Closure, Closed)."
+      },
+      {
+        "given": "a PGA pilot has completed all necessary closure activities and received final approval",
+        "when": "CBP personnel access the specific PGA pilot record in ACE/ITDS",
+        "then": "they can update the pilot's status to 'Closed'."
+      },
+      {
+        "given": "a PGA pilot's status has been set to 'Closed'",
+        "when": "CBP personnel view lists or reports filtered for 'Active' or 'In-Progress' pilots",
+        "then": "the pilot marked as 'Closed' is excluded from these specific views (or appropriately filtered)."
+      },
+      {
+        "given": "CBP personnel need to document steps taken or communications regarding a pilot's closure",
+        "when": "they access the specific PGA pilot record",
+        "then": "the system provides a mechanism (e.g., notes field, activity log, document attachment) to record assistance provided and key decisions related to the closure process."
+      }
+    ],
+    "test_cases": [
+      {
+        "test_id": "TC_PGA_CLOSE_001",
+        "description": "Verify CBP personnel can update a PGA pilot status from 'Active' to 'Initiating Closure'.",
+        "expected_result": "The system saves the change, and the pilot record's status is updated to 'Initiating Closure'. A success confirmation message is displayed.",
+        "type": "Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_CLOSE_002",
+        "description": "Verify key closure-related information fields are visible on the PGA pilot record details page.",
+        "expected_result": "The pilot record detail view displays fields/sections for: Target Closure Date, Link to Closure Checklist/Plan, Key PGA Contact for Closure, and Date Closure Initiated.",
+        "type": "Functional / UI",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_CLOSE_003",
+        "description": "Verify successful save confirmation and immediate status reflection in the detail view after updating status.",
+        "expected_result": "The system displays a confirmation message indicating the update was successful (e.g., \"Pilot status updated successfully.\"). The pilot detail view immediately reflects the new status ('Initiating Closure').",
+        "type": "Functional / UI",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_CLOSE_004",
+        "description": "Verify successful status update is reflected in the pilot list view.",
+        "expected_result": "The pilot list view correctly displays the updated status ('Initiating Closure') for the modified pilot record.",
+        "type": "Functional / UI",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_CLOSE_005",
+        "description": "Verify the summary report/dashboard displays aggregated pilot status data correctly.",
+        "expected_result": "The system presents aggregated data accurately reflecting the current pilot statuses, such as: # Active Pilots: 3, # Initiating Closure: 2, # Pending Closure: 1, # Closed: 1 (or percentages thereof).",
+        "type": "Reporting / Functional",
+        "priority": "Medium"
+      },
+      {
+        "test_id": "TC_PGA_CLOSE_006",
+        "description": "Verify CBP personnel can update a PGA pilot status to 'Closed'.",
+        "expected_result": "The system saves the change, and the pilot record's status is updated to 'Closed'. A success confirmation message is displayed.",
+        "type": "Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_CLOSE_007",
+        "description": "Verify 'Closed' pilots are excluded from views filtered for 'Active' or 'In-Progress' pilots.",
+        "expected_result": "When filtered for 'Active' or 'In-Progress', the list view does not display the pilot(s) with the status 'Closed'. Only pilots matching the filter criteria are shown.",
+        "type": "Functional / Filtering",
+        "priority": "Medium"
+      },
+      {
+        "test_id": "TC_PGA_CLOSE_008",
+        "description": "Verify a mechanism exists to record notes or documentation related to pilot closure assistance.",
+        "expected_result": "The system provides a functional mechanism (e.g., a text area, log entry button, attachment upload) allowing the user to add and save documentation related to the pilot's closure. The saved information persists and is viewable upon re-accessing the record.",
+        "type": "Functional / UI",
+        "priority": "Medium"
+      }
+    ]
+  },
+  {
+    "user_story": {
+      "user_type": "As U.S. Customs and Border Protection (CBP)",
+      "action": "conduct testing for quota functionality in the ACE Certification environment",
+      "benefit": "I can verify its successful operation before wider deployment."
+    },
+    "acceptance_criteria": [
+      {
+        "given": "Okay, here are detailed acceptance criteria for the user story based on testing quota functionality in the ACE Certification environment:",
+        "when": "**Acceptance Criteria Set 1: Successful Entry Against Available Quota**",
+        "then": "*   **Given** a specific quota (e.g., HTS code, quantity limit, start/end dates) is configured and active in the ACE Certification environment with an available balance greater than zero."
+      },
+      {
+        "given": "**Acceptance Criteria Set 2: Entry Reaching Quota Limit Exactly**",
+        "when": "*   **Given** a specific quota is configured and active in the ACE Certification environment with a known remaining available balance (e.g., 100 units).",
+        "then": "*   **And** the CBP user has the necessary credentials and permissions in the ACE Certification environment."
+      },
+      {
+        "given": "**Acceptance Criteria Set 3: Entry Exceeding Quota Limit**",
+        "when": "*   **Given** a specific quota is configured and active in the ACE Certification environment with a known remaining available balance (e.g., 50 units).",
+        "then": "*   **And** the CBP user has the necessary credentials and permissions in the ACE Certification environment."
+      },
+      {
+        "given": "**Acceptance Criteria Set 4: Querying Quota Status**",
+        "when": "*   **Given** one or more quotas are configured and have had test transactions processed against them in the ACE Certification environment.",
+        "then": "*   **And** the CBP user has the necessary credentials and permissions to query quota information in the ACE Certification environment."
+      },
+      {
+        "given": "**Acceptance Criteria Set 5: Handling Entries When Quota is Already Filled**",
+        "when": "*   **Given** a specific quota is configured and active in the ACE Certification environment, and its status is already 'Filled' (available balance is zero).",
+        "then": "*   **And** the CBP user has the necessary credentials and permissions in the ACE Certification environment."
+      }
+    ],
+    "test_cases": [
+      {
+        "test_id": "QUOTA_TC_001",
+        "description": "Verify successful entry submission when the entry quantity is less than the available quota balance.",
+        "preconditions": "1. A specific quota (e.g., HTS 9999.00.01, limit 1000 units, valid start/end dates) is configured and active in the ACE Certification environment. 2. The quota has a known available balance greater than 100 units (e.g., 500 units remaining). 3. The CBP user is logged into the ACE Certification environment with necessary credentials and permissions to submit entries against quotas.",
+        "expected_result": "The entry is successfully accepted and processed against the quota. The quota balance for HTS 9999.00.01 is reduced by 100 units (e.g., shows 400 units remaining). The quota status remains 'Open' (or equivalent).",
+        "type": "Functional / Positive",
+        "priority": "High"
+      },
+      {
+        "test_id": "QUOTA_TC_002",
+        "description": "Verify successful entry submission when the entry quantity exactly matches the remaining quota balance, filling the quota.",
+        "preconditions": "1. A specific quota (e.g., HTS 9999.00.02, limit 500 units, valid start/end dates) is configured and active in the ACE Certification environment. 2. The quota has a known remaining available balance of exactly 100 units. 3. The CBP user is logged into the ACE Certification environment with necessary credentials and permissions to submit entries against quotas.",
+        "expected_result": "The entry is successfully accepted and processed against the quota. The quota balance for HTS 9999.00.02 becomes 0 units. The quota status changes to 'Filled' (or equivalent).",
+        "type": "Functional / Boundary",
+        "priority": "High"
+      },
+      {
+        "test_id": "QUOTA_TC_003",
+        "description": "Verify entry rejection or appropriate handling when the entry quantity exceeds the remaining quota balance.",
+        "preconditions": "1. A specific quota (e.g., HTS 9999.00.03, limit 200 units, valid start/end dates) is configured and active in the ACE Certification environment. 2. The quota has a known remaining available balance of exactly 50 units. 3. The CBP user is logged into the ACE Certification environment with necessary credentials and permissions to submit entries against quotas.",
+        "expected_result": "The entry submission related to the quota claim is rejected, or only 50 units are accepted against the quota with the remainder handled appropriately (e.g., requiring over-quota duty payment), or the system flags the entry for manual review due to exceeding the limit. The quota balance should either remain 50 (if fully rejected for quota) or become 0 (if partially accepted). A clear message indicating the quota limit issue should be generated.",
+        "type": "Functional / Negative / Boundary",
+        "priority": "High"
+      },
+      {
+        "test_id": "QUOTA_TC_004",
+        "description": "Verify the ability to accurately query the status and balance of a specific quota.",
+        "preconditions": "1. One or more quotas (e.g., HTS 9999.00.01) are configured in the ACE Certification environment. 2. Test transactions have potentially been processed against these quotas, resulting in a known state (e.g., HTS 9999.00.01 has 400 units remaining and is 'Open' after QUOTA_TC_001). 3. The CBP user is logged into the ACE Certification environment with necessary credentials and permissions to query quota information.",
+        "expected_result": "The system returns accurate and up-to-date information for the queried quota (HTS 9999.00.01), including its identifier, defined limit, start/end dates, current available balance (e.g., 400 units), and current status (e.g., 'Open').",
+        "type": "Functional / Read Operation",
+        "priority": "Medium"
+      },
+      {
+        "test_id": "QUOTA_TC_005",
+        "description": "Verify entry rejection or appropriate handling when attempting to submit an entry against a quota that is already filled.",
+        "preconditions": "1. A specific quota (e.g., HTS 9999.00.02) is configured and active in the ACE Certification environment. 2. The quota's status is 'Filled', and its available balance is 0 (e.g., after QUOTA_TC_002). 3. The CBP user is logged into the ACE Certification environment with necessary credentials and permissions to submit entries against quotas.",
+        "expected_result": "The entry submission related to the quota claim is rejected, or the system flags the entry for over-quota processing/duty assessment. A clear message indicating the quota is already filled should be generated. The quota balance remains 0, and the status remains 'Filled'.",
+        "type": "Functional / Negative",
+        "priority": "High"
+      }
+    ]
+  },
+  {
+    "user_story": {
+      "user_type": "member of the Trade Community (Filer/Importer)",
+      "action": "submit required entry data electronically through the ACE PGA Message Set",
+      "benefit": "I can comply with PGA regulations efficiently and participate in the single window system."
+    },
+    "acceptance_criteria": [
+      {
+        "given": "Okay, here are detailed acceptance criteria for the user story based on the provided context:",
+        "when": "**Acceptance Criteria 1: Successful Submission of Valid PGA Data**",
+        "then": "*   **Given** a Filer/Importer has prepared a complete and valid set of entry data, including all necessary PGA information according to the ACE PGA Message Set specifications for the relevant commodity and PGA(s)."
+      },
+      {
+        "given": "**Acceptance Criteria 2: Rejection Due to Missing Required PGA Data**",
+        "when": "*   **Given** a Filer/Importer has prepared an entry data set for a commodity requiring specific PGA information.",
+        "then": "*   **And** the prepared data set is missing one or more mandatory PGA data elements as defined in the ACE PGA Message Set implementation guides."
+      },
+      {
+        "given": "**Acceptance Criteria 3: Rejection Due to Invalid PGA Data Format/Value**",
+        "when": "*   **Given** a Filer/Importer has prepared an entry data set including required PGA information.",
+        "then": "*   **And** one or more submitted PGA data elements contain syntactically invalid data (e.g., incorrect data type, invalid code value, format violation) according to the ACE PGA Message Set specifications."
+      },
+      {
+        "given": "**Acceptance Criteria 4: Submission Triggers PGA Review (Single Window)**",
+        "when": "*   **Given** a Filer/Importer has submitted a valid entry data set via the ACE PGA Message Set that has been accepted by ACE.",
+        "then": "*   **And** the data set includes information pertinent to one or more specific PGAs (e.g., FDA, USDA, EPA)."
+      },
+      {
+        "given": "**Acceptance Criteria 5: Handling Entries Not Requiring PGA Data**",
+        "when": "*   **Given** a Filer/Importer has prepared an entry data set for a commodity that does *not* require any PGA data submission according to current regulations and ACE configurations.",
+        "then": "*   **When** the Filer/Importer submits this data electronically via the ACE system, potentially using the PGA Message Set but indicating no PGA data is required or applicable."
+      }
+    ],
+    "test_cases": [
+      {
+        "test_id": "TC_PGA_001",
+        "description": "Verify successful submission of a complete and valid entry data set including all required PGA information via the ACE PGA Message Set.",
+        "preconditions": "Filer/Importer is authenticated in the ACE system. Filer/Importer has prepared a valid and complete entry data set according to ACE PGA Message Set specifications for a commodity requiring PGA data (e.g., FDA-regulated food item). All necessary PGA fields are correctly populated. Test environment simulates ACE system connectivity.",
+        "expected_result": "The ACE system accepts the submission successfully. The Filer/Importer receives a confirmation message (e.g., Acceptance notification, Entry Number assigned) without any PGA-related error codes or messages.",
+        "type": "Positive / Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_002",
+        "description": "Verify that an entry data submission is rejected when mandatory PGA data elements are missing for a commodity requiring them.",
+        "preconditions": "Filer/Importer is authenticated in the ACE system. Filer/Importer has prepared an entry data set for a commodity known to require specific PGA information (e.g., USDA regulated plant material). The data set intentionally omits one or more mandatory PGA fields (e.g., required USDA permit number). Test environment simulates ACE system connectivity.",
+        "expected_result": "The ACE system rejects the submission. The Filer/Importer receives a rejection message clearly indicating which mandatory PGA data element(s) are missing (e.g., error code specific to missing USDA permit).",
+        "type": "Negative / Functional / Validation",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_003",
+        "description": "Verify rejection of submission due to an invalid data format in a required PGA data element (e.g., incorrect date format).",
+        "preconditions": "Filer/Importer is authenticated in the ACE system. Filer/Importer has prepared an entry data set including required PGA information. One PGA data element requiring a specific format (e.g., YYYYMMDD date for FDA) is populated with an incorrect format (e.g., MM/DD/YYYY or alphanumeric text). Test environment simulates ACE system connectivity.",
+        "expected_result": "The ACE system rejects the submission. The Filer/Importer receives a rejection message indicating a syntax error or invalid format for the specific PGA data element.",
+        "type": "Negative / Functional / Validation",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_004",
+        "description": "Verify rejection of submission due to an invalid code value in a required PGA data element (e.g., non-existent country code).",
+        "preconditions": "Filer/Importer is authenticated in the ACE system. Filer/Importer has prepared an entry data set including required PGA information. One PGA data element requiring a specific code from a predefined list (e.g., EPA TSCA Compliance Code) is populated with a value not present in the valid code list (e.g., 'XYZ'). Test environment simulates ACE system connectivity.",
+        "expected_result": "The ACE system rejects the submission. The Filer/Importer receives a rejection message indicating an invalid value for the specific PGA data element.",
+        "type": "Negative / Functional / Validation",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_005",
+        "description": "Verify that a successfully submitted and accepted entry with specific PGA data triggers the appropriate PGA review process (Single Window routing).",
+        "preconditions": "Filer/Importer is authenticated in the ACE system. A valid entry data set including data relevant to a specific PGA (e.g., FDA regulated drug) has been successfully submitted and accepted by ACE (referencing the outcome of TC_PGA_001). The test environment allows monitoring of entry status or simulated PGA interface data flow.",
+        "expected_result": "The entry status in ACE is updated to indicate that it is under review by the specific PGA(s) identified in the data submission. Data pertinent to the PGA(s) is correctly routed or made available to them via the single window mechanism.",
+        "type": "Integration / Workflow / Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_006",
+        "description": "Verify successful submission and processing of an entry data set for a commodity that does not require any PGA data submission.",
+        "preconditions": "Filer/Importer is authenticated in the ACE system. Filer/Importer has prepared a valid entry data set for a commodity known *not* to require any PGA reporting (e.g., certain basic textile goods). The message set correctly indicates no PGA data is applicable or required (e.g., using appropriate flags or by omitting PGA segments as per guidelines). Test environment simulates ACE system connectivity.",
+        "expected_result": "The ACE system accepts the submission successfully. The Filer/Importer receives a confirmation message. The entry proceeds through customs processing workflow without being flagged for PGA review or rejected/held for missing PGA data.",
+        "type": "Positive / Functional / Edge Case",
+        "priority": "Medium"
+      }
+    ]
+  },
+  {
+    "user_story": {
+      "user_type": "member of the Trade Community (Filer/Importer)",
+      "action": "participate in PGA pilots",
+      "benefit": "I can test the new electronic submission process and provide feedback before mandatory implementation."
+    },
+    "acceptance_criteria": [
+      {
+        "given": "Okay, here are the acceptance criteria based on the provided user story and requirements context, following the Given/When/Then format:",
+        "when": "**Acceptance Criterion 1: Discoverability of Pilot Information**",
+        "then": "Given the Filer/Importer is accessing the designated platform (e.g., ACE Portal, CBP website section for trade)"
+      },
+      {
+        "given": "**Acceptance Criterion 2: Accessing Pilot Participation Guidelines**",
+        "when": "Given the Filer/Importer has identified a specific PGA pilot they are interested in",
+        "then": "When they select or search for details about that specific pilot"
+      },
+      {
+        "given": "**Acceptance Criterion 3: Submitting Data for a Pilot**",
+        "when": "Given the Filer/Importer is creating an electronic trade submission (e.g., Entry/Entry Summary via ABI or ACE Portal)",
+        "then": "And the submission involves data for a PGA participating in an active pilot"
+      },
+      {
+        "given": "**Acceptance Criterion 4: Receiving Pilot-Specific Feedback/Status**",
+        "when": "Given the Filer/Importer has submitted an electronic entry designated for a PGA pilot",
+        "then": "When they check the status of their submission through standard channels (e.g., ABI status messages, ACE Portal tracking)"
+      },
+      {
+        "given": "**Acceptance Criterion 5: Non-Pilot Submissions Processed Normally**",
+        "when": "Given the Filer/Importer is creating an electronic trade submission involving PGA data",
+        "then": "And an active pilot exists for that PGA, but the Filer/Importer does *not* include the specific pilot identifiers/flags"
+      },
+      {
+        "given": "**Acceptance Criterion 6: Ability to Submit for Multiple PGAs (Pilot and Non-Pilot)**",
+        "when": "Given the Filer/Importer is creating a single electronic trade submission involving data for multiple PGAs",
+        "then": "And one PGA is part of an active pilot the filer is participating in, while another PGA is not (or the filer is not participating in its pilot)"
+      }
+    ],
+    "test_cases": [
+      {
+        "test_id": "TC_PGA_PILOT_001",
+        "description": "Verify that information about available PGA pilots is discoverable on the designated platform.",
+        "preconditions": "1. The user (Filer/Importer) has valid credentials for the designated platform (e.g., ACE Portal, specific CBP website section). 2. At least one PGA pilot program is active and information is published. 3. The user is logged into or accessing the designated platform.",
+        "expected_result": "The user can successfully locate a section or page listing available PGA pilots or providing general information about participating in them. The information should be clearly presented and accessible.",
+        "type": "Functional, Usability",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_PILOT_002",
+        "description": "Verify that detailed participation guidelines can be accessed for a specific PGA pilot.",
+        "preconditions": "1. The user has successfully located the list or information page for PGA pilots (as per TC_PGA_PILOT_001). 2. A specific PGA pilot is listed.",
+        "expected_result": "The user is presented with detailed guidelines for the selected PGA pilot. This may include technical specifications, eligibility criteria, contact information, participation steps, and relevant documentation (viewable online or downloadable).",
+        "type": "Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_PILOT_003",
+        "description": "Verify successful submission of an electronic trade document flagged for participation in an active PGA pilot.",
+        "preconditions": "1. The user (Filer/Importer) is authorized to submit electronic trade data (e.g., via ABI or ACE Entry Filing). 2. The user is participating in an active PGA pilot program. 3. The user knows the specific identifier/flag required to designate a submission for that pilot. 4. The trade submission includes data relevant to the PGA participating in the pilot.",
+        "expected_result": "The system accepts the submission successfully. Initial status messages indicate acceptance and may potentially show specific indicators that the entry is being processed under the pilot program rules.",
+        "type": "Functional (Positive Path)",
+        "priority": "Critical"
+      },
+      {
+        "test_id": "TC_PGA_PILOT_004",
+        "description": "Verify that pilot-specific feedback or status updates are received for a submission flagged for a PGA pilot.",
+        "preconditions": "1. A trade submission designated for a PGA pilot has been successfully submitted (as per TC_PGA_PILOT_003). 2. Enough time has passed for processing status updates to be generated.",
+        "expected_result": "The status messages or tracking information received for the submission should reflect its processing under the pilot program. This could include specific pilot-related status codes, messages, or indicators distinguishing it from standard processing for that PGA.",
+        "type": "Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_PILOT_005",
+        "description": "Verify that a submission for a PGA with an active pilot is processed normally (non-pilot) if the pilot identifier/flag is *not* included.",
+        "preconditions": "1. The user is authorized to submit electronic trade data. 2. An active pilot program exists for a specific PGA. 3. The user creates a submission involving data for this specific PGA.",
+        "expected_result": "The system accepts the submission successfully. The status messages and processing flow follow the standard, non-pilot procedures for that PGA, without any indication of pilot program involvement.",
+        "type": "Functional (Negative Path for Pilot, Positive Path for Standard)",
+        "priority": "High"
+      },
+      {
+        "test_id": "TC_PGA_PILOT_006",
+        "description": "Verify that a single submission containing data for multiple PGAs, one participating in a pilot and one not, is processed correctly for both.",
+        "preconditions": "1. The user is authorized to submit electronic trade data. 2. The user is participating in an active PGA pilot program for PGA-A. 3. The submission involves data for both PGA-A and PGA-B. 4. PGA-B either does not have an active pilot, or the user is not participating/flagging it for a pilot. 5. The user knows the pilot identifier for PGA-A.",
+        "expected_result": "The system accepts the submission. Status updates should show that the PGA-A portion is being processed according to the pilot rules (e.g., pilot-specific statuses), while the PGA-B portion is being processed according to standard, non-pilot rules for PGA-B. Both processes occur correctly within the context of the single submission.",
+        "type": "Functional, Integration",
+        "priority": "Medium"
+      }
+    ]
+  },
+  {
+    "user_story": {
+      "user_type": "As the Border Interagency Executive Council (BIEC)",
+      "action": "support and monitor the PGA ACE/ITDS pilots",
+      "benefit": "integrated and systemic cross-agency coordination in processing imports is achieved for the single window."
+    },
+    "acceptance_criteria": [
+      {
+        "given": "Okay, here are detailed acceptance criteria based on the provided user story and requirements context, focusing on how the BIEC would monitor and support the pilots through an information system or reporting mechanism.",
+        "when": "**Acceptance Criteria:**",
+        "then": "Given the BIEC user has appropriate permissions and is accessing the designated PGA Pilot Status reporting interface/dashboard"
+      },
+      {
+        "given": "the BIEC user is viewing the list of PGA Pilots",
+        "when": "the user selects a specific pilot from the list",
+        "then": "the system displays detailed information for that pilot, including its objectives, scope (e.g., commodities, processes involved), participating PGAs, key milestones, planned start/end dates, and current progress summary."
+      },
+      {
+        "given": "a specific PGA pilot has encountered a significant issue or risk impacting cross-agency coordination or timelines",
+        "when": "the BIEC user views the details or status summary for that pilot",
+        "then": "the issue/risk is clearly flagged or described, along with any proposed mitigation steps or decisions required from BIEC."
+      },
+      {
+        "given": "a PGA pilot has reached completion",
+        "when": "the BIEC user views the details for that completed pilot",
+        "then": "a summary of the pilot's outcomes, key findings, lessons learned regarding integrated processing, and recommendations for broader implementation (if applicable) is available."
+      },
+      {
+        "given": "the BIEC user needs a high-level view of the overall pilot program",
+        "when": "the user accesses the main PGA Pilot Status dashboard or summary report",
+        "then": "the system presents a consolidated view showing the number of pilots by status (Planned, Active, Completed), highlights any pilots facing critical issues needing BIEC attention, and shows overall progress towards testing PGA functionality for the single window."
+      },
+      {
+        "given": "the status or key information (e.g., milestone completion, new issue identified) of a PGA pilot is updated by the relevant team (e.g., CBP, specific PGA)",
+        "when": "the BIEC user accesses the PGA Pilot Status information after the update",
+        "then": "the interface/dashboard accurately reflects the latest updated status and information for that pilot in a timely manner."
+      },
+      {
+        "given": "the BIEC user wants to understand which PGAs are involved across different pilots",
+        "when": "the user applies a filter or uses a search function based on a specific Partner Government Agency (PGA)",
+        "then": "the system displays only the pilots where that selected PGA is a participant."
+      }
+    ],
+    "test_cases": [
+      {
+        "test_id": "BIEC_MPP_001",
+        "description": "Verify authorized BIEC user can access the PGA Pilot Status dashboard/interface.",
+        "expected_result": "The user successfully logs in and the PGA Pilot Status interface/dashboard loads, displaying the initial view (likely the summary/list of pilots).",
+        "type": "Functional / Security",
+        "priority": "High"
+      },
+      {
+        "test_id": "BIEC_MPP_002",
+        "description": "Verify selecting a specific pilot displays its detailed information.",
+        "expected_result": "The system displays a detailed view for the selected pilot, showing its objectives, scope (e.g., commodities, processes), participating PGAs, key milestones, planned start/end dates, and current progress summary. All displayed information is accurate for the selected pilot.",
+        "type": "Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "BIEC_MPP_003",
+        "description": "Verify issues/risks are clearly flagged for a pilot experiencing problems.",
+        "expected_result": "The issue/risk is clearly indicated (e.g., flagged with an icon, listed in a specific section) and its description, along with any proposed mitigation steps or decisions required from BIEC, is visible and accurate.",
+        "type": "Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "BIEC_MPP_004",
+        "description": "Verify completed pilot details display outcomes, findings, lessons learned, and recommendations.",
+        "expected_result": "A summary of the pilot's outcomes, key findings, lessons learned regarding integrated processing, and any recommendations for broader implementation is displayed accurately for the selected completed pilot.",
+        "type": "Functional",
+        "priority": "Medium"
+      },
+      {
+        "test_id": "BIEC_MPP_005",
+        "description": "Verify the main dashboard displays a consolidated summary view of the pilot program.",
+        "expected_result": "The dashboard displays a consolidated view including:",
+        "type": "Functional",
+        "priority": "High"
+      },
+      {
+        "test_id": "BIEC_MPP_006",
+        "description": "Verify the dashboard reflects updated pilot information in a timely manner.",
+        "expected_result": "The interface/dashboard accurately displays the latest updated status and information for the pilot, reflecting the changes made in the backend system. The update appears within an acceptable timeframe (define 'timely' if specific SLA exists, e.g., within 5 minutes).",
+        "type": "Functional / Data Validation",
+        "priority": "High"
+      },
+      {
+        "test_id": "BIEC_MPP_007",
+        "description": "Verify filtering pilots by a specific participating Partner Government Agency (PGA).",
+        "expected_result": "The list of displayed pilots updates to show only those pilots where the selected PGA (\"FDA\" in the example) is a participant. Pilots not involving the selected PGA are hidden.",
+        "type": "Functional",
+        "priority": "Medium"
+      },
+      {
+        "test_id": "BIEC_MPP_008",
+        "description": "Verify unauthorized user cannot access the PGA Pilot Status dashboard/interface.",
+        "expected_result": "The user is prevented from accessing the PGA Pilot Status interface. An appropriate \"Access Denied,\" \"Unauthorized,\" or redirection message is displayed.",
+        "type": "Security",
+        "priority": "High"
+      }
+    ]
+  }
+]

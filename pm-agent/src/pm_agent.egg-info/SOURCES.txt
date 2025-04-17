@@ -1,0 +1,6 @@
+README.md
+setup.py
+src/pm_agent.egg-info/PKG-INFO
+src/pm_agent.egg-info/SOURCES.txt
+src/pm_agent.egg-info/dependency_links.txt
+src/pm_agent.egg-info/top_level.txt

@@ -1,0 +1,5 @@
+"1- Add to PEDIMENTO SUMMARY (excel version) and STATIC BOM (pdf version) reports  the RFC, Company Name and IMMEX number (as we did for allocated import and export)
+
+2- Apply the translations for the screens PEDIMENTO AUDIT, WORK WITH INVOICES, MAINTAIN STATIC BOM for all labels, buttons, etc
+3- Translate the STATIC BOM REPORT to spanish and ensure the description of the product is the same  from ALTPRODUCTDESC (tmdmxitemmaster) which is the description in SPANISH."
+ 

@@ -1,0 +1,103 @@
+[
+  {
+    "timestamp": "2025-04-17T10:40:52.559141",
+    "agent": "PM_Agent",
+    "state": "idle",
+    "message": "Model initialized successfully",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-17T10:40:52.559141",
+    "agent": "BA_Agent",
+    "state": "idle",
+    "message": "Model initialized successfully",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-17T10:40:52.560620",
+    "agent": "QA_Agent",
+    "state": "idle",
+    "message": "Model initialized successfully",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-17T10:40:52.560620",
+    "agent": "Coordinator",
+    "state": "idle",
+    "message": "All agents initialized",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-17T10:40:54.634352",
+    "agent": "Coordinator",
+    "state": "working",
+    "message": "Workflow started",
+    "metadata": {
+      "content_length": 883
+    }
+  },
+  {
+    "timestamp": "2025-04-17T10:40:54.634352",
+    "agent": "PM_Agent",
+    "state": "working",
+    "message": "Processing story extraction request",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-17T10:40:54.637353",
+    "agent": "PM_Agent",
+    "state": "working",
+    "message": "Processing chunk 1/1",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-17T10:41:17.922945",
+    "agent": "PM_Agent",
+    "state": "completed",
+    "message": "User story extraction successful",
+    "metadata": {
+      "story_count": 1
+    }
+  },
+  {
+    "timestamp": "2025-04-17T10:41:17.927940",
+    "agent": "BA_Agent",
+    "state": "working",
+    "message": "Processing acceptance criteria request",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-17T10:41:32.421489",
+    "agent": "BA_Agent",
+    "state": "completed",
+    "message": "Acceptance criteria generation successful",
+    "metadata": {
+      "criteria_count": 1
+    }
+  },
+  {
+    "timestamp": "2025-04-17T10:41:32.422489",
+    "agent": "QA_Agent",
+    "state": "working",
+    "message": "Processing test case generation request",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-17T10:41:58.940584",
+    "agent": "QA_Agent",
+    "state": "completed",
+    "message": "Test case generation successful",
+    "metadata": {
+      "test_case_count": 1
+    }
+  },
+  {
+    "timestamp": "2025-04-17T10:41:58.941587",
+    "agent": "Coordinator",
+    "state": "completed",
+    "message": "Workflow finished",
+    "metadata": {
+      "duration_seconds": 64.307235
+    }
+  }
+]

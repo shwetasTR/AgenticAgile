@@ -1,0 +1,582 @@
+[
+  {
+    "id": "TC001",
+    "work_item_type": "Test Case",
+    "title": "Verify successful submission of entry summary with HTS 9903.01.25 and valid in-transit/entry dates for 10% duty.",
+    "priority": "1",
+    "state": "Design",
+    "tags": "P1",
+    "steps": [
+      {
+        "Step Number": "1",
+        "Step Action": "Log in as Customs Filer.",
+        "Step Expected": "User is logged in successfully."
+      },
+      {
+        "Step Number": "2",
+        "Step Action": "Navigate to the Entry Summary creation page.",
+        "Step Expected": "Entry Summary form is displayed."
+      },
+      {
+        "Step Number": "3",
+        "Step Action": "Enter HTS code 9903.01.25 for a line item.",
+        "Step Expected": "HTS code is accepted."
+      },
+      {
+        "Step Number": "4",
+        "Step Action": "Enter an in-transit/loading date within the valid range (e.g., April 7, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "5",
+        "Step Action": "Enter an entry date before the deadline (e.g., May 1, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "6",
+        "Step Action": "Indicate the applicability of the in-transit criteria for the 10% additional duty associated with HTS 9903.01.25.",
+        "Step Expected": "Indication is accepted by the system."
+      },
+      {
+        "Step Number": "7",
+        "Step Action": "Complete all other mandatory fields for the entry summary.",
+        "Step Expected": "Mandatory fields are filled."
+      },
+      {
+        "Step Number": "8",
+        "Step Action": "Submit the entry summary.",
+        "Step Expected": "The entry summary is submitted successfully and accepted by the system. The 10% additional duty is calculated and applied for HTS 9903.01.25."
+      }
+    ],
+    "references": {
+      "user_story_id": "US-001",
+      "related_acceptance_criteria": [
+        "AC-001-01",
+        "AC-001-02",
+        "AC-001-03"
+      ]
+    }
+  },
+  {
+    "id": "TC002",
+    "work_item_type": "Test Case",
+    "title": "Verify 10% duty is NOT applied for HTS 9903.01.25 when in-transit date is before the valid range (April 5-9, 2025).",
+    "priority": "1",
+    "state": "Design",
+    "tags": "P1",
+    "steps": [
+      {
+        "Step Number": "1",
+        "Step Action": "Log in as Customs Filer.",
+        "Step Expected": "User is logged in successfully."
+      },
+      {
+        "Step Number": "2",
+        "Step Action": "Navigate to the Entry Summary creation page.",
+        "Step Expected": "Entry Summary form is displayed."
+      },
+      {
+        "Step Number": "3",
+        "Step Action": "Enter HTS code 9903.01.25 for a line item.",
+        "Step Expected": "HTS code is accepted."
+      },
+      {
+        "Step Number": "4",
+        "Step Action": "Enter an in-transit/loading date *before* the valid range (e.g., April 4, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "5",
+        "Step Action": "Enter an entry date before the deadline (e.g., May 1, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "6",
+        "Step Action": "Indicate the applicability of the in-transit criteria for the 10% additional duty associated with HTS 9903.01.25.",
+        "Step Expected": "Indication is accepted by the system for input."
+      },
+      {
+        "Step Number": "7",
+        "Step Action": "Complete all other mandatory fields for the entry summary.",
+        "Step Expected": "Mandatory fields are filled."
+      },
+      {
+        "Step Number": "8",
+        "Step Action": "Submit the entry summary.",
+        "Step Expected": "The entry summary is accepted, but the system does *not* apply the 10% additional duty for HTS 9903.01.25 due to failed in-transit criteria. A warning or notification may indicate the reason."
+      }
+    ],
+    "references": {
+      "user_story_id": "US-001",
+      "related_acceptance_criteria": [
+        "AC-001-01",
+        "AC-001-02",
+        "AC-001-03"
+      ]
+    }
+  },
+  {
+    "id": "TC003",
+    "work_item_type": "Test Case",
+    "title": "Verify 10% duty is NOT applied for HTS 9903.01.25 when in-transit date is after the valid range (April 5-9, 2025).",
+    "priority": "1",
+    "state": "Design",
+    "tags": "P1",
+    "steps": [
+      {
+        "Step Number": "1",
+        "Step Action": "Log in as Customs Filer.",
+        "Step Expected": "User is logged in successfully."
+      },
+      {
+        "Step Number": "2",
+        "Step Action": "Navigate to the Entry Summary creation page.",
+        "Step Expected": "Entry Summary form is displayed."
+      },
+      {
+        "Step Number": "3",
+        "Step Action": "Enter HTS code 9903.01.25 for a line item.",
+        "Step Expected": "HTS code is accepted."
+      },
+      {
+        "Step Number": "4",
+        "Step Action": "Enter an in-transit/loading date *after* the valid range (e.g., April 10, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "5",
+        "Step Action": "Enter an entry date before the deadline (e.g., May 1, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "6",
+        "Step Action": "Indicate the applicability of the in-transit criteria for the 10% additional duty associated with HTS 9903.01.25.",
+        "Step Expected": "Indication is accepted by the system for input."
+      },
+      {
+        "Step Number": "7",
+        "Step Action": "Complete all other mandatory fields for the entry summary.",
+        "Step Expected": "Mandatory fields are filled."
+      },
+      {
+        "Step Number": "8",
+        "Step Action": "Submit the entry summary.",
+        "Step Expected": "The entry summary is accepted, but the system does *not* apply the 10% additional duty for HTS 9903.01.25 due to failed in-transit criteria. A warning or notification may indicate the reason."
+      }
+    ],
+    "references": {
+      "user_story_id": "US-001",
+      "related_acceptance_criteria": [
+        "AC-001-01",
+        "AC-001-02",
+        "AC-001-03"
+      ]
+    }
+  },
+  {
+    "id": "TC004",
+    "work_item_type": "Test Case",
+    "title": "Verify 10% duty is NOT applied for HTS 9903.01.25 when entry date is ON the deadline (May 27, 2025).",
+    "priority": "1",
+    "state": "Design",
+    "tags": "P1",
+    "steps": [
+      {
+        "Step Number": "1",
+        "Step Action": "Log in as Customs Filer.",
+        "Step Expected": "User is logged in successfully."
+      },
+      {
+        "Step Number": "2",
+        "Step Action": "Navigate to the Entry Summary creation page.",
+        "Step Expected": "Entry Summary form is displayed."
+      },
+      {
+        "Step Number": "3",
+        "Step Action": "Enter HTS code 9903.01.25 for a line item.",
+        "Step Expected": "HTS code is accepted."
+      },
+      {
+        "Step Number": "4",
+        "Step Action": "Enter an in-transit/loading date within the valid range (e.g., April 7, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "5",
+        "Step Action": "Enter an entry date *on* the deadline (May 27, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "6",
+        "Step Action": "Indicate the applicability of the in-transit criteria for the 10% additional duty associated with HTS 9903.01.25.",
+        "Step Expected": "Indication is accepted by the system for input."
+      },
+      {
+        "Step Number": "7",
+        "Step Action": "Complete all other mandatory fields for the entry summary.",
+        "Step Expected": "Mandatory fields are filled."
+      },
+      {
+        "Step Number": "8",
+        "Step Action": "Submit the entry summary.",
+        "Step Expected": "The entry summary is accepted, but the system does *not* apply the 10% additional duty for HTS 9903.01.25 due to the entry date not being before the deadline. A warning or notification may indicate the reason."
+      }
+    ],
+    "references": {
+      "user_story_id": "US-001",
+      "related_acceptance_criteria": [
+        "AC-001-01",
+        "AC-001-02",
+        "AC-001-03"
+      ]
+    }
+  },
+  {
+    "id": "TC005",
+    "work_item_type": "Test Case",
+    "title": "Verify 10% duty is NOT applied for HTS 9903.01.25 when entry date is AFTER the deadline (Before May 27, 2025).",
+    "priority": "1",
+    "state": "Design",
+    "tags": "P1",
+    "steps": [
+      {
+        "Step Number": "1",
+        "Step Action": "Log in as Customs Filer.",
+        "Step Expected": "User is logged in successfully."
+      },
+      {
+        "Step Number": "2",
+        "Step Action": "Navigate to the Entry Summary creation page.",
+        "Step Expected": "Entry Summary form is displayed."
+      },
+      {
+        "Step Number": "3",
+        "Step Action": "Enter HTS code 9903.01.25 for a line item.",
+        "Step Expected": "HTS code is accepted."
+      },
+      {
+        "Step Number": "4",
+        "Step Action": "Enter an in-transit/loading date within the valid range (e.g., April 7, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "5",
+        "Step Action": "Enter an entry date *after* the deadline (e.g., May 28, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "6",
+        "Step Action": "Indicate the applicability of the in-transit criteria for the 10% additional duty associated with HTS 9903.01.25.",
+        "Step Expected": "Indication is accepted by the system for input."
+      },
+      {
+        "Step Number": "7",
+        "Step Action": "Complete all other mandatory fields for the entry summary.",
+        "Step Expected": "Mandatory fields are filled."
+      },
+      {
+        "Step Number": "8",
+        "Step Action": "Submit the entry summary.",
+        "Step Expected": "The entry summary is accepted, but the system does *not* apply the 10% additional duty for HTS 9903.01.25 due to the entry date being past the deadline. A warning or notification may indicate the reason."
+      }
+    ],
+    "references": {
+      "user_story_id": "US-001",
+      "related_acceptance_criteria": [
+        "AC-001-01",
+        "AC-001-02",
+        "AC-001-03"
+      ]
+    }
+  },
+  {
+    "id": "TC006",
+    "work_item_type": "Test Case",
+    "title": "Verify successful submission with HTS 9903.01.25 using the earliest valid in-transit date (April 5, 2025).",
+    "priority": "2",
+    "state": "Design",
+    "tags": "P2",
+    "steps": [
+      {
+        "Step Number": "1",
+        "Step Action": "Log in as Customs Filer.",
+        "Step Expected": "User is logged in successfully."
+      },
+      {
+        "Step Number": "2",
+        "Step Action": "Navigate to the Entry Summary creation page.",
+        "Step Expected": "Entry Summary form is displayed."
+      },
+      {
+        "Step Number": "3",
+        "Step Action": "Enter HTS code 9903.01.25 for a line item.",
+        "Step Expected": "HTS code is accepted."
+      },
+      {
+        "Step Number": "4",
+        "Step Action": "Enter the earliest valid in-transit/loading date (April 5, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "5",
+        "Step Action": "Enter an entry date before the deadline (e.g., May 1, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "6",
+        "Step Action": "Indicate the applicability of the in-transit criteria for the 10% additional duty associated with HTS 9903.01.25.",
+        "Step Expected": "Indication is accepted by the system."
+      },
+      {
+        "Step Number": "7",
+        "Step Action": "Complete all other mandatory fields for the entry summary.",
+        "Step Expected": "Mandatory fields are filled."
+      },
+      {
+        "Step Number": "8",
+        "Step Action": "Submit the entry summary.",
+        "Step Expected": "The entry summary is submitted successfully and accepted by the system. The 10% additional duty is calculated and applied for HTS 9903.01.25."
+      }
+    ],
+    "references": {
+      "user_story_id": "US-001",
+      "related_acceptance_criteria": [
+        "AC-001-01",
+        "AC-001-02",
+        "AC-001-03"
+      ]
+    }
+  },
+  {
+    "id": "TC007",
+    "work_item_type": "Test Case",
+    "title": "Verify successful submission with HTS 9903.01.25 using the latest valid in-transit date (April 9, 2025).",
+    "priority": "2",
+    "state": "Design",
+    "tags": "P2",
+    "steps": [
+      {
+        "Step Number": "1",
+        "Step Action": "Log in as Customs Filer.",
+        "Step Expected": "User is logged in successfully."
+      },
+      {
+        "Step Number": "2",
+        "Step Action": "Navigate to the Entry Summary creation page.",
+        "Step Expected": "Entry Summary form is displayed."
+      },
+      {
+        "Step Number": "3",
+        "Step Action": "Enter HTS code 9903.01.25 for a line item.",
+        "Step Expected": "HTS code is accepted."
+      },
+      {
+        "Step Number": "4",
+        "Step Action": "Enter the latest valid in-transit/loading date (April 9, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "5",
+        "Step Action": "Enter an entry date before the deadline (e.g., May 1, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "6",
+        "Step Action": "Indicate the applicability of the in-transit criteria for the 10% additional duty associated with HTS 9903.01.25.",
+        "Step Expected": "Indication is accepted by the system."
+      },
+      {
+        "Step Number": "7",
+        "Step Action": "Complete all other mandatory fields for the entry summary.",
+        "Step Expected": "Mandatory fields are filled."
+      },
+      {
+        "Step Number": "8",
+        "Step Action": "Submit the entry summary.",
+        "Step Expected": "The entry summary is submitted successfully and accepted by the system. The 10% additional duty is calculated and applied for HTS 9903.01.25."
+      }
+    ],
+    "references": {
+      "user_story_id": "US-001",
+      "related_acceptance_criteria": [
+        "AC-001-01",
+        "AC-001-02",
+        "AC-001-03"
+      ]
+    }
+  },
+  {
+    "id": "TC008",
+    "work_item_type": "Test Case",
+    "title": "Verify successful submission with HTS 9903.01.25 using the latest valid entry date (May 26, 2025).",
+    "priority": "2",
+    "state": "Design",
+    "tags": "P2",
+    "steps": [
+      {
+        "Step Number": "1",
+        "Step Action": "Log in as Customs Filer.",
+        "Step Expected": "User is logged in successfully."
+      },
+      {
+        "Step Number": "2",
+        "Step Action": "Navigate to the Entry Summary creation page.",
+        "Step Expected": "Entry Summary form is displayed."
+      },
+      {
+        "Step Number": "3",
+        "Step Action": "Enter HTS code 9903.01.25 for a line item.",
+        "Step Expected": "HTS code is accepted."
+      },
+      {
+        "Step Number": "4",
+        "Step Action": "Enter an in-transit/loading date within the valid range (e.g., April 7, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "5",
+        "Step Action": "Enter the latest valid entry date (May 26, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "6",
+        "Step Action": "Indicate the applicability of the in-transit criteria for the 10% additional duty associated with HTS 9903.01.25.",
+        "Step Expected": "Indication is accepted by the system."
+      },
+      {
+        "Step Number": "7",
+        "Step Action": "Complete all other mandatory fields for the entry summary.",
+        "Step Expected": "Mandatory fields are filled."
+      },
+      {
+        "Step Number": "8",
+        "Step Action": "Submit the entry summary.",
+        "Step Expected": "The entry summary is submitted successfully and accepted by the system. The 10% additional duty is calculated and applied for HTS 9903.01.25."
+      }
+    ],
+    "references": {
+      "user_story_id": "US-001",
+      "related_acceptance_criteria": [
+        "AC-001-01",
+        "AC-001-02",
+        "AC-001-03"
+      ]
+    }
+  },
+  {
+    "id": "TC009",
+    "work_item_type": "Test Case",
+    "title": "Verify 10% duty for HTS 9903.01.25 cannot be applied when using a different HTS code.",
+    "priority": "2",
+    "state": "Design",
+    "tags": "P2",
+    "steps": [
+      {
+        "Step Number": "1",
+        "Step Action": "Log in as Customs Filer.",
+        "Step Expected": "User is logged in successfully."
+      },
+      {
+        "Step Number": "2",
+        "Step Action": "Navigate to the Entry Summary creation page.",
+        "Step Expected": "Entry Summary form is displayed."
+      },
+      {
+        "Step Number": "3",
+        "Step Action": "Enter a different HTS code (e.g., 9903.88.03) for a line item.",
+        "Step Expected": "HTS code is accepted."
+      },
+      {
+        "Step Number": "4",
+        "Step Action": "Enter an in-transit/loading date within the HTS 9903.01.25 valid range (e.g., April 7, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "5",
+        "Step Action": "Enter an entry date before the HTS 9903.01.25 deadline (e.g., May 1, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "6",
+        "Step Action": "Attempt to indicate the applicability of the in-transit criteria for the 10% additional duty specifically associated with HTS 9903.01.25.",
+        "Step Expected": "The system prevents associating the HTS 9903.01.25 specific duty/criteria or flags it as inapplicable for the entered HTS code."
+      },
+      {
+        "Step Number": "7",
+        "Step Action": "Complete all other mandatory fields for the entry summary.",
+        "Step Expected": "Mandatory fields are filled."
+      },
+      {
+        "Step Number": "8",
+        "Step Action": "Submit the entry summary.",
+        "Step Expected": "The entry summary is accepted, but the system does *not* apply the 10% additional duty related to HTS 9903.01.25."
+      }
+    ],
+    "references": {
+      "user_story_id": "US-001",
+      "related_acceptance_criteria": [
+        "AC-001-01",
+        "AC-001-02",
+        "AC-001-03"
+      ]
+    }
+  },
+  {
+    "id": "TC010",
+    "work_item_type": "Test Case",
+    "title": "Verify 10% duty is NOT applied for HTS 9903.01.25 when applicability indicator is not selected, even with valid dates.",
+    "priority": "2",
+    "state": "Design",
+    "tags": "P2",
+    "steps": [
+      {
+        "Step Number": "1",
+        "Step Action": "Log in as Customs Filer.",
+        "Step Expected": "User is logged in successfully."
+      },
+      {
+        "Step Number": "2",
+        "Step Action": "Navigate to the Entry Summary creation page.",
+        "Step Expected": "Entry Summary form is displayed."
+      },
+      {
+        "Step Number": "3",
+        "Step Action": "Enter HTS code 9903.01.25 for a line item.",
+        "Step Expected": "HTS code is accepted."
+      },
+      {
+        "Step Number": "4",
+        "Step Action": "Enter an in-transit/loading date within the valid range (e.g., April 7, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "5",
+        "Step Action": "Enter an entry date before the deadline (e.g., May 1, 2025).",
+        "Step Expected": "Date is accepted."
+      },
+      {
+        "Step Number": "6",
+        "Step Action": "*Do not* indicate the applicability of the in-transit criteria for the 10% additional duty associated with HTS 9903.01.25.",
+        "Step Expected": "No indication is selected/provided."
+      },
+      {
+        "Step Number": "7",
+        "Step Action": "Complete all other mandatory fields for the entry summary.",
+        "Step Expected": "Mandatory fields are filled."
+      },
+      {
+        "Step Number": "8",
+        "Step Action": "Submit the entry summary.",
+        "Step Expected": "The entry summary is submitted successfully and accepted by the system, but the 10% additional duty is *not* applied for HTS 9903.01.25."
+      }
+    ],
+    "references": {
+      "user_story_id": "US-001",
+      "related_acceptance_criteria": [
+        "AC-001-01",
+        "AC-001-02",
+        "AC-001-03"
+      ]
+    }
+  }
+]

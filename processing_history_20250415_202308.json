@@ -1,0 +1,85 @@
+[
+  {
+    "timestamp": "2025-04-15T20:23:07.267289",
+    "agent": "PM_Agent",
+    "state": "idle",
+    "message": "Model initialized successfully",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-15T20:23:07.268287",
+    "agent": "BA_Agent",
+    "state": "idle",
+    "message": "Model initialized successfully",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-15T20:23:07.269289",
+    "agent": "QA_Agent",
+    "state": "idle",
+    "message": "Model initialized successfully",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-15T20:23:07.269289",
+    "agent": "Coordinator",
+    "state": "idle",
+    "message": "All agents initialized",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-15T20:23:08.619436",
+    "agent": "Coordinator",
+    "state": "working",
+    "message": "Workflow started",
+    "metadata": {
+      "content_length": 27050
+    }
+  },
+  {
+    "timestamp": "2025-04-15T20:23:08.619436",
+    "agent": "PM_Agent",
+    "state": "working",
+    "message": "Processing story extraction request",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-15T20:23:08.623983",
+    "agent": "PM_Agent",
+    "state": "working",
+    "message": "Processing chunk 1/1",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-15T20:23:49.247654",
+    "agent": "PM_Agent",
+    "state": "completed",
+    "message": "User story extraction successful",
+    "metadata": {
+      "story_count": 10
+    }
+  },
+  {
+    "timestamp": "2025-04-15T20:23:49.262881",
+    "agent": "BA_Agent",
+    "state": "working",
+    "message": "Processing acceptance criteria request",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-04-15T20:26:35.120690",
+    "agent": "BA_Agent",
+    "state": "completed",
+    "message": "Acceptance criteria generation successful",
+    "metadata": {
+      "criteria_count": 10
+    }
+  },
+  {
+    "timestamp": "2025-04-15T20:26:35.122712",
+    "agent": "QA_Agent",
+    "state": "working",
+    "message": "Processing test case generation request",
+    "metadata": {}
+  }
+]
