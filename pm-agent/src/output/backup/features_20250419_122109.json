@@ -1,0 +1,23 @@
+{
+  "title": "AES Shipment Filing Core Functionality",
+  "description": "Enables users to create, modify, cancel, and transmit export shipment data electronically to the U.S. Customs and Border Protection (CBP) Automated Export System (AES) in compliance with regulations. This includes handling initial transmissions and subsequent updates or corrections.",
+  "user_roles": [
+    "U.S. Principal Parties in Interest (Exporters)",
+    "Forwarding Agents / Authorized Agents",
+    "Vessel Carriers/NVOCCs acting as agents",
+    "Software Vendors/Service Centers"
+  ],
+  "functionality": [
+    "Create new export shipment filings with all required data elements.",
+    "Modify previously accepted shipments (e.g., change port of export) using 'Replace' or 'Change' actions.",
+    "Cancel previously accepted shipments.",
+    "Transmit shipment data to CBP AES.",
+    "Populate and manage standard shipment header information (e.g., reference numbers, dates, parties involved)."
+  ],
+  "benefits": [
+    "Ensures compliance with mandatory electronic export reporting requirements.",
+    "Streamlines the export declaration process.",
+    "Provides a mechanism for correcting errors in previously filed data.",
+    "Facilitates timely communication with CBP."
+  ]
+}

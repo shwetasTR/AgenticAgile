@@ -1,0 +1,22 @@
+{
+  "title": "Create and Submit Export Shipments (EEI Filing)",
+  "description": "Allows users to create new export shipment declarations (Electronic Export Information - EEI) with all mandatory commodity data and transmit them electronically to the CBP AES system.",
+  "user_roles": [
+    "Exporters (USPPI)",
+    "Authorized Agents (Forwarders)",
+    "Carriers acting as Agents"
+  ],
+  "functionality": [
+    "Input shipment header information (parties, transport details, dates).",
+    "Input commodity line item details (description, tariff number, quantities, values, units of measure, ECCN, EIC, origin).",
+    "Support shipments with single or multiple commodity lines.",
+    "Handle commodities requiring two units of measure.",
+    "Transmit shipment data to AES in the specified format (e.g., ABI).",
+    "Generate unique Shipment Reference Numbers."
+  ],
+  "benefits": [
+    "Ensures compliance with US export reporting regulations.",
+    "Provides a standardized electronic method for submitting EEI.",
+    "Facilitates the core process of declaring exports."
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "error": "Failed to parse JSON: Expecting ',' delimiter: line 213 column 10 (char 8301)",
+  "response_preview": "```json\n{\n  \"feature_title\": \"AES Electronic Export Information (EEI) Filing & Management\",\n  \"test_cases\": [\n    {\n      \"id\": \"TC-001\",\n      \"title\": \"Verify successful creation and saving of a draft EEI with mandatory fields\",\n      \"priority\": \"High\",\n      \"related_user_story\": \"US-001\",\n      \"test_steps\": [\n        {\n          \"step_number\": 1,\n          \"action\": \"Navigate to the EEI creation screen.\",\n          \"expected_result\": \"EEI creation form is displayed.\"\n        },\n        {\n "
+}

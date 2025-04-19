@@ -1,0 +1,119 @@
+{
+  "feature_title": "AES Shipment Filing Core Functionality",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "U.S. Principal Parties in Interest (Exporters)",
+      "action": "I want to create a new AES shipment filing by entering all required export information electronically",
+      "benefit": "so that I can comply with U.S. export regulations and declare my shipment to CBP.",
+      "priority": "High",
+      "related_functionality": [
+        "Create new export shipment filings with all required data elements.",
+        "Populate and manage standard shipment header information (e.g., reference numbers, dates, parties involved)."
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Forwarding Agents / Authorized Agents",
+      "action": "I want to create a new AES shipment filing on behalf of my client (the exporter)",
+      "benefit": "so that I can fulfill my service obligations and ensure their shipment meets compliance requirements.",
+      "priority": "High",
+      "related_functionality": [
+        "Create new export shipment filings with all required data elements.",
+        "Populate and manage standard shipment header information (e.g., reference numbers, dates, parties involved)."
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "U.S. Principal Parties in Interest (Exporters)",
+      "action": "I want to transmit the completed AES shipment filing data directly to CBP AES",
+      "benefit": "so that I can receive an Internal Transaction Number (ITN) confirming acceptance and proceed with the export.",
+      "priority": "High",
+      "related_functionality": [
+        "Transmit shipment data to CBP AES."
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "Forwarding Agents / Authorized Agents",
+      "action": "I want to transmit the completed AES shipment filing data to CBP AES for my client",
+      "benefit": "so that their export declaration is submitted promptly and they receive the necessary ITN.",
+      "priority": "High",
+      "related_functionality": [
+        "Transmit shipment data to CBP AES."
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "U.S. Principal Parties in Interest (Exporters)",
+      "action": "I want to modify a previously accepted AES filing using 'Replace' or 'Change' actions",
+      "benefit": "so that I can correct errors or update shipment details (like port of export or value) as required by regulations.",
+      "priority": "High",
+      "related_functionality": [
+        "Modify previously accepted shipments (e.g., change port of export) using 'Replace' or 'Change' actions.",
+        "Transmit shipment data to CBP AES."
+      ]
+    },
+    {
+      "id": "US-006",
+      "user_role": "Forwarding Agents / Authorized Agents",
+      "action": "I want to modify a previously accepted AES filing for my client",
+      "benefit": "so that I can ensure the accuracy of the filed information and maintain compliance on their behalf.",
+      "priority": "High",
+      "related_functionality": [
+        "Modify previously accepted shipments (e.g., change port of export) using 'Replace' or 'Change' actions.",
+        "Transmit shipment data to CBP AES."
+      ]
+    },
+    {
+      "id": "US-007",
+      "user_role": "U.S. Principal Parties in Interest (Exporters)",
+      "action": "I want to cancel a previously accepted AES filing",
+      "benefit": "so that I can inform CBP that the planned export is no longer occurring and avoid potential compliance issues.",
+      "priority": "High",
+      "related_functionality": [
+        "Cancel previously accepted shipments.",
+        "Transmit shipment data to CBP AES."
+      ]
+    },
+    {
+      "id": "US-008",
+      "user_role": "Forwarding Agents / Authorized Agents",
+      "action": "I want to cancel a previously accepted AES filing for my client",
+      "benefit": "so that CBP records accurately reflect the cancellation of the export shipment.",
+      "priority": "High",
+      "related_functionality": [
+        "Cancel previously accepted shipments.",
+        "Transmit shipment data to CBP AES."
+      ]
+    },
+    {
+      "id": "US-009",
+      "user_role": "Vessel Carriers/NVOCCs acting as agents",
+      "action": "I want to create, modify, cancel, and transmit AES filings when acting as an authorized agent",
+      "benefit": "so that I can fulfill the necessary filing requirements as per regulations when I am responsible for the declaration.",
+      "priority": "Medium",
+      "related_functionality": [
+        "Create new export shipment filings with all required data elements.",
+        "Modify previously accepted shipments (e.g., change port of export) using 'Replace' or 'Change' actions.",
+        "Cancel previously accepted shipments.",
+        "Transmit shipment data to CBP AES.",
+        "Populate and manage standard shipment header information (e.g., reference numbers, dates, parties involved)."
+      ]
+    },
+    {
+      "id": "US-010",
+      "user_role": "Software Vendors/Service Centers",
+      "action": "I want to provide functionality for users to create, modify, cancel, and transmit AES filings",
+      "benefit": "so that my customers (Exporters, Agents, Carriers) can use my software/service to meet their AES compliance needs efficiently.",
+      "priority": "High",
+      "related_functionality": [
+        "Create new export shipment filings with all required data elements.",
+        "Modify previously accepted shipments (e.g., change port of export) using 'Replace' or 'Change' actions.",
+        "Cancel previously accepted shipments.",
+        "Transmit shipment data to CBP AES.",
+        "Populate and manage standard shipment header information (e.g., reference numbers, dates, parties involved)."
+      ]
+    }
+  ]
+}

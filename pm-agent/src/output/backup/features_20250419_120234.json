@@ -1,0 +1,24 @@
+{
+  "title": "AES Shipment Filing & Management",
+  "description": "Core capability to create, view, modify, and cancel Automated Export System (AES) export shipments electronically. This includes managing both header-level shipment information and detailed commodity line item data.",
+  "user_roles": [
+    "U.S. Principal Party in Interest (USPPI)/Exporter",
+    "Authorized Agent (Forwarder)",
+    "Vessel Carrier/NVOCC"
+  ],
+  "functionality": [
+    "Create new export shipments with unique reference numbers.",
+    "Input and edit shipment header details (e.g., parties involved, transport information, dates, port of export).",
+    "Add, edit, and delete commodity line items within a shipment (including product description, Schedule B/HTS, quantities, units of measure, value, origin).",
+    "Support shipment modification actions (e.g., 'Replace' or 'Change' filing actions for accepted shipments).",
+    "Cancel previously accepted export shipments.",
+    "Input Forwarding Agent profile details.",
+    "Handle shipments with multiple commodity lines."
+  ],
+  "benefits": [
+    "Enables electronic filing of export information as required by U.S. regulations.",
+    "Streamlines the process of submitting export declarations to CBP.",
+    "Provides a centralized system for managing export filing records.",
+    "Facilitates compliance with AES reporting requirements."
+  ]
+}

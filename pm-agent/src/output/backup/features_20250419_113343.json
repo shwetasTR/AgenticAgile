@@ -1,0 +1,23 @@
+{
+  "title": "AES Shipment Filing Management",
+  "description": "Core capability to create, update, and cancel export shipment filings electronically to CBP AES. This includes handling basic shipment header information and managing the lifecycle of a filing.",
+  "user_roles": [
+    "Exporter (USPPI)",
+    "Forwarding Agent",
+    "Carrier/NVOCC",
+    "Software User"
+  ],
+  "functionality": [
+    "Create new export shipment filings with all mandatory data elements.",
+    "Modify previously accepted shipments (e.g., change port of export) using Replace/Change indicators.",
+    "Cancel previously accepted export shipments.",
+    "Input and manage shipment reference numbers.",
+    "Handle different party roles (USPPI, Forwarding Agent/Authorized Agent, Ultimate Consignee)."
+  ],
+  "benefits": [
+    "Ensures compliance with mandatory electronic export reporting regulations.",
+    "Streamlines the process of submitting export data to CBP.",
+    "Provides a mechanism to correct or withdraw filings as needed.",
+    "Reduces manual paperwork and potential for errors."
+  ]
+}

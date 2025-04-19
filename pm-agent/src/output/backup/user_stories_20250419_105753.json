@@ -1,0 +1,163 @@
+{
+  "feature_title": "AES Export Filing Certification Interface",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "U.S. Principal Party in Interest (Exporter)",
+      "action": "create and transmit a complete AES filing for a standard export shipment",
+      "benefit": "to comply with U.S. CBP regulations and obtain an ITN for my export",
+      "priority": "High",
+      "acceptance_criteria": [
+        "All mandatory AESTIR data fields can be entered.",
+        "The filing is successfully transmitted to AES via the interface.",
+        "An AES confirmation message (e.g., ITN or fatal error) is received and displayed."
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Forwarding Agent",
+      "action": "modify a previously accepted AES filing to change the port of export",
+      "benefit": "to update the shipment details in AES when logistical plans change, ensuring data accuracy",
+      "priority": "High",
+      "acceptance_criteria": [
+        "The system can retrieve an existing, accepted filing by its ITN.",
+        "The port of export field can be edited.",
+        "The modified filing is successfully transmitted to AES.",
+        "An AES confirmation of the update is received and displayed."
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "Forwarding Agent",
+      "action": "include my company's profile data (EIN, name, address) when submitting a filing on behalf of an exporter",
+      "benefit": "to correctly identify my role as the authorized agent in the AES filing",
+      "priority": "High",
+      "acceptance_criteria": [
+        "Forwarding agent profile data can be stored or entered.",
+        "The profile data is correctly included in the designated fields of the AES transmission.",
+        "The filing is accepted by AES with the forwarding agent data."
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "Exporter",
+      "action": "submit an AES filing for a shipment containing multiple commodity lines with different units of measure (e.g., kilograms, number)",
+      "benefit": "to accurately declare all goods in a consolidated shipment according to AESTIR specifications",
+      "priority": "High",
+      "acceptance_criteria": [
+        "The interface allows adding multiple commodity line items to a single filing.",
+        "Each commodity line allows specifying a Schedule B number, quantity, and unit of measure.",
+        "The filing containing multiple lines with varying UOMs is successfully accepted by AES."
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "User (any role performing filing)",
+      "action": "receive clear validation feedback on data entry errors before transmitting the filing to AES",
+      "benefit": "to reduce the likelihood of receiving fatal errors from AES and minimize correction time",
+      "priority": "High",
+      "acceptance_criteria": [
+        "The system performs local validation checks based on AESTIR rules (e.g., field formats, code validity).",
+        "Error messages clearly indicate the field and the nature of the error.",
+        "Transmission to AES is prevented if local validation errors exist."
+      ]
+    },
+    {
+      "id": "US-006",
+      "user_role": "User (any role performing filing)",
+      "action": "view and correct fatal errors returned by AES after a filing transmission attempt",
+      "benefit": "to efficiently resolve issues identified by CBP and successfully resubmit the filing",
+      "priority": "High",
+      "acceptance_criteria": [
+        "AES fatal error messages are received and clearly displayed, associated with the relevant filing.",
+        "The interface allows editing the filing data to correct the identified errors.",
+        "The corrected filing can be easily resubmitted to AES."
+      ]
+    },
+    {
+      "id": "US-007",
+      "user_role": "Approved Exporter/Forwarding Agent",
+      "action": "submit an AES filing using the Post-Departure (Option 4) filing timeline",
+      "benefit": "to comply with regulations when authorized for post-departure filing, streamlining export operations",
+      "priority": "Medium",
+      "acceptance_criteria": [
+        "The interface allows specifying the filing option as 'Option 4'.",
+        "All required data elements specific to Option 4 filings can be entered.",
+        "The Option 4 filing is successfully transmitted and accepted by AES."
+      ]
+    },
+    {
+      "id": "US-008",
+      "user_role": "Exporter/Forwarding Agent",
+      "action": "cancel a previously accepted AES filing for a shipment that is no longer exporting",
+      "benefit": "to ensure AES records accurately reflect actual exports and avoid compliance issues",
+      "priority": "High",
+      "acceptance_criteria": [
+        "The system allows retrieving an accepted filing by its ITN.",
+        "A cancellation request can be initiated for the filing.",
+        "The cancellation request is transmitted to AES.",
+        "An AES confirmation of the cancellation is received and displayed."
+      ]
+    },
+    {
+      "id": "US-009",
+      "user_role": "Exporter/Forwarding Agent",
+      "action": "specify the correct transport mode (Air, Truck, Vessel) for my export shipment",
+      "benefit": "to provide accurate logistical information required for AES filing and compliance",
+      "priority": "High",
+      "acceptance_criteria": [
+        "The interface provides options to select the mode of transport.",
+        "The selected mode is included in the AES transmission.",
+        "The filing is accepted with the specified transport mode."
+      ]
+    },
+    {
+      "id": "US-010",
+      "user_role": "Exporter/Forwarding Agent",
+      "action": "include required license information (e.g., BIS license number, DDTC license details) for controlled goods",
+      "benefit": "to comply with U.S. export control regulations for licensed shipments",
+      "priority": "High",
+      "acceptance_criteria": [
+        "The interface provides designated fields for entering export license type, number, and value.",
+        "License data is included in the commodity line information transmitted to AES.",
+        "The filing with license data is accepted by AES."
+      ]
+    },
+    {
+      "id": "US-011",
+      "user_role": "Exporter/Forwarding Agent",
+      "action": "file an AES declaration for a shipment moving from the U.S. to Puerto Rico",
+      "benefit": "to comply with specific filing requirements for trade between the US and Puerto Rico",
+      "priority": "Medium",
+      "acceptance_criteria": [
+        "The interface allows specifying Puerto Rico as the destination.",
+        "The system correctly formats and transmits the filing according to US-PR trade rules.",
+        "The filing is accepted by AES for the US-PR shipment."
+      ]
+    },
+    {
+      "id": "US-012",
+      "user_role": "Exporter/Forwarding Agent",
+      "action": "provide specific commodity details, such as VINs for used vehicles",
+      "benefit": "to comply with AESTIR requirements for reporting specific data elements for certain commodities",
+      "priority": "Medium",
+      "acceptance_criteria": [
+        "The interface provides fields within the commodity section for entering VINs when applicable.",
+        "The entered VIN information is included in the AES transmission.",
+        "The filing containing VIN data is accepted by AES."
+      ]
+    },
+    {
+      "id": "US-013",
+      "user_role": "Software Vendor",
+      "action": "use the interface to successfully execute all required AESTIR certification test scenarios",
+      "benefit": "to achieve AES operational certification for my software product",
+      "priority": "High",
+      "acceptance_criteria": [
+        "All specified certification scenarios (create, modify, cancel, various data conditions) can be performed using the interface.",
+        "Transmissions for all scenarios are correctly formatted according to AESTIR.",
+        "AES responses for all scenarios are correctly processed and displayed."
+      ]
+    }
+  ]
+}

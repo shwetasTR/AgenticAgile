@@ -1,0 +1,35 @@
+{
+  "title": "AES Electronic Export Information (EEI) Filing",
+  "description": "Enables the electronic submission, modification, and cancellation of export shipment data to the U.S. Customs and Border Protection (CBP) Automated Export System (AES) according to specified requirements.",
+  "user_roles": [
+    "U.S. Principal Party in Interest (Exporter)",
+    "Forwarding Agent",
+    "Vessel Carrier/NVOCC acting as Forwarding Agent",
+    "Service Center User",
+    "Port Authority User",
+    "Software Vendor User"
+  ],
+  "functionality": [
+    "Create and transmit new export shipment filings.",
+    "Modify (replace/change) previously accepted shipments (e.g., change port of export).",
+    "Manage multi-commodity shipments (add, delete, update lines).",
+    "Support specific commodity data requirements (e.g., multiple units of measure, large quantities).",
+    "Include detailed forwarding agent profiles.",
+    "Report shipments by various modes of transport (air, truck, vessel).",
+    "Handle different filing options (e.g., Post-Departure Option 4).",
+    "Report various Export Information Codes (EICs), including mandatory and optional (e.g., HH, IS).",
+    "Cancel previously accepted shipments.",
+    "Process shipments involving specific geographies (e.g., US-Puerto Rico trade).",
+    "Manage and report export control licenses (BIS, DDTC/USML) and related information (ECCNs, license numbers, exemptions, ACM#).",
+    "Report specific commodity types with additional details (e.g., used vehicles with VINs).",
+    "Perform pre-transmission validation to identify potential errors.",
+    "Process and handle AES responses, including fatal errors requiring correction and resubmission."
+  ],
+  "benefits": [
+    "Ensures compliance with U.S. export reporting regulations.",
+    "Automates and streamlines the export declaration process.",
+    "Facilitates accurate data submission through validation.",
+    "Supports diverse and complex export scenarios, including licensed goods and special filing options.",
+    "Enables efficient management and correction of export filings."
+  ]
+}

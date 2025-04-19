@@ -1,0 +1,22 @@
+{
+  "title": "AES Filing Submission",
+  "description": "Enables users to electronically submit export shipment data (Electronic Export Information - EEI) to the U.S. Customs and Border Protection (CBP) Automated Export System (AES) according to the Automated Export System Trade Interface Requirements (AESTIR) specifications. This includes initial transmissions as well as updates (replace/change) to previously submitted filings.",
+  "user_roles": [
+    "USPPI (Exporters)",
+    "Forwarding Agents (Authorized Agents)",
+    "Vessel Carriers/NVOCCs acting as agents",
+    "Software Vendors/Service Centers"
+  ],
+  "functionality": [
+    "Transmit export shipment data to CBP AES.",
+    "Support different filing action requests (e.g., Create, Replace/Change).",
+    "Generate transmission files in the required format (e.g., .abi format as per AESTIR).",
+    "Log transmission attempts and basic status.",
+    "Handle transmission via specified protocols (e.g., FTP to gateway)."
+  ],
+  "benefits": [
+    "Ensures compliance with U.S. export reporting regulations.",
+    "Automates the submission process, reducing manual effort and potential errors.",
+    "Facilitates faster export clearance processes."
+  ]
+}

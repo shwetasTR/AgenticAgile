@@ -1,0 +1,76 @@
+{
+  "feature_title": "Core AES Filing Submission & Management",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "Exporters (USPPI)",
+      "action": "create a new export shipment filing by inputting all required header, party, and commodity line data",
+      "benefit": "so that I can accurately capture all necessary export details electronically for submission.",
+      "priority": "High",
+      "related_functionality": [
+        "Create new export shipment filings.",
+        "Input all required AES data elements for header, parties, and commodity lines."
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Forwarding Agents/Authorized Agents",
+      "action": "transmit the completed and validated export filing data electronically to the AES system",
+      "benefit": "so that I can submit the EEI to U.S. CBP and obtain an Internal Transaction Number (ITN) required for export.",
+      "priority": "High",
+      "related_functionality": [
+        "Transmit formatted data electronically to the AES system."
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "Exporters (USPPI)",
+      "action": "revise a previously accepted AES filing using a 'Change' action",
+      "benefit": "so that I can correct or update specific details (like Port of Export) without resubmitting the entire filing, ensuring data accuracy and compliance.",
+      "priority": "High",
+      "related_functionality": [
+        "Revise previously accepted shipments using 'Replace' or 'Change' actions (e.g., update Port of Export)."
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "Forwarding Agents/Authorized Agents",
+      "action": "revise a previously accepted AES filing using a 'Replace' action",
+      "benefit": "so that I can make significant corrections to the filing while maintaining a history and ensuring compliance.",
+      "priority": "High",
+      "related_functionality": [
+        "Revise previously accepted shipments using 'Replace' or 'Change' actions (e.g., update Port of Export)."
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "Exporters (USPPI)",
+      "action": "cancel a previously accepted AES filing",
+      "benefit": "so that I can formally withdraw an export declaration if the shipment is no longer proceeding, maintaining accurate records with CBP.",
+      "priority": "High",
+      "related_functionality": [
+        "Cancel previously accepted shipments."
+      ]
+    },
+    {
+      "id": "US-006",
+      "user_role": "Software Users",
+      "action": "associate each AES filing (new, revised, or cancelled) with a specific Shipment Reference Number (SRN)",
+      "benefit": "so that I can easily track, manage, and reference export filings within the system and correlate them with internal shipment documentation.",
+      "priority": "Medium",
+      "related_functionality": [
+        "Associate submissions with specific Shipment Reference Numbers."
+      ]
+    },
+    {
+      "id": "US-007",
+      "user_role": "Forwarding Agents/Authorized Agents",
+      "action": "input all mandatory and optional AES data elements for different sections of the filing (header, parties, commodities)",
+      "benefit": "so that I can ensure the filing is complete, passes validation checks, and meets all regulatory requirements before transmission.",
+      "priority": "High",
+      "related_functionality": [
+        "Input all required AES data elements for header, parties, and commodity lines."
+      ]
+    }
+  ]
+}

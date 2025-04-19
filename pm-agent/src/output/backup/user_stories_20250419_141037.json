@@ -1,0 +1,86 @@
+{
+  "feature_title": "AES Shipment Filing Core Functionality",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "Exporters (USPPI)",
+      "action": "create a new export shipment filing, inputting all required header and commodity data",
+      "benefit": "I can accurately prepare the Electronic Export Information (EEI) needed for my shipment.",
+      "priority": "High",
+      "related_functionality": [
+        "Create new export shipment filings with header and commodity data.",
+        "Input and manage required data elements for shipments (parties, transport details, commodity info)."
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Authorized Agents (Forwarders)",
+      "action": "transmit the completed EEI filing to AES",
+      "benefit": "I can obtain the Internal Transaction Number (ITN) required for export clearance and comply with regulations.",
+      "priority": "High",
+      "related_functionality": [
+        "Transmit initial EEI filings to AES."
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "Exporters (USPPI)",
+      "action": "revise a previously accepted filing using a 'Replace' or 'Change' action to update details like the port of export or commodity information",
+      "benefit": "I can ensure the submitted EEI remains accurate and compliant even if shipment details change after initial filing.",
+      "priority": "High",
+      "related_functionality": [
+        "Revise previously accepted filings using Replace/Change actions (e.g., change port, add/delete/modify commodity lines)."
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "Authorized Agents (Forwarders)",
+      "action": "cancel a previously accepted filing",
+      "benefit": "I can withdraw an EEI submission for a shipment that is no longer exporting, maintaining compliance.",
+      "priority": "High",
+      "related_functionality": [
+        "Cancel previously accepted filings."
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "Internal Compliance Staff",
+      "action": "review and manage the required data elements (parties, transport, commodities) within a filing before transmission",
+      "benefit": "I can verify the accuracy and completeness of the EEI data to minimize errors and ensure compliance.",
+      "priority": "Medium",
+      "related_functionality": [
+        "Input and manage required data elements for shipments (parties, transport details, commodity info)."
+      ]
+    },
+    {
+      "id": "US-006",
+      "user_role": "Exporters (USPPI)",
+      "action": "correct data elements like quantity or value based on fatal error responses received from AES",
+      "benefit": "I can quickly resolve issues identified by CBP and successfully resubmit the filing to achieve acceptance.",
+      "priority": "High",
+      "related_functionality": [
+        "Handle basic error correction based on AES responses (e.g., correcting quantity after fatal error)."
+      ]
+    },
+    {
+      "id": "US-007",
+      "user_role": "Carriers/NVOCCs",
+      "action": "input and manage transportation details within the EEI filing when responsible for providing this data",
+      "benefit": "I can ensure the mode of transport, carrier SCAC, and vessel information are correctly reported as required.",
+      "priority": "Medium",
+      "related_functionality": [
+        "Input and manage required data elements for shipments (parties, transport details, commodity info)."
+      ]
+    },
+    {
+      "id": "US-008",
+      "user_role": "Authorized Agents (Forwarders)",
+      "action": "add or delete commodity lines on a previously accepted filing via a revision",
+      "benefit": "I can accurately reflect changes to the goods being shipped after the initial submission.",
+      "priority": "High",
+      "related_functionality": [
+        "Revise previously accepted filings using Replace/Change actions (e.g., change port, add/delete/modify commodity lines)."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "feature_title": "AES Filing Submission",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "USPPI (Exporter)",
+      "action": "input all required header, party (myself as USPPI, consignee), transportation, and commodity information for my standard export shipment",
+      "benefit": "create a complete Electronic Export Information (EEI) filing to comply with US export regulations",
+      "priority": "High",
+      "related_functionality": [
+        "Input/Capture USPPI, Ultimate Consignee, and Authorized Agent details (including profile).",
+        "Input/Capture transportation details (Mode of Transport, Port of Export, Carrier info).",
+        "Add one or more commodity lines with required details (Schedule B/HTS, Quantity, Value, Weight, ECCN, etc.)."
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Authorized Agent (Forwarder)",
+      "action": "input all required header, party (USPPI, consignee, myself as agent), transportation, and commodity information for an export shipment on behalf of my client (the USPPI)",
+      "benefit": "create a complete and compliant EEI filing for my client's export shipment",
+      "priority": "High",
+      "related_functionality": [
+        "Input/Capture USPPI, Ultimate Consignee, and Authorized Agent details (including profile).",
+        "Input/Capture transportation details (Mode of Transport, Port of Export, Carrier info).",
+        "Add one or more commodity lines with required details (Schedule B/HTS, Quantity, Value, Weight, ECCN, etc.)."
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "USPPI (Exporter)",
+      "action": "add multiple commodity lines to a single EEI filing, providing details like Schedule B, quantity, value, and weight for each line item",
+      "benefit": "accurately declare shipments containing various types of goods within one filing",
+      "priority": "High",
+      "related_functionality": [
+        "Add one or more commodity lines with required details (Schedule B/HTS, Quantity, Value, Weight, ECCN, etc.)."
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "Authorized Agent (Forwarder)",
+      "action": "transmit the completed and validated EEI data directly to the CBP Automated Export System (AES)",
+      "benefit": "electronically submit the export declaration to meet regulatory requirements and obtain an ITN",
+      "priority": "High",
+      "related_functionality": [
+        "Transmit the complete and valid shipment data to AES."
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "USPPI (Exporter)",
+      "action": "input the specific data elements required for shipments routed from the US to Puerto Rico or vice-versa",
+      "benefit": "ensure my EEI filing is accurate and compliant for specific domestic trade lanes requiring AES filing",
+      "priority": "Medium",
+      "related_functionality": [
+        "Input data for specific routing scenarios (e.g., US to PR, PR to US)."
+      ]
+    },
+    {
+      "id": "US-006",
+      "user_role": "Authorized Agent (Forwarder)",
+      "action": "select and apply specific Export Information Codes (EICs) such as OS, HH, or IS when creating an EEI filing",
+      "benefit": "accurately represent the specific circumstances or type of export shipment according to regulatory codes",
+      "priority": "Medium",
+      "related_functionality": [
+        "Use specific Export Information Codes (EIC) as required (e.g., OS, HH, IS)."
+      ]
+    },
+    {
+      "id": "US-007",
+      "user_role": "Carrier/NVOCC acting as Agent",
+      "action": "input all necessary EEI data, including party, transportation, and commodity details, when I am acting as the authorized filing agent",
+      "benefit": "fulfill my regulatory obligation to file the EEI when designated as the agent for an export shipment",
+      "priority": "High",
+      "related_functionality": [
+        "Input/Capture USPPI, Ultimate Consignee, and Authorized Agent details (including profile).",
+        "Input/Capture transportation details (Mode of Transport, Port of Export, Carrier info).",
+        "Add one or more commodity lines with required details (Schedule B/HTS, Quantity, Value, Weight, ECCN, etc.).",
+        "Transmit the complete and valid shipment data to AES."
+      ]
+    },
+    {
+      "id": "US-008",
+      "user_role": "Authorized Agent (Forwarder)",
+      "action": "select pre-saved profiles for USPPI, Ultimate Consignee, or myself (as Agent) when entering party details",
+      "benefit": "speed up the filing creation process and reduce data entry errors by reusing frequently used party information",
+      "priority": "Medium",
+      "related_functionality": [
+        "Input/Capture USPPI, Ultimate Consignee, and Authorized Agent details (including profile)."
+      ]
+    }
+  ]
+}

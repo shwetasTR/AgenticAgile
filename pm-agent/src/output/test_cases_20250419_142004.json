@@ -1,0 +1,633 @@
+{
+  "feature_title": "AES Shipment Filing & Management",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "USPPI (Exporters)",
+      "action": "I want to create a new export shipment record",
+      "benefit": "so that I can file my export declaration electronically and ensure basic compliance with AES mandates.",
+      "priority": "High",
+      "test_cases": [
+        {
+          "id": "TC-US-001-01",
+          "title": "Verify successful creation of a new export shipment record with mandatory fields",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in to the system as a USPPI user.",
+              "expected_result": "User successfully logs in and the main dashboard is displayed."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the 'Shipments' or 'Create New Shipment' section.",
+              "expected_result": "The 'Create New Shipment' form/page is displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter valid data for all mandatory fields, including Shipper Name, Consignee Name, Port of Export (e.g., '3001 - Los Angeles'), Mode of Transport (e.g., 'Vessel'), and Estimated Departure Date.",
+              "expected_result": "Data is entered successfully into the respective fields without errors."
+            },
+            {
+              "step_number": 4,
+              "action": "Click the 'Save Shipment' or 'Create Record' button.",
+              "expected_result": "A success message is displayed, confirming the shipment record has been created, and a unique Shipment Reference Number (SRN) is generated and displayed."
+            },
+            {
+              "step_number": 5,
+              "action": "Navigate to the shipment listing or search for the newly created SRN.",
+              "expected_result": "The newly created shipment record appears in the list with the correct SRN and basic details entered in step 3."
+            }
+          ]
+        },
+        {
+          "id": "TC-US-001-02",
+          "title": "Verify error handling when creating a shipment record with a missing mandatory field (Port of Export)",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in to the system as a USPPI user.",
+              "expected_result": "User successfully logs in and the main dashboard is displayed."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the 'Create New Shipment' section.",
+              "expected_result": "The 'Create New Shipment' form/page is displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter valid data for some mandatory fields (e.g., Shipper Name, Consignee Name, Mode of Transport) but leave the 'Port of Export' field empty.",
+              "expected_result": "Data is entered successfully into the filled fields."
+            },
+            {
+              "step_number": 4,
+              "action": "Click the 'Save Shipment' or 'Create Record' button.",
+              "expected_result": "An error message is displayed, specifically indicating that the 'Port of Export' field is required. The shipment record is not created."
+            },
+            {
+              "step_number": 5,
+              "action": "Check the shipment listing or search function.",
+              "expected_result": "No new shipment record corresponding to the data entered in step 3 exists in the system."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Authorized Agents (Forwarders)",
+      "action": "I want to create a new export shipment record on behalf of my client",
+      "benefit": "so that their export declaration is filed correctly and timely, ensuring compliance.",
+      "priority": "High",
+      "test_cases": [
+        {
+          "id": "TC-US-002-01",
+          "title": "Verify successful creation of a new export shipment record with all required information",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as an Authorized Agent (Forwarder).",
+              "expected_result": "User is successfully logged in and accesses the main dashboard."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the 'Create New Export Shipment' section/page.",
+              "expected_result": "The form for creating a new export shipment record is displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter valid data for all mandatory fields: Client ID ('CLIENTXYZ'), Shipper Details, Consignee Details, Port of Export ('USLAX'), Commodity Details (e.g., Schedule B number, quantity, value), Estimated Departure Date.",
+              "expected_result": "All mandatory fields are populated with valid data without error indicators."
+            },
+            {
+              "step_number": 4,
+              "action": "Click the 'Submit' or 'Create Record' button.",
+              "expected_result": "A success message is displayed (e.g., 'Export Shipment Record created successfully') and a unique Shipment Reference Number is generated and displayed."
+            },
+            {
+              "step_number": 5,
+              "action": "Verify the newly created record appears in the shipment tracking list or can be retrieved by searching for the new Shipment Reference Number.",
+              "expected_result": "The created shipment record exists in the system with the entered details."
+            }
+          ]
+        },
+        {
+          "id": "TC-US-002-02",
+          "title": "Verify system prevents creation of an export shipment record if a mandatory field (Port of Export) is missing",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as an Authorized Agent (Forwarder).",
+              "expected_result": "User is successfully logged in and accesses the main dashboard."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the 'Create New Export Shipment' section/page.",
+              "expected_result": "The form for creating a new export shipment record is displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter valid data for all mandatory fields *except* 'Port of Export'. Leave the 'Port of Export' field blank.",
+              "expected_result": "All other mandatory fields are populated, but 'Port of Export' remains empty."
+            },
+            {
+              "step_number": 4,
+              "action": "Click the 'Submit' or 'Create Record' button.",
+              "expected_result": "An error message is displayed, specifically indicating that the 'Port of Export' field is required. The form submission is halted."
+            },
+            {
+              "step_number": 5,
+              "action": "Check the shipment list or attempt to search for a newly created record.",
+              "expected_result": "No new shipment record has been created in the system."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "Carriers/NVOCCs acting as agents",
+      "action": "I want to create a new export shipment record for shipments I am handling",
+      "benefit": "so that I fulfill my filing responsibilities and ensure compliance with AES regulations.",
+      "priority": "High",
+      "test_cases": [
+        {
+          "id": "TC-US-003-01",
+          "title": "Verify successful creation of a new export shipment record with mandatory details",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in to the system as a 'Carrier/NVOCC agent'.",
+              "expected_result": "User is successfully logged in and dashboard is displayed."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the 'Export Shipments' section and click 'Create New Shipment'.",
+              "expected_result": "The 'Create New Export Shipment' form/screen is displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter valid data for all mandatory fields, including Shipper Info, Consignee Info, Commodity Details, a valid 'Port of Export' code (e.g., '2704' for Los Angeles, CA), and a unique 'Shipment Reference Number'.",
+              "expected_result": "All mandatory fields accept the valid data entry without errors."
+            },
+            {
+              "step_number": 4,
+              "action": "Click the 'Save' or 'Submit' button.",
+              "expected_result": "A success message 'Export shipment record created successfully' is displayed. The newly created record appears in the list of export shipments, reflecting the entered Port of Export and Shipment Reference Number."
+            }
+          ]
+        },
+        {
+          "id": "TC-US-003-02",
+          "title": "Verify error handling when attempting to create a shipment record without a Port of Export",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in to the system as a 'Carrier/NVOCC agent'.",
+              "expected_result": "User is successfully logged in and dashboard is displayed."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the 'Export Shipments' section and click 'Create New Shipment'.",
+              "expected_result": "The 'Create New Export Shipment' form/screen is displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter valid data for all mandatory fields EXCEPT 'Port of Export'. Leave the 'Port of Export' field blank.",
+              "expected_result": "Data is entered successfully into other mandatory fields."
+            },
+            {
+              "step_number": 4,
+              "action": "Click the 'Save' or 'Submit' button.",
+              "expected_result": "An error message is displayed (e.g., 'Port of Export is required'). The shipment record is not created, and the user remains on the form page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "USPPI (Exporters)",
+      "action": "I want to modify an existing shipment filing using 'Replace' or 'Change' actions",
+      "benefit": "so that I can correct errors or update information (like the Port of Export) as needed before export, maintaining accurate declarations.",
+      "priority": "High",
+      "test_cases": [
+        {
+          "id": "TC-US-004-01",
+          "title": "Verify USPPI can update Port of Export using 'Change' action",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as a USPPI user and navigate to the list of submitted/accepted shipment filings.",
+              "expected_result": "User is logged in and the list of previously submitted filings is displayed."
+            },
+            {
+              "step_number": 2,
+              "action": "Locate and select a specific, previously accepted filing (e.g., with ITN 'XYZ789012'). Choose the 'Change' action for this filing.",
+              "expected_result": "The selected filing opens in an editable mode, pre-filled with existing data. The action type should indicate 'Change'."
+            },
+            {
+              "step_number": 3,
+              "action": "Navigate to the section containing the 'Port of Export'. Change the existing Port of Export code (e.g., from '1001 - Boston, MA') to a different valid code (e.g., '4101 - San Francisco, CA').",
+              "expected_result": "The system accepts the new valid Port of Export code. The field updates to '4101 - San Francisco, CA'."
+            },
+            {
+              "step_number": 4,
+              "action": "Save the changes and submit the modified filing.",
+              "expected_result": "The system accepts the 'Change' filing. A confirmation message is displayed (e.g., 'Filing successfully updated'). The record for ITN 'XYZ789012' now shows the updated Port of Export '4101 - San Francisco, CA'."
+            }
+          ]
+        },
+        {
+          "id": "TC-US-004-02",
+          "title": "Verify USPPI can correct commodity quantity and value using 'Replace' action",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as a USPPI user and navigate to the list of submitted/accepted shipment filings.",
+              "expected_result": "User is logged in and the list of previously submitted filings is displayed."
+            },
+            {
+              "step_number": 2,
+              "action": "Locate and select a specific, previously accepted filing (e.g., with ITN 'ABC123456'). Choose the 'Replace' action for this filing.",
+              "expected_result": "The selected filing opens in an editable mode, pre-filled with existing data. The action type should indicate 'Replace'."
+            },
+            {
+              "step_number": 3,
+              "action": "Navigate to the 'Commodity Information' section for a specific line item. Update the 'Quantity 1' field (e.g., from '50' to '75') and the 'Value' field (e.g., from '$10000' to '$15000').",
+              "expected_result": "The system accepts the new Quantity and Value. The fields update to '75' and '$15000' respectively."
+            },
+            {
+              "step_number": 4,
+              "action": "Review the updated information and submit the 'Replace' filing.",
+              "expected_result": "The system accepts the 'Replace' filing, superseding the previous version. A confirmation message is displayed (e.g., 'Filing successfully replaced'). The record for ITN 'ABC123456' (or a new ITN if generated upon replacement) reflects the updated Quantity '75' and Value '$15000' for the modified line item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "Authorized Agents (Forwarders)",
+      "action": "I want to modify an existing shipment filing using 'Replace' or 'Change' actions",
+      "benefit": "so that I can update the declaration based on new information received from the client or carrier, ensuring accuracy and compliance.",
+      "priority": "High",
+      "test_cases": [
+        {
+          "id": "TC-US-005-01",
+          "title": "Verify Agent can modify Port of Export using 'Change' action",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in to the system as an Authorized Agent.",
+              "expected_result": "User is successfully logged in and redirected to the agent dashboard."
+            },
+            {
+              "step_number": 2,
+              "action": "Search for and retrieve an existing, successfully filed shipment (e.g., ITN: X20240315123456).",
+              "expected_result": "The details of the specified shipment filing are displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Select the 'Modify Filing' option and choose the 'Change' action.",
+              "expected_result": "The shipment filing form is loaded with existing data, and the filing action type is set to 'Change'."
+            },
+            {
+              "step_number": 4,
+              "action": "Navigate to the transportation details section and update the 'Port of Export' field from its current value (e.g., '3801 - Los Angeles, CA') to a new value (e.g., '2704 - Seattle, WA').",
+              "expected_result": "The 'Port of Export' field reflects the newly entered value ('2704 - Seattle, WA')."
+            },
+            {
+              "step_number": 5,
+              "action": "Submit the modified filing.",
+              "expected_result": "The system accepts the submission, provides a confirmation message (e.g., 'Filing successfully updated'), and the shipment's history log shows a 'Change' entry with the updated Port of Export."
+            }
+          ]
+        },
+        {
+          "id": "TC-US-005-02",
+          "title": "Verify Agent can modify multiple fields using 'Replace' action",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in to the system as an Authorized Agent.",
+              "expected_result": "User is successfully logged in and redirected to the agent dashboard."
+            },
+            {
+              "step_number": 2,
+              "action": "Search for and retrieve an existing, successfully filed shipment (e.g., ITN: X20240410654321).",
+              "expected_result": "The details of the specified shipment filing are displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Select the 'Modify Filing' option and choose the 'Replace' action.",
+              "expected_result": "The shipment filing form is loaded with existing data, and the filing action type is set to 'Replace'."
+            },
+            {
+              "step_number": 4,
+              "action": "Update the 'Ultimate Consignee Name' to 'New Global Importer Ltd.' and change the 'Total Invoice Value' to '55000.00'.",
+              "expected_result": "The 'Ultimate Consignee Name' and 'Total Invoice Value' fields reflect the newly entered values."
+            },
+            {
+              "step_number": 5,
+              "action": "Submit the modified filing.",
+              "expected_result": "The system accepts the submission, provides a confirmation message (e.g., 'Filing successfully replaced'), and the shipment's history log shows a 'Replace' entry reflecting the submission of the updated filing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-006",
+      "user_role": "USPPI (Exporters)",
+      "action": "I want to cancel a previously accepted shipment filing",
+      "benefit": "so that I can withdraw a declaration for a shipment that is no longer exporting, managing the lifecycle correctly.",
+      "priority": "High",
+      "related_functionality": [
+        "Cancel a previously accepted shipment"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-US-006-01",
+          "title": "Verify USPPI can successfully cancel an accepted shipment filing via the UI",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in to the system as a USPPI user.",
+              "expected_result": "User is successfully logged in and redirected to the main dashboard."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the 'Manage Shipments' or equivalent section listing submitted filings.",
+              "expected_result": "A list or table of shipment filings is displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Locate and select a specific shipment filing that currently has the status 'Accepted' (e.g., ITN X20240515987654).",
+              "expected_result": "The details page for the selected 'Accepted' shipment filing is displayed."
+            },
+            {
+              "step_number": 4,
+              "action": "Click the 'Cancel Filing' or 'Request Cancellation' button.",
+              "expected_result": "A confirmation dialog or modal appears, prompting the user to confirm the cancellation action, possibly asking for a reason."
+            },
+            {
+              "step_number": 5,
+              "action": "Confirm the cancellation (e.g., click 'Confirm', 'Yes, Cancel', optionally enter a reason if required).",
+              "expected_result": "A success message (e.g., 'Shipment ITN X20240515987654 cancellation request submitted successfully' or 'Shipment Cancelled') is displayed. The status of the shipment filing updates to 'Cancelled' or 'Cancellation Requested' on the details page."
+            }
+          ]
+        },
+        {
+          "id": "TC-US-006-02",
+          "title": "Verify cancelled shipment status is reflected in search results and details view",
+          "priority": "Medium",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in to the system as a USPPI user (or ensure user is still logged in from previous test).",
+              "expected_result": "User is successfully logged in and the main dashboard is displayed."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the 'Manage Shipments' or equivalent section.",
+              "expected_result": "The shipment listing/search interface is displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Search specifically for the ITN of the shipment that was cancelled in TC-US-006-01 (e.g., ITN X20240515987654).",
+              "expected_result": "The search results display the specific shipment filing."
+            },
+            {
+              "step_number": 4,
+              "action": "Observe the status displayed for the shipment in the search results list.",
+              "expected_result": "The status shown in the list view for ITN X20240515987654 is 'Cancelled' (or the final cancelled state)."
+            },
+            {
+              "step_number": 5,
+              "action": "Click on the cancelled shipment to view its details.",
+              "expected_result": "The shipment details page loads, prominently displaying the status as 'Cancelled'. Actions applicable only to 'Accepted' filings (e.g., 'Amend') should be disabled or hidden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-007",
+      "user_role": "Authorized Agents (Forwarders)",
+      "action": "I want to cancel a previously accepted shipment filing",
+      "benefit": "so that I can manage the lifecycle of declarations accurately when shipments are cancelled by my clients.",
+      "priority": "High",
+      "related_functionality": [
+        "Cancel a previously accepted shipment"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-US-007-01",
+          "title": "Verify Agent can successfully cancel an Accepted shipment filing",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as an Authorized Agent.",
+              "expected_result": "User is successfully logged in and dashboard is displayed."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the list of shipment filings and identify a specific filing with 'Accepted' status (e.g., Filing ID: ACC-12345).",
+              "expected_result": "The list of filings is displayed, and filing ACC-12345 is visible with status 'Accepted'."
+            },
+            {
+              "step_number": 3,
+              "action": "Select the 'Accepted' filing (ACC-12345) and choose the 'Cancel Filing' option.",
+              "expected_result": "A confirmation prompt or cancellation reason form appears."
+            },
+            {
+              "step_number": 4,
+              "action": "Enter a valid reason for cancellation (e.g., 'Shipment cancelled by client') if required, and confirm the cancellation.",
+              "expected_result": "A success message confirms the cancellation (e.g., 'Filing ACC-12345 cancelled successfully'). The status of filing ACC-12345 updates to 'Cancelled' in the system/filings list."
+            }
+          ]
+        },
+        {
+          "id": "TC-US-007-02",
+          "title": "Verify Agent cannot cancel a shipment filing that is not in 'Accepted' status (e.g., 'Submitted')",
+          "priority": "Medium",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as an Authorized Agent.",
+              "expected_result": "User is successfully logged in and dashboard is displayed."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the list of shipment filings and identify a specific filing with 'Submitted' status (e.g., Filing ID: SUB-67890).",
+              "expected_result": "The list of filings is displayed, and filing SUB-67890 is visible with status 'Submitted'."
+            },
+            {
+              "step_number": 3,
+              "action": "Select the 'Submitted' filing (SUB-67890) and attempt to find or activate the 'Cancel Filing' option.",
+              "expected_result": "The 'Cancel Filing' option is either disabled, hidden, or selecting it results in an error message (e.g., 'Filings can only be cancelled if they are in Accepted status'). The status of filing SUB-67890 remains 'Submitted'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-008",
+      "user_role": "USPPI (Exporters)",
+      "action": "I want to easily track my shipment filings using reference numbers (e.g., ITN, internal refs)",
+      "benefit": "so that I can quickly find, review status, and manage specific declarations within the system.",
+      "priority": "Medium",
+      "test_cases": [
+        {
+          "id": "TC-US-008-01",
+          "title": "Verify successful search and status review using a valid ITN",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in to the system as a USPPI user.",
+              "expected_result": "User is successfully logged in and directed to the dashboard or relevant landing page."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the 'Shipment Filings' or 'Track Shipments' section.",
+              "expected_result": "The shipment search/tracking interface is displayed, including a search input field."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter a known, valid ITN (e.g., \"X20240315987654\") associated with a previously submitted filing into the designated search field.",
+              "expected_result": "The ITN is entered correctly into the search field."
+            },
+            {
+              "step_number": 4,
+              "action": "Click the 'Search' or 'Track' button.",
+              "expected_result": "The system processes the search query and displays the results."
+            },
+            {
+              "step_number": 5,
+              "action": "Observe the search results.",
+              "expected_result": "The specific shipment filing corresponding to the entered ITN (X20240315987654) is displayed prominently. Key details such as the ITN, internal reference number (if applicable), filing date, and current accurate status (e.g., 'Accepted', 'Pending', 'Rejected') are clearly visible for this filing."
+            }
+          ]
+        },
+        {
+          "id": "TC-US-008-02",
+          "title": "Verify successful search and status review using an internal reference number",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in to the system as a USPPI user.",
+              "expected_result": "User is successfully logged in and directed to the dashboard or relevant landing page."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the 'Shipment Filings' or 'Track Shipments' section.",
+              "expected_result": "The shipment search/tracking interface is displayed, including a search input field."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter a known, valid internal reference number (e.g., \"INV-2024-A550\") associated with a specific filing into the designated search field.",
+              "expected_result": "The internal reference number is entered correctly into the search field."
+            },
+            {
+              "step_number": 4,
+              "action": "Click the 'Search' or 'Track' button.",
+              "expected_result": "The system processes the search query and displays the results."
+            },
+            {
+              "step_number": 5,
+              "action": "Observe the search results.",
+              "expected_result": "The specific shipment filing corresponding to the entered internal reference number (INV-2024-A550) is displayed. Key details such as the internal reference number, ITN (if generated), filing date, and current accurate status (e.g., 'Draft', 'Submitted', 'Accepted') are clearly visible for this filing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-009",
+      "user_role": "Authorized Agents (Forwarders)",
+      "action": "I want to easily track client shipment filings using reference numbers",
+      "benefit": "so that I can efficiently manage multiple client declarations, check status, and provide updates.",
+      "priority": "Medium",
+      "test_cases": [
+        {
+          "id": "TC-US-009-01",
+          "title": "Verify tracking a valid shipment filing using its reference number",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in to the system as an Authorized Agent.",
+              "expected_result": "User is successfully logged in and presented with the agent dashboard/homepage."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the 'Shipment Tracking' or equivalent section.",
+              "expected_result": "The shipment tracking page loads, displaying a search field for reference numbers."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter a known, valid client shipment reference number (e.g., 'CLIENTREF789') into the search field.",
+              "expected_result": "The reference number 'CLIENTREF789' is entered correctly into the field."
+            },
+            {
+              "step_number": 4,
+              "action": "Click the 'Track Shipment' or 'Search' button.",
+              "expected_result": "The system searches for the filing associated with 'CLIENTREF789' and displays the results."
+            },
+            {
+              "step_number": 5,
+              "action": "Verify the displayed shipment details.",
+              "expected_result": "The details for shipment 'CLIENTREF789' are displayed, including client name, current status (e.g., 'Submitted', 'Under Review', 'Cleared'), filing date, and key identifiers."
+            }
+          ]
+        },
+        {
+          "id": "TC-US-009-02",
+          "title": "Verify system behavior when tracking an invalid or non-existent reference number",
+          "priority": "Medium",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in to the system as an Authorized Agent.",
+              "expected_result": "User is successfully logged in and presented with the agent dashboard/homepage."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the 'Shipment Tracking' or equivalent section.",
+              "expected_result": "The shipment tracking page loads, displaying a search field for reference numbers."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter an invalid or non-existent reference number (e.g., 'INVALIDREF123') into the search field.",
+              "expected_result": "The reference number 'INVALIDREF123' is entered correctly into the field."
+            },
+            {
+              "step_number": 4,
+              "action": "Click the 'Track Shipment' or 'Search' button.",
+              "expected_result": "The system attempts to search for the filing associated with 'INVALIDREF123'."
+            },
+            {
+              "step_number": 5,
+              "action": "Verify the displayed message.",
+              "expected_result": "An informative message is displayed indicating that the reference number was not found (e.g., 'No shipment found for reference number INVALIDREF123'). No shipment details are displayed."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "error": "Could not extract valid JSON features",
+  "raw_response_preview": "Okay, let's analyze the CBP AES AESTIR test script requirements in the context of a completely empty system.\n\n**Analysis:**\n\n1.  **Nature of Requirements:** The provided document is a set of test scripts for certifying a client system's ability to interact correctly with the CBP Automated Export System (AES). It outlines specific scenarios involving creating, modifying (replacing, changing, correcting), adding/deleting commodity lines, canceling export shipments, and handling various data comple"
+}

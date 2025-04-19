@@ -1,0 +1,4 @@
+{
+  "error": "Failed to parse JSON: Expecting ',' delimiter: line 1 column 9483 (char 9482)",
+  "response_preview": "```json\n{\n  \"feature_title\": \"AES Export Filing Certification Interface\",\n  \"test_cases\": [\n    {\n      \"id\": \"TC-001\",\n      \"title\": \"Verify successful creation and transmission of a standard AES filing\",\n      \"priority\": \"High\",\n      \"test_steps\": [\n        {\n          \"step_number\": 1,\n          \"action\": \"Log in as an Exporter.\",\n          \"expected_result\": \"User is successfully logged in.\"\n        },\n        {\n          \"step_number\": 2,\n          \"action\": \"Navigate to the AES filing c"
+}

@@ -1,0 +1,62 @@
+{
+  "feature_title": "AES Shipment Creation and Submission",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "Exporter (USPPI)",
+      "action": "input required shipment header data including my details, consignee information, dates, mode of transport, and ports",
+      "benefit": "I can initiate an electronic export filing to comply with basic AES requirements and streamline the declaration process.",
+      "priority": "High",
+      "related_functionality": [
+        "Input/capture required shipment header data (e.g., USPPI, Consignee, Dates, Mode of Transport).",
+        "Specify Port of Export and Destination Country.",
+        "Specify Mode of Transport (Air, Truck, Vessel, etc.)."
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Authorized Agent (Forwarder)",
+      "action": "input required shipment header data on behalf of the USPPI, including my agent profile information, shipment details, ports, and mode of transport",
+      "benefit": "I can efficiently create compliant AES filings for my clients.",
+      "priority": "High",
+      "related_functionality": [
+        "Input/capture required shipment header data (e.g., USPPI, Consignee, Dates, Mode of Transport).",
+        "Input/capture Forwarding Agent/Authorized Agent profile information.",
+        "Specify Port of Export and Destination Country.",
+        "Specify Mode of Transport (Air, Truck, Vessel, etc.)."
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "Carrier/NVOCC",
+      "action": "input necessary shipment header data, port information, and mode of transport when acting as the filer",
+      "benefit": "I can create the required AES filing for shipments I am responsible for filing.",
+      "priority": "Medium",
+      "related_functionality": [
+        "Input/capture required shipment header data (e.g., USPPI, Consignee, Dates, Mode of Transport).",
+        "Specify Port of Export and Destination Country.",
+        "Specify Mode of Transport (Air, Truck, Vessel, etc.)."
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "Exporter (USPPI)",
+      "action": "transmit the created shipment data to CBP AES after entering all required information",
+      "benefit": "I can electronically submit my export declaration as required by regulations.",
+      "priority": "High",
+      "related_functionality": [
+        "Transmit the created shipment data to CBP AES."
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "Authorized Agent (Forwarder)",
+      "action": "transmit the completed shipment filing data to CBP AES",
+      "benefit": "I can fulfill the electronic filing obligation for the export shipment on behalf of the USPPI.",
+      "priority": "High",
+      "related_functionality": [
+        "Transmit the created shipment data to CBP AES."
+      ]
+    }
+  ]
+}

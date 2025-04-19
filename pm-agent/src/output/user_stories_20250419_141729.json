@@ -1,0 +1,103 @@
+{
+  "feature_title": "AES Shipment Filing & Management",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "USPPI (Exporters)",
+      "action": "I want to create a new export shipment record",
+      "benefit": "so that I can file my export declaration electronically and ensure basic compliance with AES mandates.",
+      "priority": "High",
+      "related_functionality": [
+        "Create new export shipment record",
+        "Specify and update Port of Export",
+        "Track shipment reference numbers"
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Authorized Agents (Forwarders)",
+      "action": "I want to create a new export shipment record on behalf of my client",
+      "benefit": "so that their export declaration is filed correctly and timely, ensuring compliance.",
+      "priority": "High",
+      "related_functionality": [
+        "Create new export shipment record",
+        "Specify and update Port of Export",
+        "Track shipment reference numbers"
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "Carriers/NVOCCs acting as agents",
+      "action": "I want to create a new export shipment record for shipments I am handling",
+      "benefit": "so that I fulfill my filing responsibilities and ensure compliance with AES regulations.",
+      "priority": "High",
+      "related_functionality": [
+        "Create new export shipment record",
+        "Specify and update Port of Export",
+        "Track shipment reference numbers"
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "USPPI (Exporters)",
+      "action": "I want to modify an existing shipment filing using 'Replace' or 'Change' actions",
+      "benefit": "so that I can correct errors or update information (like the Port of Export) as needed before export, maintaining accurate declarations.",
+      "priority": "High",
+      "related_functionality": [
+        "Modify existing shipment using 'Replace' or 'Change' filing action (e.g., change port of export)",
+        "Specify and update Port of Export"
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "Authorized Agents (Forwarders)",
+      "action": "I want to modify an existing shipment filing using 'Replace' or 'Change' actions",
+      "benefit": "so that I can update the declaration based on new information received from the client or carrier, ensuring accuracy and compliance.",
+      "priority": "High",
+      "related_functionality": [
+        "Modify existing shipment using 'Replace' or 'Change' filing action (e.g., change port of export)",
+        "Specify and update Port of Export"
+      ]
+    },
+    {
+      "id": "US-006",
+      "user_role": "USPPI (Exporters)",
+      "action": "I want to cancel a previously accepted shipment filing",
+      "benefit": "so that I can withdraw a declaration for a shipment that is no longer exporting, managing the lifecycle correctly.",
+      "priority": "High",
+      "related_functionality": [
+        "Cancel a previously accepted shipment"
+      ]
+    },
+    {
+      "id": "US-007",
+      "user_role": "Authorized Agents (Forwarders)",
+      "action": "I want to cancel a previously accepted shipment filing",
+      "benefit": "so that I can manage the lifecycle of declarations accurately when shipments are cancelled by my clients.",
+      "priority": "High",
+      "related_functionality": [
+        "Cancel a previously accepted shipment"
+      ]
+    },
+    {
+      "id": "US-008",
+      "user_role": "USPPI (Exporters)",
+      "action": "I want to easily track my shipment filings using reference numbers (e.g., ITN, internal refs)",
+      "benefit": "so that I can quickly find, review status, and manage specific declarations within the system.",
+      "priority": "Medium",
+      "related_functionality": [
+        "Track shipment reference numbers"
+      ]
+    },
+    {
+      "id": "US-009",
+      "user_role": "Authorized Agents (Forwarders)",
+      "action": "I want to easily track client shipment filings using reference numbers",
+      "benefit": "so that I can efficiently manage multiple client declarations, check status, and provide updates.",
+      "priority": "Medium",
+      "related_functionality": [
+        "Track shipment reference numbers"
+      ]
+    }
+  ]
+}

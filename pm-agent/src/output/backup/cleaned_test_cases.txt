@@ -1,0 +1,38 @@
+{,""feature_title": "AES Shipment Creation and Submission",,""test_cases": [
+    {,""id": "TC-001",,""title": "Exporter Inputs Required Shipment Header Data",,""priority": "High",,""test_steps": [
+        {,""step_number": 1,,""action": "Log in as an Exporter (USPPI).",,""expected_result": "User is logged in and dashboard is displayed."
+        },
+        {,""step_number": 2,,""action": "Navigate to the 'Create AES Shipment' page.",,""expected_result": "The shipment creation form is displayed."
+        },
+        {,""step_number": 3,,""action": "Enter valid USPPI details, Consignee information, Shipment Dates, Mode of Transport (e.g., Air), Port of Export, and Destination Country.",,""expected_result": "All required header fields accept the valid input."
+        },
+        {,""step_number": 4,,""action": "Click 'Save' or 'Validate Header'.",,""expected_result": "The system validates the entered header data without errors and confirms it's saved or ready for line item entry."
+        }
+      ]
+    },
+    {,""id": "TC-002",,""title": "Agent Inputs Required Shipment Header Data Including Agent Profile",,""priority": "High",,""test_steps": [
+        {,""step_number": 1,,""action": "Log in as an Authorized Agent (Forwarder).",,""expected_result": "User is logged in and dashboard is displayed."
+        },
+        {,""step_number": 2,,""action": "Navigate to the 'Create AES Shipment' page.",,""expected_result": "The shipment creation form is displayed."
+        },
+        {,""step_number": 3,,""action": "Select or input the Forwarding Agent profile information.",,""expected_result": "Agent profile information is correctly associated with the shipment."
+        },
+        {,""step_number": 4,,""action": "Enter valid USPPI details, Consignee information, Shipment Dates, Mode of Transport (e.g., Vessel), Port of Export, and Destination Country.",,""expected_result": "All required header fields accept the valid input."
+        },
+        {,""step_number": 5,,""action": "Click 'Save' or 'Validate Header'.",,""expected_result": "The system validates the entered header data, including agent info, without errors and confirms it's saved."
+        }
+      ]
+    },
+    {,""id": "TC-003",,""title": "User Transmits Completed Shipment Data to AES",,""priority": "High",,""test_steps": [
+        {,""step_number": 1,,""action": "Log in as an Exporter or Authorized Agent.",,""expected_result": "User is logged in and dashboard is displayed."
+        },
+        {,""step_number": 2,,""action": "Open an existing shipment record that has all required header and line item data entered and validated.",,""expected_result": "The complete shipment record is displayed."
+        },
+        {,""step_number": 3,,""action": "Locate and click the 'Transmit to AES' button.",,""expected_result": "A confirmation prompt for transmission is displayed."
+        },
+        {,""step_number": 4,,""action": "Confirm the transmission action.",,""expected_result": "The system indicates that the transmission process has started and updates the shipment status accordingly (e.g., 'Transmitting', 'Submitted')."
+        }
+      ]
+    }
+  ]
+}

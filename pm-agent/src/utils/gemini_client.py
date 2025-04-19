@@ -4,6 +4,7 @@ import requests
 import logging
 from typing import Dict
 from google.oauth2.credentials import Credentials as OAuth2Credentials
+from datetime import datetime
 import vertexai
 from vertexai.generative_models import GenerativeModel
 import re
@@ -311,69 +312,95 @@ class GeminiClient:
 
     def generate_test_cases(self, user_stories: dict) -> dict:
         """
-        Generate test cases from user stories with improved error handling.
+        Generate test cases for user stories in a properly nested structure.
         """
-        try:
+        output_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'output')
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Process each user story individually to avoid complex JSON
+        result = {
+            "feature_title": user_stories.get("feature_title", "AES Shipment Filing"),
+            "user_stories": []
+        }
+        
+        for idx, story in enumerate(user_stories.get("user_stories", [])):
+            story_id = story.get("id", f"US-{idx+1:03d}")
+            
             prompt = f"""
-            Generate test cases for these user stories. Return ONLY valid JSON.
+            Generate 1-2 test cases for this specific user story. Follow the EXACT format shown below.
             
-            User Stories:
-            {json.dumps(user_stories, indent=2)}
+            USER STORY:
+            {json.dumps(story, indent=2)}
             
-            Format response EXACTLY as:
+            FORMAT:
             {{
-                "feature_title": string,
-                "test_cases": [
+              "id": "{story_id}",
+              "user_role": "{story.get('user_role', 'User')}",
+              "action": "{story.get('action', 'action')}",
+              "benefit": "{story.get('benefit', 'benefit')}",
+              "priority": "{story.get('priority', 'High')}",
+              "test_cases": [
+                {{
+                  "id": "TC-{story_id}-01",
+                  "title": "Clear descriptive title based on the user story",
+                  "priority": "High|Medium|Low",
+                  "test_steps": [
                     {{
-                        "id": "TC-001",
-                        "title": string,
-                        "priority": "High|Medium|Low",
-                        "test_steps": [
-                            {{
-                                "step_number": number,
-                                "action": string,
-                                "expected_result": string
-                            }}
-                        ]
+                      "step_number": 1,
+                      "action": "First action to take",
+                      "expected_result": "Expected outcome"
+                    }},
+                    {{
+                      "step_number": 2,
+                      "action": "Second action to take",
+                      "expected_result": "Expected outcome"
                     }}
-                ]
+                  ]
+                }}
+              ]
             }}
             
-            Rules:
-            1. Use valid JSON syntax
-            2. No trailing commas
-            3. No comments
-            4. Double quotes for strings
-            5. Keep response focused and concise
+            IMPORTANT:
+            1. Each test case should have 3-5 practical, detailed steps
+            2. Steps should be specific, not general
+            3. Expected results should be verifiable
+            4. Test case IDs should follow format TC-{story_id}-##
+            5. Return ONLY the JSON with NO explanations or markdown
             """
             
-            response = self.generate_text(prompt)
-            logger.debug(f"Raw response: {response[:200]}...")
-            
             try:
-                # Clean and parse JSON
-                json_str = self._clean_json_response(response)
-                test_cases = json.loads(json_str)
+                # Get test cases for this story
+                response = self.generate_text(prompt)
                 
-                # Validate structure
-                if not isinstance(test_cases, dict):
-                    raise ValueError("Response is not a JSON object")
-                    
-                required_fields = ["feature_title", "test_cases"]
-                if not all(field in test_cases for field in required_fields):
-                    raise ValueError(f"Missing required fields: {required_fields}")
-                    
-                logger.info(f"Successfully generated {len(test_cases['test_cases'])} test cases")
-                return test_cases
+                # Clean and extract JSON
+                json_start = response.find('{')
+                json_end = response.rfind('}') + 1
                 
-            except json.JSONDecodeError as je:
-                logger.error(f"JSON parsing error: {str(je)}")
-                logger.debug(f"Attempted to parse:\n{json_str}")
-                return {
-                    "error": f"Failed to parse JSON: {str(je)}",
-                    "response_preview": response[:500]
-                }
-                
-        except Exception as e:
-            logger.error(f"Error generating test cases: {str(e)}")
-            return {"error": str(e)}
+                if json_start >= 0 and json_end > json_start:
+                    json_str = response[json_start:json_end]
+                    story_with_tests = json.loads(json_str)
+                    result["user_stories"].append(story_with_tests)
+                    logger.info(f"Generated test cases for user story {story_id}")
+                else:
+                    # If extraction fails, keep original story with empty test cases
+                    story_copy = story.copy()
+                    story_copy["test_cases"] = []
+                    story_copy["error"] = "Failed to generate test cases"
+                    result["user_stories"].append(story_copy)
+                    logger.warning(f"Failed to extract test cases for story {story_id}")
+            
+            except Exception as e:
+                logger.error(f"Error generating test cases for story {story_id}: {str(e)}")
+                # Add the story without test cases
+                story_copy = story.copy()
+                story_copy["test_cases"] = []
+                story_copy["error"] = str(e)
+                result["user_stories"].append(story_copy)
+        
+        # Save the complete result
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        result_file = os.path.join(output_dir, f'test_cases_{timestamp}.json')
+        with open(result_file, 'w', encoding='utf-8') as f:
+            json.dump(result, f, indent=2)
+        
+        return result

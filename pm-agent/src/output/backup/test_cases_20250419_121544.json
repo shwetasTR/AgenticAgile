@@ -1,0 +1,4 @@
+{
+  "error": "Failed to parse JSON: Expecting ',' delimiter: line 319 column 14 (char 13962)",
+  "response_preview": "```json\n{\n  \"feature_title\": \"AES Filing Submission\",\n  \"user_stories\": [\n    {\n      \"id\": \"US-001\",\n      \"user_role\": \"USPPI (Exporters)\",\n      \"action\": \"electronically submit my initial export shipment data (EEI) to CBP AES\",\n      \"benefit\": \"ensure compliance with U.S. export regulations and avoid penalties for new shipments\",\n      \"priority\": \"High\",\n      \"related_functionality\": [\n        \"Transmit export shipment data to CBP AES.\",\n        \"Support different filing action requests ("
+}

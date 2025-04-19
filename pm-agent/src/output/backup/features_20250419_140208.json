@@ -1,0 +1,22 @@
+{
+  "title": "AES Filing Submission",
+  "description": "Allows users to create and submit new Electronic Export Information (EEI) filings to the CBP Automated Export System (AES). This includes capturing all mandatory header, party, transportation, and commodity data for a standard export shipment.",
+  "user_roles": [
+    "USPPI (Exporter)",
+    "Authorized Agent (Forwarder)",
+    "Carrier/NVOCC acting as Agent"
+  ],
+  "functionality": [
+    "Input/Capture USPPI, Ultimate Consignee, and Authorized Agent details (including profile).",
+    "Input/Capture transportation details (Mode of Transport, Port of Export, Carrier info).",
+    "Add one or more commodity lines with required details (Schedule B/HTS, Quantity, Value, Weight, ECCN, etc.).",
+    "Input data for specific routing scenarios (e.g., US to PR, PR to US).",
+    "Transmit the complete and valid shipment data to AES.",
+    "Use specific Export Information Codes (EIC) as required (e.g., OS, HH, IS)."
+  ],
+  "benefits": [
+    "Enables core compliance with US export reporting regulations.",
+    "Provides a structured way to capture and transmit required export data.",
+    "Facilitates international trade operations."
+  ]
+}

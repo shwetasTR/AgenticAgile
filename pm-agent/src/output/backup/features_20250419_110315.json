@@ -1,0 +1,36 @@
+{
+  "title": "AES Electronic Export Shipment Filing & Compliance",
+  "description": "Enables users (exporters, agents, carriers) to electronically file, modify, and manage export shipment data with US CBP AES, ensuring compliance with various requirements including commodity details, licensing, specific codes (EIC), and error handling.",
+  "user_roles": [
+    "U.S. Principal Parties in Interest (exporters)",
+    "Forwarding agents",
+    "Vessel carriers or NVOCCs acting as forwarding agents",
+    "Service centers",
+    "Port authorities",
+    "Software vendors"
+  ],
+  "functionality": [
+    "Create and transmit export shipments electronically.",
+    "Modify (Replace/Change) previously accepted shipments.",
+    "Cancel previously accepted shipments.",
+    "Manage multi-commodity shipments (add/delete lines).",
+    "Handle specific commodity data (e.g., dual units of measure, large quantities, VINs for used vehicles).",
+    "Include Forwarding Agent profiles.",
+    "Report shipments by various transport modes (Air, Truck, Vessel).",
+    "Support Post-Departure (Option 4) filing.",
+    "Report mandatory and optional Export Information Codes (EICs like OS, HH, IS).",
+    "Process shipments requiring export licenses (BIS, DDTC/USML) and related data (ECCN, License Numbers, Registration Numbers, Exemptions).",
+    "Handle treaty-specific requirements (e.g., UK Treaty ACM#).",
+    "Manage shipments involving specific geographies (US-Puerto Rico).",
+    "Validate data against AES rules and handle system rejections/fatal errors.",
+    "Correct and resubmit shipments after fatal errors."
+  ],
+  "benefits": [
+    "Ensures compliance with CBP AES electronic filing mandates.",
+    "Streamlines the export declaration process.",
+    "Reduces errors through validation and standardized data entry.",
+    "Facilitates accurate reporting of complex shipment details (licenses, multiple commodities).",
+    "Provides capability for operational certification testing.",
+    "Supports various filing scenarios and export types."
+  ]
+}

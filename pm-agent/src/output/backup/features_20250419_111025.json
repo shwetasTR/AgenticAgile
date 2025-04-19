@@ -1,0 +1,36 @@
+{
+  "title": "AES Electronic Export Information (EEI) Filing & Management",
+  "description": "Enables users to electronically create, validate, transmit, amend, and cancel export shipment data (EEI) to the U.S. Customs and Border Protection (CBP) Automated Export System (AES) according to regulatory requirements and specific test scenarios.",
+  "user_roles": [
+    "U.S. Principal Parties in Interest (Exporters)",
+    "Forwarding Agents",
+    "Vessel Carriers/NVOCCs (acting as agents)",
+    "Service Centers",
+    "Port Authorities",
+    "Software Vendors"
+  ],
+  "functionality": [
+    "Create new export shipment filings with all required data elements.",
+    "Transmit shipment data electronically to the AES system.",
+    "Revise previously accepted shipments (e.g., change port of export, correct errors).",
+    "Manage commodity lines within a shipment (add, delete).",
+    "Handle shipments with multiple commodities, including dual units of measure.",
+    "Support various transport modes (Air, Truck, Vessel).",
+    "Process specific filing types (e.g., Option 4 post-departure).",
+    "Utilize different Export Information Codes (EICs), including optional EEI reporting (HH, IS).",
+    "Cancel previously accepted shipments.",
+    "Manage shipments between the US and Puerto Rico.",
+    "Include required license information (BIS, USML, Treaties) and related data (ECCN, DDTC elements, ACM#).",
+    "Report used vehicle information including VINs.",
+    "Perform pre-transmission validation to identify potential errors.",
+    "Handle and allow correction of fatal errors returned by AES."
+  ],
+  "benefits": [
+    "Ensures compliance with U.S. export reporting regulations.",
+    "Streamlines the export declaration process through electronic submission.",
+    "Provides capability to manage and maintain accurate shipment data with CBP.",
+    "Supports a wide range of complex export scenarios and requirements.",
+    "Reduces errors through pre-transmission validation and guided error correction.",
+    "Facilitates efficient international trade operations."
+  ]
+}

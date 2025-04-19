@@ -1,0 +1,106 @@
+```json
+{
+  "feature_title": "AES Electronic Export Information (EEI) Filing & Management",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "Exporter/Forwarding Agent",
+      "action": "create a new EEI filing with all required shipment details",
+      "benefit": "initiate the export declaration process electronically and capture necessary data.",
+      "priority": "High",
+      "acceptance_criteria": [
+        "System allows entry of all mandatory AES data fields (e.g., USPPI, Consignee, Commodity, Transport).",
+        "Filing can be saved in a draft state before validation or transmission."
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Exporter/Forwarding Agent",
+      "action": "perform pre-transmission validation on an EEI filing",
+      "benefit": "identify and correct potential errors before submitting to AES, reducing rejections.",
+      "priority": "High",
+      "acceptance_criteria": [
+        "Validation checks run against known AES business rules.",
+        "Errors and warnings are clearly flagged for user review and correction."
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "Exporter/Forwarding Agent",
+      "action": "electronically transmit a validated EEI filing to the CBP AES system",
+      "benefit": "submit export declarations to CBP for approval and receive an Internal Transaction Number (ITN).",
+      "priority": "High",
+      "acceptance_criteria": [
+        "Filing data is successfully formatted and sent to the AES endpoint.",
+        "System receives and displays the AES response (e.g., Accepted with ITN, Rejected with errors)."
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "Exporter/Forwarding Agent",
+      "action": "view and correct fatal errors returned by AES for a rejected filing",
+      "benefit": "resolve issues identified by CBP and successfully resubmit the filing for compliance.",
+      "priority": "High",
+      "acceptance_criteria": [
+        "Fatal errors from AES are clearly displayed alongside the relevant filing data.",
+        "User can edit the rejected filing based on error feedback and re-transmit it."
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "Exporter/Forwarding Agent",
+      "action": "amend a previously accepted EEI filing",
+      "benefit": "update shipment information (e.g., port, value, quantity) with CBP to maintain data accuracy.",
+      "priority": "High",
+      "acceptance_criteria": [
+        "User can retrieve an accepted filing using its ITN.",
+        "Changes can be made to editable fields and submitted to AES as an amendment."
+      ]
+    },
+    {
+      "id": "US-006",
+      "user_role": "Exporter/Forwarding Agent",
+      "action": "cancel a previously accepted EEI filing",
+      "benefit": "withdraw an export declaration from CBP when a shipment is cancelled.",
+      "priority": "Medium",
+      "acceptance_criteria": [
+        "User can retrieve an accepted filing using its ITN.",
+        "A cancellation request can be successfully transmitted to AES."
+      ]
+    },
+    {
+      "id": "US-007",
+      "user_role": "Exporter/Forwarding Agent",
+      "action": "manage shipments with multiple commodity lines, including dual units of measure",
+      "benefit": "accurately declare complex shipments containing various goods.",
+      "priority": "Medium",
+      "acceptance_criteria": [
+        "System allows adding, editing, and deleting multiple commodity line items within a single filing.",
+        "System supports entry of both primary and secondary units of measure and quantities where required by the HTS code."
+      ]
+    },
+    {
+      "id": "US-008",
+      "user_role": "Exporter/Forwarding Agent",
+      "action": "include required license information (e.g., BIS, USML) or used vehicle data (VINs) in an EEI filing",
+      "benefit": "ensure compliance when exporting controlled goods or used vehicles.",
+      "priority": "Medium",
+      "acceptance_criteria": [
+        "Fields for license type, number, ECCN, DDTC data, and VINs are available when applicable.",
+        "Entered license or vehicle data is correctly included in the AES transmission."
+      ]
+    },
+    {
+      "id": "US-009",
+      "user_role": "Exporter/Forwarding Agent",
+      "action": "file EEI for specific scenarios like Option 4 post-departure or US/Puerto Rico shipments",
+      "benefit": "support less common but necessary export filing types and trade lanes.",
+      "priority": "Low",
+      "acceptance_criteria": [
+        "System allows selection of relevant filing options (e.g., Option 4).",
+        "System correctly handles routing and data requirements for US/Puerto Rico shipments."
+      ]
+    }
+  ]
+}
+```

@@ -1,0 +1,37 @@
+{
+  "title": "AES Export Filing Certification Test",
+  "description": "A testing suite designed to certify participant systems for transmitting export commodity data to the U.S. Customs and Border Protection (CBP) Automated Export System (AES), ensuring compliance with data input and transaction requirements.",
+  "user_roles": [
+    "U.S. Principal Party in Interest (Exporter)",
+    "Forwarding Agent",
+    "Vessel Carrier acting as Forwarding Agent",
+    "NVOCC acting as Forwarding Agent",
+    "Service Center",
+    "Port Authority",
+    "Software Vendor"
+  ],
+  "functionality": [
+    "Create new export shipment filings with complete and valid data.",
+    "Modify previously accepted shipments (e.g., change port of export, delete/add commodity lines).",
+    "Include detailed forwarding agent profiles.",
+    "Report shipments with multiple commodities, including those requiring multiple units of measure.",
+    "Handle different modes of transport (Air, Truck, Vessel).",
+    "Manage and correct fatal errors identified by AES (e.g., quantity validation).",
+    "Submit post-departure filings (Option 4).",
+    "Report various Export Information Codes (EICs), including mandatory ('OS') and optional ('HH', 'IS').",
+    "Cancel previously accepted shipments.",
+    "Handle specific geographic routes (US <-> Puerto Rico).",
+    "Report shipments requiring licenses (BIS, USML) with associated codes, numbers, and exemption details.",
+    "Report shipments under specific treaties (e.g., UK Treaty with ACM#).",
+    "Report shipments containing specialized commodities like used vehicles with VINs.",
+    "Validate input data locally and identify invalid transactions before transmission.",
+    "Transmit test data to AES within a specified timeframe."
+  ],
+  "benefits": [
+    "Achieve operational certification for AES filing.",
+    "Validate system capability to correctly format and transmit export data.",
+    "Ensure compliance with CBP AES requirements.",
+    "Verify handling of standard and complex export scenarios.",
+    "Confirm system's ability to manage shipment updates, corrections, and cancellations."
+  ]
+}

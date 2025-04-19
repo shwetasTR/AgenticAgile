@@ -1,0 +1,89 @@
+{
+  "feature_title": "AES Shipment Filing Management",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "Exporter (USPPI)",
+      "action": "create a new export shipment filing with all mandatory data elements",
+      "benefit": "so that I can comply with electronic export reporting regulations and ensure my shipment is cleared for export.",
+      "priority": "High",
+      "related_functionality": [
+        "Create new export shipment filings with all mandatory data elements.",
+        "Input and manage shipment reference numbers.",
+        "Handle different party roles (USPPI, Forwarding Agent/Authorized Agent, Ultimate Consignee)."
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Forwarding Agent",
+      "action": "create a new export shipment filing on behalf of an Exporter (USPPI)",
+      "benefit": "so that I can fulfill my service agreement and ensure the client's compliance with export regulations.",
+      "priority": "High",
+      "related_functionality": [
+        "Create new export shipment filings with all mandatory data elements.",
+        "Input and manage shipment reference numbers.",
+        "Handle different party roles (USPPI, Forwarding Agent/Authorized Agent, Ultimate Consignee)."
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "Software User",
+      "action": "modify a previously accepted shipment filing using Replace/Change indicators",
+      "benefit": "so that I can correct errors or update information (e.g., port of export, value) accurately and maintain compliance without starting over.",
+      "priority": "High",
+      "related_functionality": [
+        "Modify previously accepted shipments (e.g., change port of export) using Replace/Change indicators."
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "Software User",
+      "action": "cancel a previously accepted export shipment filing",
+      "benefit": "so that I can withdraw the submission if the shipment is no longer proceeding, ensuring accurate reporting to CBP.",
+      "priority": "High",
+      "related_functionality": [
+        "Cancel previously accepted export shipments."
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "Software User",
+      "action": "input and manage specific shipment reference numbers within the filing",
+      "benefit": "so that I can easily track and reconcile the electronic filing with internal documentation and partner communications.",
+      "priority": "Medium",
+      "related_functionality": [
+        "Input and manage shipment reference numbers."
+      ]
+    },
+    {
+      "id": "US-006",
+      "user_role": "Software User",
+      "action": "accurately input and identify the different parties involved (USPPI, Forwarding Agent, Ultimate Consignee)",
+      "benefit": "so that the filing correctly represents the roles and responsibilities in the export transaction as required by regulations.",
+      "priority": "High",
+      "related_functionality": [
+        "Handle different party roles (USPPI, Forwarding Agent/Authorized Agent, Ultimate Consignee)."
+      ]
+    },
+    {
+      "id": "US-007",
+      "user_role": "Exporter (USPPI)",
+      "action": "update the details of an accepted filing if circumstances change before export",
+      "benefit": "so that the final data submitted to CBP is accurate, avoiding potential compliance issues or delays.",
+      "priority": "High",
+      "related_functionality": [
+        "Modify previously accepted shipments (e.g., change port of export) using Replace/Change indicators."
+      ]
+    },
+    {
+      "id": "US-008",
+      "user_role": "Forwarding Agent",
+      "action": "cancel a filing I previously submitted if the export is cancelled by the USPPI",
+      "benefit": "so that I can maintain accurate records and avoid penalties associated with incorrect declarations to CBP.",
+      "priority": "High",
+      "related_functionality": [
+        "Cancel previously accepted export shipments."
+      ]
+    }
+  ]
+}

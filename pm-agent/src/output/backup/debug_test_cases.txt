@@ -1,0 +1,322 @@
+```json
+{
+  "feature_title": "AES Filing Submission",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "USPPI (Exporters)",
+      "action": "electronically submit my initial export shipment data (EEI) to CBP AES",
+      "benefit": "ensure compliance with U.S. export regulations and avoid penalties for new shipments",
+      "priority": "High",
+      "related_functionality": [
+        "Transmit export shipment data to CBP AES.",
+        "Support different filing action requests (e.g., Create, Replace/Change).",
+        "Generate transmission files in the required format (e.g., .abi format as per AESTIR).",
+        "Handle transmission via specified protocols (e.g., FTP to gateway)."
+      ],
+      "test_cases": [
+        {
+          "id": "TC-001",
+          "title": "Verify successful submission of initial EEI data by USPPI",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as a USPPI user.",
+              "expected_result": "User is successfully logged in."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the AES filing creation screen.",
+              "expected_result": "AES filing creation form is displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter all mandatory EEI data for a new shipment (Action Request Code: C - Create).",
+              "expected_result": "Data is accepted by the form validation."
+            },
+            {
+              "step_number": 4,
+              "action": "Initiate the submission process.",
+              "expected_result": "System confirms submission initiation and generates a transmission file."
+            },
+            {
+              "step_number": 5,
+              "action": "Check the transmission log/status.",
+              "expected_result": "Status indicates the file was successfully transmitted to the CBP gateway (acknowledgement may take time)."
+            }
+          ]
+        },
+        {
+          "id": "TC-002",
+          "title": "Verify submission attempt with missing mandatory EEI data by USPPI",
+          "priority": "Medium",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as a USPPI user.",
+              "expected_result": "User is successfully logged in."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the AES filing creation screen.",
+              "expected_result": "AES filing creation form is displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter partial EEI data, omitting a mandatory field (e.g., USPPI EIN).",
+              "expected_result": "Data is entered."
+            },
+            {
+              "step_number": 4,
+              "action": "Attempt to initiate the submission process.",
+              "expected_result": "System prevents submission and displays a clear error message indicating the missing mandatory field(s)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Forwarding Agents (Authorized Agents)",
+      "action": "electronically submit initial EEI data to CBP AES on behalf of my clients (USPPIs)",
+      "benefit": "provide a compliant filing service and facilitate faster export clearance for my clients",
+      "priority": "High",
+      "related_functionality": [
+        "Transmit export shipment data to CBP AES.",
+        "Support different filing action requests (e.g., Create, Replace/Change).",
+        "Generate transmission files in the required format (e.g., .abi format as per AESTIR).",
+        "Handle transmission via specified protocols (e.g., FTP to gateway)."
+      ],
+      "test_cases": [
+        {
+          "id": "TC-003",
+          "title": "Verify successful submission of initial EEI data by Agent on behalf of USPPI",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as a Forwarding Agent user.",
+              "expected_result": "User is successfully logged in."
+            },
+            {
+              "step_number": 2,
+              "action": "Navigate to the AES filing creation screen.",
+              "expected_result": "AES filing creation form is displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter all mandatory EEI data for a new shipment, ensuring the USPPI and Agent roles/IDs are correctly specified.",
+              "expected_result": "Data is accepted by the form validation."
+            },
+            {
+              "step_number": 4,
+              "action": "Initiate the submission process (Action Request Code: C - Create).",
+              "expected_result": "System confirms submission initiation and generates a transmission file identifying the Agent as the filer."
+            },
+            {
+              "step_number": 5,
+              "action": "Check the transmission log/status.",
+              "expected_result": "Status indicates the file was successfully transmitted to the CBP gateway."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "USPPI (Exporters)",
+      "action": "submit updates (replace/change) to my previously filed EEI data through the system",
+      "benefit": "correct errors or reflect changes in shipment details to maintain compliance and data accuracy with CBP",
+      "priority": "High",
+      "related_functionality": [
+        "Transmit export shipment data to CBP AES.",
+        "Support different filing action requests (e.g., Create, Replace/Change).",
+        "Generate transmission files in the required format (e.g., .abi format as per AESTIR).",
+        "Handle transmission via specified protocols (e.g., FTP to gateway)."
+      ],
+      "test_cases": [
+        {
+          "id": "TC-004",
+          "title": "Verify successful 'Replace' submission for previously filed EEI by USPPI",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as a USPPI user.",
+              "expected_result": "User is successfully logged in."
+            },
+            {
+              "step_number": 2,
+              "action": "Locate a previously submitted AES filing (with an ITN).",
+              "expected_result": "The details of the previous filing are displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Initiate an update action for the filing.",
+              "expected_result": "The filing data becomes editable."
+            },
+            {
+              "step_number": 4,
+              "action": "Modify relevant data fields (e.g., quantity, value).",
+              "expected_result": "Changes are registered."
+            },
+            {
+              "step_number": 5,
+              "action": "Submit the update using the 'Replace' action (Action Request Code: R).",
+              "expected_result": "System confirms submission initiation and generates a transmission file with the 'R' code and the original ITN."
+            },
+            {
+              "step_number": 6,
+              "action": "Check the transmission log/status.",
+              "expected_result": "Status indicates the 'Replace' file was successfully transmitted."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "Forwarding Agents (Authorized Agents)",
+      "action": "submit updates (replace/change) to previously filed EEI data on behalf of my clients",
+      "benefit": "ensure my client's filings remain accurate and compliant with CBP regulations",
+      "priority": "High",
+      "related_functionality": [
+        "Transmit export shipment data to CBP AES.",
+        "Support different filing action requests (e.g., Create, Replace/Change).",
+        "Generate transmission files in the required format (e.g., .abi format as per AESTIR).",
+        "Handle transmission via specified protocols (e.g., FTP to gateway)."
+      ],
+      "test_cases": [
+        {
+          "id": "TC-005",
+          "title": "Verify successful 'Change' submission by Agent for a client's filing",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as a Forwarding Agent user.",
+              "expected_result": "User is successfully logged in."
+            },
+            {
+              "step_number": 2,
+              "action": "Locate a previously submitted AES filing for a specific client (with an ITN).",
+              "expected_result": "The details of the client's previous filing are displayed."
+            },
+            {
+              "step_number": 3,
+              "action": "Initiate an update action.",
+              "expected_result": "The filing data becomes editable."
+            },
+            {
+              "step_number": 4,
+              "action": "Modify specific data fields allowed for a 'Change' action (e.g., carrier SCAC, vessel name - refer to AESTIR for specifics).",
+              "expected_result": "Changes are registered."
+            },
+            {
+              "step_number": 5,
+              "action": "Submit the update using the 'Change' action (Action Request Code: U).",
+              "expected_result": "System confirms submission initiation and generates a transmission file with the 'U' code and the original ITN, identifying the Agent as the filer."
+            },
+            {
+              "step_number": 6,
+              "action": "Check the transmission log/status.",
+              "expected_result": "Status indicates the 'Change' file was successfully transmitted."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "USPPI (Exporters)",
+      "action": "have the system automatically generate the AES transmission file in the required AESTIR format (e.g., .abi)",
+      "benefit": "ensure my submission is technically valid and accepted by CBP AES without format-related rejections",
+      "priority": "High",
+      "related_functionality": [
+        "Generate transmission files in the required format (e.g., .abi format as per AESTIR)."
+      ],
+      "test_cases": [
+        {
+          "id": "TC-006",
+          "title": "Verify generated transmission file format for a 'Create' filing",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as a USPPI user and prepare a valid 'Create' AES filing.",
+              "expected_result": "Filing data is ready for submission."
+            },
+            {
+              "step_number": 2,
+              "action": "Initiate the submission process.",
+              "expected_result": "System generates a transmission file."
+            },
+            {
+              "step_number": 3,
+              "action": "Access the generated transmission file (e.g., via system logs or a temporary storage location if accessible).",
+              "expected_result": "File is accessible."
+            },
+            {
+              "step_number": 4,
+              "action": "Validate the file structure and content against the AESTIR specifications for an .abi format (check record identifiers like A, B, C, S, K, L, X, Y, Z, specific field positions, lengths, and data types).",
+              "expected_result": "The generated file strictly adheres to the AESTIR .abi format specifications."
+            }
+          ]
+        },
+        {
+          "id": "TC-007",
+          "title": "Verify generated transmission file format for a 'Replace' filing",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as a USPPI user and prepare a valid 'Replace' AES filing (updating a previous submission).",
+              "expected_result": "Filing data is ready for submission."
+            },
+            {
+              "step_number": 2,
+              "action": "Initiate the submission process.",
+              "expected_result": "System generates a transmission file."
+            },
+            {
+              "step_number": 3,
+              "action": "Access the generated transmission file.",
+              "expected_result": "File is accessible."
+            },
+            {
+              "step_number": 4,
+              "action": "Validate the file structure and content against the AESTIR specifications, specifically checking for the correct Action Request Code ('R') and inclusion of the original ITN in the appropriate record/field.",
+              "expected_result": "The generated file adheres to the AESTIR .abi format specifications for a 'Replace' action."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-006",
+      "user_role": "Forwarding Agents (Authorized Agents)",
+      "action": "view a log of my AES transmission attempts and their basic status (e.g., sent, acknowledged)",
+      "benefit": "track the progress of my filings, confirm submission, and troubleshoot any transmission issues",
+      "priority": "Medium",
+      "related_functionality": [
+        "Log transmission attempts and basic status."
+      ],
+      "test_cases": [
+        {
+          "id": "TC-008",
+          "title": "Verify transmission log displays entry for a sent filing",
+          "priority": "Medium",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as a Forwarding Agent user.",
+              "expected_result": "User is successfully logged in."
+            },
+            {
+              "step_number": 2,
+              "action": "Submit a valid AES filing.",
+              "expected_result": "Filing is submitted and transmitted."
+            },
+            {
+              "step_number": 3,

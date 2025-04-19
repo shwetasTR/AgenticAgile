@@ -1,0 +1,91 @@
+{
+  "feature_title": "Create and Submit Export Shipments (EEI Filing)",
+  "test_cases": [
+    {
+      "id": "TC-001",
+      "title": "Verify successful creation of basic shipment header",
+      "priority": "High",
+      "test_steps": [
+        {
+          "step_number": 1,
+          "action": "Log in as Exporter (USPPI).",
+          "expected_result": "User is logged in successfully."
+        },
+        {
+          "step_number": 2,
+          "action": "Navigate to the 'Create New Shipment' function.",
+          "expected_result": "The shipment creation form/screen is displayed."
+        },
+        {
+          "step_number": 3,
+          "action": "Enter valid required header information (e.g., USPPI details, Ultimate Consignee details, Mode of Transport, Departure Date).",
+          "expected_result": "Header fields accept valid data."
+        },
+        {
+          "step_number": 4,
+          "action": "Save the shipment header.",
+          "expected_result": "The shipment header is saved successfully, and a unique Shipment Reference Number (SRN) is generated and displayed."
+        }
+      ]
+    },
+    {
+      "id": "TC-002",
+      "title": "Verify adding a single commodity line to a shipment",
+      "priority": "High",
+      "test_steps": [
+        {
+          "step_number": 1,
+          "action": "Log in as Exporter (USPPI) and open an existing shipment with only header information.",
+          "expected_result": "The shipment details screen is displayed."
+        },
+        {
+          "step_number": 2,
+          "action": "Navigate to the 'Add Commodity Line' section/function.",
+          "expected_result": "The commodity line entry form is displayed."
+        },
+        {
+          "step_number": 3,
+          "action": "Enter valid details for one commodity line (e.g., Description, Tariff number, Quantity, Value, Unit of Measure, ECCN, EIC, Country of Origin).",
+          "expected_result": "Commodity line fields accept valid data."
+        },
+        {
+          "step_number": 4,
+          "action": "Save the commodity line.",
+          "expected_result": "The commodity line is successfully added to the shipment and displayed in the commodity list for that shipment."
+        }
+      ]
+    },
+    {
+      "id": "TC-003",
+      "title": "Verify submission of a simple shipment with one commodity line by Authorized Agent",
+      "priority": "High",
+      "test_steps": [
+        {
+          "step_number": 1,
+          "action": "Log in as Authorized Agent (Forwarder).",
+          "expected_result": "User is logged in successfully."
+        },
+        {
+          "step_number": 2,
+          "action": "Create a new shipment, entering all required header information.",
+          "expected_result": "Shipment header is created, SRN generated."
+        },
+        {
+          "step_number": 3,
+          "action": "Add one complete and valid commodity line to the shipment.",
+          "expected_result": "Commodity line is added successfully."
+        },
+        {
+          "step_number": 4,
+          "action": "Review the complete shipment details.",
+          "expected_result": "All entered data is displayed correctly."
+        },
+        {
+          "step_number": 5,
+          "action": "Initiate the 'Transmit to AES' action for the completed shipment.",
+          "expected_result": "The system confirms the transmission request has been sent (e.g., status updates to 'Transmitted' or similar). A successful transmission response (e.g., ITN Accepted) should eventually be received, though immediate confirmation might just be acknowledgement of sending."
+        }
+      ]
+    }
+  ]
+}

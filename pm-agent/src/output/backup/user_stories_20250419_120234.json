@@ -1,0 +1,117 @@
+{
+  "feature_title": "AES Shipment Filing & Management",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "U.S. Principal Party in Interest (USPPI)/Exporter",
+      "action": "create a new AES shipment filing electronically, including header and commodity details",
+      "benefit": "comply with U.S. export regulations and submit my declaration efficiently",
+      "priority": "High",
+      "related_functionality": [
+        "Create new export shipments with unique reference numbers.",
+        "Input and edit shipment header details (e.g., parties involved, transport information, dates, port of export).",
+        "Add, edit, and delete commodity line items within a shipment (including product description, Schedule B/HTS, quantities, units of measure, value, origin).",
+        "Handle shipments with multiple commodity lines."
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Authorized Agent (Forwarder)",
+      "action": "create a new AES shipment filing on behalf of my client (USPPI)",
+      "benefit": "provide forwarding services and ensure timely, compliant export declarations for my clients",
+      "priority": "High",
+      "related_functionality": [
+        "Create new export shipments with unique reference numbers.",
+        "Input and edit shipment header details (e.g., parties involved, transport information, dates, port of export).",
+        "Add, edit, and delete commodity line items within a shipment (including product description, Schedule B/HTS, quantities, units of measure, value, origin).",
+        "Handle shipments with multiple commodity lines.",
+        "Input Forwarding Agent profile details."
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "U.S. Principal Party in Interest (USPPI)/Exporter",
+      "action": "input and edit the header-level details for my export shipment",
+      "benefit": "accurately capture essential shipment information like parties, transport, and dates for the AES filing",
+      "priority": "High",
+      "related_functionality": [
+        "Input and edit shipment header details (e.g., parties involved, transport information, dates, port of export)."
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "Authorized Agent (Forwarder)",
+      "action": "add, edit, and delete multiple commodity line items within a single shipment filing",
+      "benefit": "accurately declare all goods being exported in one consolidated filing, even for complex shipments",
+      "priority": "High",
+      "related_functionality": [
+        "Add, edit, and delete commodity line items within a shipment (including product description, Schedule B/HTS, quantities, units of measure, value, origin).",
+        "Handle shipments with multiple commodity lines."
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "U.S. Principal Party in Interest (USPPI)/Exporter",
+      "action": "modify an already accepted AES filing using a 'Replace' or 'Change' action",
+      "benefit": "correct errors or update information post-submission to maintain compliance with AES requirements",
+      "priority": "High",
+      "related_functionality": [
+        "Support shipment modification actions (e.g., 'Replace' or 'Change' filing actions for accepted shipments)."
+      ]
+    },
+    {
+      "id": "US-006",
+      "user_role": "Authorized Agent (Forwarder)",
+      "action": "cancel a previously accepted export shipment filing",
+      "benefit": "withdraw the declaration if the shipment is cancelled, ensuring accurate reporting to CBP",
+      "priority": "High",
+      "related_functionality": [
+        "Cancel previously accepted export shipments."
+      ]
+    },
+    {
+      "id": "US-007",
+      "user_role": "Authorized Agent (Forwarder)",
+      "action": "input and maintain my Forwarding Agent profile details",
+      "benefit": "ensure my identifying information is correctly associated with the filings I submit",
+      "priority": "Medium",
+      "related_functionality": [
+        "Input Forwarding Agent profile details."
+      ]
+    },
+    {
+      "id": "US-008",
+      "user_role": "U.S. Principal Party in Interest (USPPI)/Exporter",
+      "action": "view the status and details of my submitted AES filings",
+      "benefit": "track my export declarations and maintain a centralized record for compliance and auditing",
+      "priority": "Medium",
+      "related_functionality": [
+        "Create new export shipments with unique reference numbers.",
+        "Support shipment modification actions (e.g., 'Replace' or 'Change' filing actions for accepted shipments).",
+        "Cancel previously accepted export shipments."
+      ]
+    },
+    {
+      "id": "US-009",
+      "user_role": "Authorized Agent (Forwarder)",
+      "action": "view the status and details of AES filings I have submitted",
+      "benefit": "manage my workload, provide status updates to clients, and maintain records centrally",
+      "priority": "Medium",
+      "related_functionality": [
+        "Create new export shipments with unique reference numbers.",
+        "Support shipment modification actions (e.g., 'Replace' or 'Change' filing actions for accepted shipments).",
+        "Cancel previously accepted export shipments."
+      ]
+    },
+    {
+      "id": "US-010",
+      "user_role": "U.S. Principal Party in Interest (USPPI)/Exporter",
+      "action": "ensure my electronic filing contains all required commodity details (description, Sch B, quantity, value, origin)",
+      "benefit": "provide complete and accurate information for each item being exported, facilitating compliance",
+      "priority": "High",
+      "related_functionality": [
+        "Add, edit, and delete commodity line items within a shipment (including product description, Schedule B/HTS, quantities, units of measure, value, origin)."
+      ]
+    }
+  ]
+}

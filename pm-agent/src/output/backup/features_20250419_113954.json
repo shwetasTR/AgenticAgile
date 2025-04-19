@@ -1,0 +1,24 @@
+{
+  "title": "Core AES Filing Submission & Management",
+  "description": "Enables users to create, submit, modify (replace/change), and cancel Electronic Export Information (EEI) filings to U.S. CBP via the Automated Export System (AES), ensuring compliance with export regulations. This covers the fundamental lifecycle of an AES submission.",
+  "user_roles": [
+    "Exporters (USPPI)",
+    "Forwarding Agents/Authorized Agents",
+    "Carriers (Vessel/NVOCC)",
+    "Software Users"
+  ],
+  "functionality": [
+    "Create new export shipment filings.",
+    "Input all required AES data elements for header, parties, and commodity lines.",
+    "Transmit formatted data electronically to the AES system.",
+    "Revise previously accepted shipments using 'Replace' or 'Change' actions (e.g., update Port of Export).",
+    "Cancel previously accepted shipments.",
+    "Associate submissions with specific Shipment Reference Numbers."
+  ],
+  "benefits": [
+    "Enables mandatory electronic filing for exports.",
+    "Streamlines the export declaration process compared to manual methods.",
+    "Provides a standardized mechanism to create, correct, and manage export filings.",
+    "Facilitates compliance with CBP reporting requirements."
+  ]
+}

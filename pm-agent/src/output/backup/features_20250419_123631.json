@@ -1,0 +1,23 @@
+{
+  "title": "AES Shipment Filing Creation",
+  "description": "Allows users to create new electronic export shipment declarations (EEI filings) by entering all mandatory and relevant optional data elements required by CBP AES regulations.",
+  "user_roles": [
+    "U.S. Principal Parties in Interest (USPPI/Exporters)",
+    "Forwarding Agents/Authorized Agents",
+    "Carriers/NVOCCs",
+    "Software Vendors/Service Centers"
+  ],
+  "functionality": [
+    "Input USPPI, Ultimate Consignee, and Authorized Agent (Forwarder) details.",
+    "Specify transportation details (mode of transport, port of export, departure date etc.).",
+    "Add one or more commodity lines with required details (e.g., Schedule B/HTS number, value, quantity, weight, origin).",
+    "Support for commodities requiring multiple units of measure.",
+    "Input Export Information Codes (EIC) like 'OS', 'HH', 'IS'.",
+    "Handle specific routing scenarios (e.g., US to PR, PR to US)."
+  ],
+  "benefits": [
+    "Enables users to initiate the export declaration process.",
+    "Provides a structured way to capture all necessary shipment data.",
+    "Forms the foundation for AES compliance."
+  ]
+}

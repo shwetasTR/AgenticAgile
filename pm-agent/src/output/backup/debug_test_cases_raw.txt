@@ -1,0 +1,276 @@
+```json
+{
+  "feature_title": "AES Shipment Filing Creation",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "U.S. Principal Parties in Interest (USPPI/Exporters)",
+      "test_cases": [
+        {
+          "id": "TC-US-001-01",
+          "title": "Verify USPPI can input details for USPPI, Consignee, and Agent",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Navigate to the 'Create New AES Filing' screen.",
+              "expected_result": "The filing creation form is displayed."
+            },
+            {
+              "step_number": 2,
+              "action": "Enter valid USPPI details (e.g., Name, Address, EIN/ID).",
+              "expected_result": "USPPI details are accepted and displayed correctly."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter valid Ultimate Consignee details (e.g., Name, Address, Country).",
+              "expected_result": "Ultimate Consignee details are accepted and displayed correctly."
+            },
+            {
+              "step_number": 4,
+              "action": "Optionally, enter valid Authorized Agent details (e.g., Name, Address, ID).",
+              "expected_result": "Authorized Agent details are accepted and displayed correctly."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Forwarding Agents/Authorized Agents",
+      "test_cases": [
+        {
+          "id": "TC-US-002-01",
+          "title": "Verify Agent can input details for USPPI, Consignee, and Agent",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Log in as an Authorized Agent and navigate to the 'Create New AES Filing' screen.",
+              "expected_result": "The filing creation form is displayed."
+            },
+            {
+              "step_number": 2,
+              "action": "Enter valid USPPI details provided by the exporter.",
+              "expected_result": "USPPI details are accepted and displayed correctly."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter valid Ultimate Consignee details.",
+              "expected_result": "Ultimate Consignee details are accepted and displayed correctly."
+            },
+            {
+              "step_number": 4,
+              "action": "Enter own valid Authorized Agent details.",
+              "expected_result": "Authorized Agent details are accepted and displayed correctly."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "U.S. Principal Parties in Interest (USPPI/Exporters)",
+      "test_cases": [
+        {
+          "id": "TC-US-003-01",
+          "title": "Verify USPPI can specify transportation details",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Navigate to the transportation section of the AES filing form.",
+              "expected_result": "Transportation detail fields are visible."
+            },
+            {
+              "step_number": 2,
+              "action": "Select a valid Mode of Transport (e.g., 'Sea', 'Air').",
+              "expected_result": "Mode of Transport is selected."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter a valid Port of Export code.",
+              "expected_result": "Port of Export is accepted."
+            },
+            {
+              "step_number": 4,
+              "action": "Enter a valid Estimated Departure Date.",
+              "expected_result": "Departure Date is accepted."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "Forwarding Agents/Authorized Agents",
+      "test_cases": [
+        {
+          "id": "TC-US-004-01",
+          "title": "Verify Agent can enter transportation details",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "As an Agent, navigate to the transportation section of the AES filing form.",
+              "expected_result": "Transportation detail fields are visible."
+            },
+            {
+              "step_number": 2,
+              "action": "Select a valid Mode of Transport.",
+              "expected_result": "Mode of Transport is selected."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter a valid Port of Export code.",
+              "expected_result": "Port of Export is accepted."
+            },
+            {
+              "step_number": 4,
+              "action": "Enter a valid Estimated Departure Date.",
+              "expected_result": "Departure Date is accepted."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "U.S. Principal Parties in Interest (USPPI/Exporters)",
+      "test_cases": [
+        {
+          "id": "TC-US-005-01",
+          "title": "Verify USPPI can add a commodity line with required details",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Navigate to the commodity section of the AES filing form.",
+              "expected_result": "Commodity section is displayed."
+            },
+            {
+              "step_number": 2,
+              "action": "Click 'Add Commodity Line'.",
+              "expected_result": "Fields for a new commodity line appear."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter valid Schedule B/HTS number, value, quantity, unit of measure, weight, and country of origin.",
+              "expected_result": "Commodity details are accepted."
+            },
+            {
+              "step_number": 4,
+              "action": "Save the commodity line.",
+              "expected_result": "The commodity line is added to the filing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-006",
+      "user_role": "Forwarding Agents/Authorized Agents",
+      "test_cases": [
+        {
+          "id": "TC-US-006-01",
+          "title": "Verify Agent can add a commodity line with required details",
+          "priority": "High",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "As an Agent, navigate to the commodity section of the AES filing form.",
+              "expected_result": "Commodity section is displayed."
+            },
+            {
+              "step_number": 2,
+              "action": "Click 'Add Commodity Line'.",
+              "expected_result": "Fields for a new commodity line appear."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter valid Schedule B/HTS, value, quantity, UOM, weight, and origin provided by USPPI.",
+              "expected_result": "Commodity details are accepted."
+            },
+            {
+              "step_number": 4,
+              "action": "Save the commodity line.",
+              "expected_result": "The commodity line is added to the filing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-007",
+      "user_role": "U.S. Principal Parties in Interest (USPPI/Exporters)",
+      "test_cases": [
+        {
+          "id": "TC-US-007-01",
+          "title": "Verify USPPI can enter multiple Units of Measure for a commodity",
+          "priority": "Medium",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "Add a commodity line requiring multiple Units of Measure (UOMs) based on its Schedule B number.",
+              "expected_result": "Fields for Quantity 1/UOM 1 and Quantity 2/UOM 2 are displayed for the commodity line."
+            },
+            {
+              "step_number": 2,
+              "action": "Enter a valid quantity and select the correct UOM for the first required unit.",
+              "expected_result": "Quantity 1 and UOM 1 are accepted."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter a valid quantity and select the correct UOM for the second required unit.",
+              "expected_result": "Quantity 2 and UOM 2 are accepted."
+            },
+            {
+              "step_number": 4,
+              "action": "Save the commodity line.",
+              "expected_result": "Commodity line with both UOMs is successfully added."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-008",
+      "user_role": "Forwarding Agents/Authorized Agents",
+      "test_cases": [
+        {
+          "id": "TC-US-008-01",
+          "title": "Verify Agent can enter multiple Units of Measure for a commodity",
+          "priority": "Medium",
+          "test_steps": [
+            {
+              "step_number": 1,
+              "action": "As an Agent, add a commodity line requiring multiple UOMs based on its Schedule B.",
+              "expected_result": "Fields for Quantity 1/UOM 1 and Quantity 2/UOM 2 are displayed."
+            },
+            {
+              "step_number": 2,
+              "action": "Enter valid quantity and UOM for the first required unit.",
+              "expected_result": "Quantity 1 and UOM 1 are accepted."
+            },
+            {
+              "step_number": 3,
+              "action": "Enter valid quantity and UOM for the second required unit.",
+              "expected_result": "Quantity 2 and UOM 2 are accepted."
+            },
+            {
+              "step_number": 4,
+              "action": "Save the commodity line.",
+              "expected_result": "Commodity line with both UOMs is successfully added."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "US-009",
+      "user_role": "U.S. Principal Parties in Interest (USPPI/Exporters)",
+      "test_cases": [
+        {
+          "id": "TC-US-009-01",
+          "title": "Verify USPPI can select and input a relevant EIC",
+          "priority": "Medium",

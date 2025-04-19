@@ -1,0 +1,4 @@
+{
+  "error": "Failed to parse JSON: Expecting ',' delimiter: line 256 column 10 (char 11636)",
+  "response_preview": "```json\n{\n  \"feature_title\": \"AES Shipment Filing & Management\",\n  \"user_stories\": [\n    {\n      \"id\": \"US-001\",\n      \"user_role\": \"U.S. Principal Party in Interest (USPPI)/Exporter\",\n      \"action\": \"create a new AES shipment filing electronically, including header and commodity details\",\n      \"benefit\": \"comply with U.S. export regulations and submit my declaration efficiently\",\n      \"priority\": \"High\",\n      \"related_functionality\": [\n        \"Create new export shipments with unique refere"
+}

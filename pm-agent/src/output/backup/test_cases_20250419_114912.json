@@ -1,0 +1,4 @@
+{
+  "error": "Failed to parse JSON: <string>:1 Unexpected \"\"\" at column 3",
+  "response_preview": "```json\n{\n  \"feature_title\": \"AES Shipment Creation and Submission\",\n  \"test_cases\": [\n    {\n      \"id\": \"TC-001\",\n      \"title\": \"Exporter Inputs Required Shipment Header Data\",\n      \"priority\": \"High\",\n      \"test_steps\": [\n        {\n          \"step_number\": 1,\n          \"action\": \"Log in as an Exporter (USPPI).\",\n          \"expected_result\": \"User is logged in and dashboard is displayed.\"\n        },\n        {\n          \"step_number\": 2,\n          \"action\": \"Navigate to the 'Create AES Shipme"
+}

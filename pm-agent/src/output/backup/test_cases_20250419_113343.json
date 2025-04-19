@@ -1,0 +1,4 @@
+{
+  "error": "Failed to parse JSON: Expecting ',' delimiter: line 1 column 7325 (char 7324)",
+  "response_preview": "```json\n{\n  \"feature_title\": \"AES Shipment Filing Management\",\n  \"test_cases\": [\n    {\n      \"id\": \"TC-001\",\n      \"title\": \"Verify Exporter (USPPI) can create a new AES filing with all mandatory data\",\n      \"priority\": \"High\",\n      \"test_steps\": [\n        {\n          \"step_number\": 1,\n          \"action\": \"Log in as an Exporter (USPPI) role.\",\n          \"expected_result\": \"User is successfully logged in with Exporter privileges.\"\n        },\n        {\n          \"step_number\": 2,\n          \"acti"
+}

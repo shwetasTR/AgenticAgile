@@ -1,0 +1,23 @@
+{
+  "title": "AES Shipment Filing Core Functionality",
+  "description": "Enables users to create, manage, and transmit Electronic Export Information (EEI) for export shipments to U.S. Customs and Border Protection (CBP) via the Automated Export System (AES). This includes handling initial submissions, subsequent revisions (updates to data like port of export, commodity details), and cancellations of previously accepted filings.",
+  "user_roles": [
+    "Exporters (USPPI)",
+    "Authorized Agents (Forwarders)",
+    "Carriers/NVOCCs",
+    "Internal Compliance Staff"
+  ],
+  "functionality": [
+    "Create new export shipment filings with header and commodity data.",
+    "Transmit initial EEI filings to AES.",
+    "Revise previously accepted filings using Replace/Change actions (e.g., change port, add/delete/modify commodity lines).",
+    "Cancel previously accepted filings.",
+    "Input and manage required data elements for shipments (parties, transport details, commodity info).",
+    "Handle basic error correction based on AES responses (e.g., correcting quantity after fatal error)."
+  ],
+  "benefits": [
+    "Ensures compliance with U.S. export reporting regulations (15 CFR Part 30).",
+    "Facilitates timely export clearance by providing required data to CBP.",
+    "Provides a structured workflow for managing the lifecycle of EEI submissions."
+  ]
+}

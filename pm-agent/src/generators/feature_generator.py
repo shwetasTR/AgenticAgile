@@ -1,6 +1,8 @@
 import json
 import logging
 import os
+from typing import List, Dict
+from analyzers.file_analyzer import FileAnalyzer
 
 class FeatureGenerator:
     """
@@ -15,6 +17,7 @@ class FeatureGenerator:
             gemini_client: An instance of GeminiClient for text generation
         """
         self.gemini_client = gemini_client
+        self.file_analyzer = FileAnalyzer()
         self.logger = self._setup_logger()
     
     def _setup_logger(self):
@@ -116,6 +119,43 @@ class FeatureGenerator:
                 "stage": "feature_generation",
                 "details": "Check logs for more information"
             }
+
+    def generate_from_files(self, files: List[str], requirements_text: str) -> Dict:
+        """Generate features using multiple input files and requirements."""
+        try:
+            # Analyze all input files
+            system_context = self.file_analyzer.analyze_files(files)
+            
+            prompt = self._create_context_aware_prompt(system_context, requirements_text)
+            features = self.gemini_client.extract_features_from_text(prompt)
+            
+            return features
+        except Exception as e:
+            self.logger.error(f"Error generating features: {str(e)}")
+            return {"error": str(e)}
+
+    def _create_context_aware_prompt(self, system_context: Dict, requirements_text: str) -> str:
+        return f"""
+        Analyze these requirements in the context of the existing system:
+
+        System Context:
+        {json.dumps(system_context, indent=2)}
+
+        Requirements:
+        {requirements_text}
+
+        Consider:
+        1. Existing Components: {len(system_context['code_components'])} components found
+        2. API Endpoints: {len(system_context['api_endpoints'])} endpoints identified
+        3. Data Models: {len(system_context['data_models'])} models present
+        4. Business Rules: {len(system_context['business_rules'])} rules identified
+
+        Generate features that align with:
+        - Existing architectural patterns
+        - Current API design
+        - Data model structure
+        - Business rule constraints
+        """
 
     def save_features_to_json(self, features: dict, output_path: str) -> bool:
         """

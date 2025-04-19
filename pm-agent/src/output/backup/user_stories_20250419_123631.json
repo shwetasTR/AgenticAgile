@@ -1,0 +1,125 @@
+{
+  "feature_title": "AES Shipment Filing Creation",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "U.S. Principal Parties in Interest (USPPI/Exporters)",
+      "action": "input my company details (USPPI), the ultimate consignee's details, and my authorized agent's details (if applicable) when creating a new AES filing",
+      "benefit": "so that all parties involved in the export transaction are correctly identified as required by CBP regulations.",
+      "priority": "High",
+      "related_functionality": [
+        "Input USPPI, Ultimate Consignee, and Authorized Agent (Forwarder) details."
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Forwarding Agents/Authorized Agents",
+      "action": "input the USPPI details, the ultimate consignee details, and my own agent details when creating a new AES filing on behalf of an exporter",
+      "benefit": "so that I can accurately represent the parties involved and fulfill my filing responsibilities.",
+      "priority": "High",
+      "related_functionality": [
+        "Input USPPI, Ultimate Consignee, and Authorized Agent (Forwarder) details."
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "U.S. Principal Parties in Interest (USPPI/Exporters)",
+      "action": "specify the mode of transport, port of export, and estimated departure date for my shipment",
+      "benefit": "so that the transportation details are accurately recorded for the AES filing and logistics planning.",
+      "priority": "High",
+      "related_functionality": [
+        "Specify transportation details (mode of transport, port of export, departure date etc.)."
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "Forwarding Agents/Authorized Agents",
+      "action": "enter the correct transportation details, including mode, port, and dates, for the shipment I am filing",
+      "benefit": "so that the AES filing accurately reflects the shipment's logistics.",
+      "priority": "High",
+      "related_functionality": [
+        "Specify transportation details (mode of transport, port of export, departure date etc.)."
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "U.S. Principal Parties in Interest (USPPI/Exporters)",
+      "action": "add detailed information for each commodity being exported, including Schedule B/HTS number, value, quantity, unit of measure, weight, and country of origin",
+      "benefit": "so that I can accurately declare the goods being shipped and comply with export regulations.",
+      "priority": "High",
+      "related_functionality": [
+        "Add one or more commodity lines with required details (e.g., Schedule B/HTS number, value, quantity, weight, origin)."
+      ]
+    },
+    {
+      "id": "US-006",
+      "user_role": "Forwarding Agents/Authorized Agents",
+      "action": "input all required commodity line details provided by the USPPI, such as Schedule B/HTS number, value, quantity, weight, and origin",
+      "benefit": "so that the goods declaration is complete and accurate for the AES filing.",
+      "priority": "High",
+      "related_functionality": [
+        "Add one or more commodity lines with required details (e.g., Schedule B/HTS number, value, quantity, weight, origin)."
+      ]
+    },
+    {
+      "id": "US-007",
+      "user_role": "U.S. Principal Parties in Interest (USPPI/Exporters)",
+      "action": "enter quantities using multiple units of measure for commodity lines that require it per AES regulations",
+      "benefit": "so that I can meet the specific reporting requirements for certain Schedule B/HTS numbers.",
+      "priority": "Medium",
+      "related_functionality": [
+        "Support for commodities requiring multiple units of measure."
+      ]
+    },
+    {
+      "id": "US-008",
+      "user_role": "Forwarding Agents/Authorized Agents",
+      "action": "input multiple units of measure when required for a specific commodity line based on the Schedule B/HTS number",
+      "benefit": "so that the filing complies with the detailed reporting requirements for those goods.",
+      "priority": "Medium",
+      "related_functionality": [
+        "Support for commodities requiring multiple units of measure."
+      ]
+    },
+    {
+      "id": "US-009",
+      "user_role": "U.S. Principal Parties in Interest (USPPI/Exporters)",
+      "action": "select and input relevant Export Information Codes (EICs) like 'OS', 'HH', or 'IS' for my shipment",
+      "benefit": "so that I can indicate special conditions, exemptions, or types of shipments applicable to the export transaction.",
+      "priority": "Medium",
+      "related_functionality": [
+        "Input Export Information Codes (EIC) like 'OS', 'HH', 'IS'."
+      ]
+    },
+    {
+      "id": "US-010",
+      "user_role": "Forwarding Agents/Authorized Agents",
+      "action": "enter the appropriate Export Information Codes (EICs) as applicable to the shipment I am filing",
+      "benefit": "so that the AES declaration accurately reflects any special circumstances, exemptions, or types of shipments.",
+      "priority": "Medium",
+      "related_functionality": [
+        "Input Export Information Codes (EIC) like 'OS', 'HH', 'IS'."
+      ]
+    },
+    {
+      "id": "US-011",
+      "user_role": "U.S. Principal Parties in Interest (USPPI/Exporters)",
+      "action": "create an AES filing specifically for a shipment routed from the US to Puerto Rico or from Puerto Rico to the US",
+      "benefit": "so that I can comply with filing requirements for these specific trade lanes.",
+      "priority": "Medium",
+      "related_functionality": [
+        "Handle specific routing scenarios (e.g., US to PR, PR to US)."
+      ]
+    },
+    {
+      "id": "US-012",
+      "user_role": "Forwarding Agents/Authorized Agents",
+      "action": "correctly file an AES declaration for shipments between the US and Puerto Rico, ensuring proper routing information is captured",
+      "benefit": "so that I can handle these specific routing scenarios accurately for my clients and ensure compliance.",
+      "priority": "Medium",
+      "related_functionality": [
+        "Handle specific routing scenarios (e.g., US to PR, PR to US)."
+      ]
+    }
+  ]
+}

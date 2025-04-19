@@ -1,0 +1,34 @@
+{
+  "title": "AES Export Filing Certification Interface",
+  "description": "Enables users to electronically submit, modify, and cancel export shipment data to the U.S. CBP Automated Export System (AES) according to AESTIR specifications, covering various scenarios required for operational certification.",
+  "user_roles": [
+    "U.S. Principal Parties in Interest (exporters)",
+    "Forwarding agents",
+    "Vessel carriers/NVOCCs acting as forwarding agents",
+    "Service centers",
+    "Port authorities",
+    "Software vendors"
+  ],
+  "functionality": [
+    "Create and transmit complete export shipment filings.",
+    "Modify previously accepted shipments (e.g., change port, add/delete commodity lines).",
+    "Include Forwarding Agent profile data.",
+    "Handle shipments with multiple commodity lines, including varying units of measure.",
+    "Support different transport modes (Air, Truck, Vessel).",
+    "Validate data locally and handle/correct fatal errors from AES.",
+    "Support Post-Departure (Option 4) filing.",
+    "Process various Export Information Codes (EICs) with conditional data requirements (e.g., 'OS', 'HH', 'IS').",
+    "Cancel previously accepted shipments.",
+    "Manage specific routing (US <-> Puerto Rico).",
+    "Include required data for licensed shipments (BIS, DDTC/USML).",
+    "Support treaty-specific requirements (e.g., UK ACM#).",
+    "Report specific commodity details (e.g., Used Vehicle VINs)."
+  ],
+  "benefits": [
+    "Achieve AES operational certification for electronic export filing.",
+    "Ensure compliance with CBP AESTIR requirements.",
+    "Streamline the export declaration process.",
+    "Reduce filing errors through validation and correction capabilities.",
+    "Facilitate compliant international trade operations."
+  ]
+}

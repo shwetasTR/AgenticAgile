@@ -1,0 +1,97 @@
+{
+  "feature_title": "Create and Submit Export Shipments (EEI Filing)",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "user_role": "Exporter (USPPI)",
+      "action": "create a new export shipment declaration by entering essential header information like parties involved, transport details, and relevant dates",
+      "benefit": "initiate the EEI filing process accurately and ensure basic shipment context is captured for compliance",
+      "priority": "High",
+      "related_functionality": [
+        "Input shipment header information (parties, transport details, dates)."
+      ]
+    },
+    {
+      "id": "US-002",
+      "user_role": "Exporter (USPPI)",
+      "action": "add detailed commodity line item information including description, tariff number, quantity, value, unit of measure, ECCN, Export Information Code (EIC), and country of origin to my shipment declaration",
+      "benefit": "ensure all mandatory commodity data is provided as required by US export regulations",
+      "priority": "High",
+      "related_functionality": [
+        "Input commodity line item details (description, tariff number, quantities, values, units of measure, ECCN, EIC, origin)."
+      ]
+    },
+    {
+      "id": "US-003",
+      "user_role": "Authorized Agent (Forwarder)",
+      "action": "create declarations for shipments containing multiple distinct commodity lines within a single filing",
+      "benefit": "efficiently handle complex shipments with various goods without needing separate filings for each commodity type",
+      "priority": "High",
+      "related_functionality": [
+        "Support shipments with single or multiple commodity lines.",
+        "Input commodity line item details (description, tariff number, quantities, values, units of measure, ECCN, EIC, origin)."
+      ]
+    },
+    {
+      "id": "US-004",
+      "user_role": "Exporter (USPPI)",
+      "action": "specify two different units of measure and their corresponding quantities for commodity lines that require dual reporting",
+      "benefit": "comply accurately with reporting requirements for specific tariff numbers mandating dual units of measure",
+      "priority": "Medium",
+      "related_functionality": [
+        "Handle commodities requiring two units of measure.",
+        "Input commodity line item details (description, tariff number, quantities, values, units of measure, ECCN, EIC, origin)."
+      ]
+    },
+    {
+      "id": "US-005",
+      "user_role": "Authorized Agent (Forwarder)",
+      "action": "transmit the completed export shipment declaration data electronically to the CBP AES system in the required format",
+      "benefit": "fulfill the legal requirement for EEI submission and obtain necessary export clearance for my client's shipment",
+      "priority": "High",
+      "related_functionality": [
+        "Transmit shipment data to AES in the specified format (e.g., ABI)."
+      ]
+    },
+    {
+      "id": "US-006",
+      "user_role": "Carrier acting as Agent",
+      "action": "receive a unique Shipment Reference Number (SRN) upon successfully creating or attempting to submit an EEI filing",
+      "benefit": "easily track, reference, and manage specific export filings within the system and with CBP",
+      "priority": "High",
+      "related_functionality": [
+        "Generate unique Shipment Reference Numbers."
+      ]
+    },
+    {
+      "id": "US-007",
+      "user_role": "Authorized Agent (Forwarder)",
+      "action": "create and submit a complete EEI filing, including header and all commodity details, on behalf of an Exporter (USPPI)",
+      "benefit": "provide essential forwarding services and ensure export compliance for the clients I represent",
+      "priority": "High",
+      "related_functionality": [
+        "Input shipment header information (parties, transport details, dates).",
+        "Input commodity line item details (description, tariff number, quantities, values, units of measure, ECCN, EIC, origin).",
+        "Support shipments with single or multiple commodity lines.",
+        "Handle commodities requiring two units of measure.",
+        "Transmit shipment data to AES in the specified format (e.g., ABI).",
+        "Generate unique Shipment Reference Numbers."
+      ]
+    },
+    {
+      "id": "US-008",
+      "user_role": "Carrier acting as Agent",
+      "action": "create and submit a complete EEI filing when acting as the authorized agent for an export shipment",
+      "benefit": "fulfill regulatory obligations for export reporting when acting in an agency capacity for the USPPI or forwarder",
+      "priority": "High",
+      "related_functionality": [
+        "Input shipment header information (parties, transport details, dates).",
+        "Input commodity line item details (description, tariff number, quantities, values, units of measure, ECCN, EIC, origin).",
+        "Support shipments with single or multiple commodity lines.",
+        "Handle commodities requiring two units of measure.",
+        "Transmit shipment data to AES in the specified format (e.g., ABI).",
+        "Generate unique Shipment Reference Numbers."
+      ]
+    }
+  ]
+}

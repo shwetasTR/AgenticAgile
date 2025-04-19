@@ -1,0 +1,21 @@
+{
+  "title": "AES Shipment Creation and Submission",
+  "description": "Allows users to create new export shipment filings with all necessary header and party information, ensuring compliance with basic AES requirements.",
+  "user_roles": [
+    "Exporter (USPPI)",
+    "Authorized Agent (Forwarder)",
+    "Carrier/NVOCC"
+  ],
+  "functionality": [
+    "Input/capture required shipment header data (e.g., USPPI, Consignee, Dates, Mode of Transport).",
+    "Input/capture Forwarding Agent/Authorized Agent profile information.",
+    "Specify Port of Export and Destination Country.",
+    "Specify Mode of Transport (Air, Truck, Vessel, etc.).",
+    "Transmit the created shipment data to CBP AES."
+  ],
+  "benefits": [
+    "Enables electronic filing of export information as required by regulations.",
+    "Streamlines the process of initiating an export declaration.",
+    "Ensures basic required data elements are captured."
+  ]
+}
